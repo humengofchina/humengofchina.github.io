@@ -1,0 +1,1014 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Macho Meng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="JavaScript语言不同于Java语言，且没有关系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习笔记">
+<meta property="og:url" content="https://machomeng.pages.dev/12/index.html">
+<meta property="og:site_name" content="爱发电的猛男妙妙屋">
+<meta property="og:description" content="JavaScript语言不同于Java语言，且没有关系">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://machomeng.pages.dev/images/A/javascript.jpg">
+<meta property="article:published_time" content="2024-08-20T08:15:21.000Z">
+<meta property="article:modified_time" content="2024-09-15T10:15:43.000Z">
+<meta property="article:author" content="Macho Meng">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/javascript.jpg">
+  
+  
+  
+  <title>JavaScript学习笔记 - 爱发电的猛男妙妙屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"machomeng.pages.dev","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":false,"placement":"left","headingSelector":"h1,h2,h3,h4,h5","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>爱发电的猛男妙妙屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/web/" target="_self">
+                
+                <span>常用网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/browser/" target="_self">
+                
+                <span>收藏网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/informalessay/" target="_self">
+                
+                <span>随笔</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="JavaScript学习笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Macho Meng
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-20 16:15" pubdate>
+          2024年8月20日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          22 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">JavaScript学习笔记</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年9月15日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h4><span id="目录默认关闭点击展开">目录（默认关闭，点击展开）：</span></h4>
+<h4><span id="展开目录找的更快">展开目录找的更快</span></h4>
+<details>
+<summary>
+点击展开目录
+</summary>
+<!-- toc -->
+<ul>
+<li><a href="#一-javascript概述">一、JavaScript概述</a></li>
+<li><a href="#二-javascript语言特性">二、JavaScript语言特性</a></li>
+<li><a href="#三-js书写位置">三、JS书写位置</a></li>
+<li><a href="#四-js基本语法">四、JS基本语法</a></li>
+<li><a href="#五-js数据类型">五、JS数据类型</a>
+<ul>
+<li><a href="#1-原始类型">1、原始类型</a></li>
+<li><a href="#2-引用类型">2、引用类型</a></li>
+</ul></li>
+<li><a href="#六-js变量">六、JS变量</a>
+<ul>
+<li><a href="#1-定义变量">1、定义变量</a></li>
+<li><a href="#2-赋值变量">2、赋值变量</a></li>
+<li><a href="#3-语法糖">3、语法糖</a></li>
+<li><a href="#4-变量提升">4、变量提升</a></li>
+</ul></li>
+<li><a href="#七-js对象">七、js对象</a>
+<ul>
+<li><a href="#1-对象属性">1、对象属性</a>
+<ul>
+<li><a href="#留坑">留坑</a></li>
+</ul></li>
+<li><a href="#2-修改属性">2、修改属性</a></li>
+<li><a href="#3-增加属性">3、增加属性</a></li>
+<li><a href="#4-删除属性">4、删除属性</a></li>
+<li><a href="#5-属性表达式">5、属性表达式</a></li>
+<li><a href="#6-动态取值">6、动态取值</a></li>
+</ul></li>
+</ul>
+<!-- tocstop -->
+</details>
+<h2><span id="一-javascript概述">一、JavaScript概述</span></h2>
+<p>JavaScript之父：布兰登·艾克</p>
+<figure>
+<img src="./../../images/JavaScript/image-20240820162605991.png" srcset="/img/loading.gif" lazyload alt="布兰登·艾克">
+<figcaption aria-hidden="true">布兰登·艾克</figcaption>
+</figure>
+<p>ES1:1997年</p>
+<p>ES2:1998年</p>
+<p>ES3:1999年</p>
+<p><strong>ES5:2009年</strong></p>
+<p>ES2015：也叫ES6，发布于2015年</p>
+<p>ES2016：</p>
+<p>.............</p>
+<p>ES2023：</p>
+<p>主要学习ES5</p>
+<h2><span id="二-javascript语言特性">二、JavaScript语言特性</span></h2>
+<p>HTML是标记语言（只有定义内容和结构，没有逻辑控制和操作）</p>
+<p>JavaScript是编程语言（可以编写用于执行的程序）</p>
+<table>
+
+<thead>
+<tr>
+<th>编程语言</th>
+<th>编译型编程语言</th>
+<th>解释型编程语言</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>一次性全部编译成计算机识别的机器语言，再执行</td>
+<td>多次边编译边执行</td>
+</tr>
+<tr>
+<td></td>
+<td>C语言、C++、C#</td>
+<td>Python</td>
+</tr>
+<tr>
+<td></td>
+<td>Go语言</td>
+<td>JavaScript</td>
+</tr>
+<tr>
+<td></td>
+<td>Java语言</td>
+<td>PHP</td>
+</tr>
+</tbody>
+</table>
+<p>JavaScript简称“JS”、JS在浏览器中的解释引擎最主流的是谷歌的“V8引擎”（类似于汽车领域的V8发动机的地位）</p>
+<figure>
+<img src="./../../images/JavaScript/image-20240820164844943.png" srcset="/img/loading.gif" lazyload alt="Google_V8引擎">
+<figcaption aria-hidden="true">Google_V8引擎</figcaption>
+</figure>
+<h2><span id="三-js书写位置">三、JS书写位置</span></h2>
+<p>1、可以直接在HTML中的script标签内写js语言</p>
+<figure>
+<img src="./../../images/JavaScript/image-20240820170206081.png" srcset="/img/loading.gif" lazyload alt="如图所示">
+<figcaption aria-hidden="true">如图所示</figcaption>
+</figure>
+<p>2、类似于CSS也可以通过link引入的方式：</p>
+<p>但是引入Src的script标签里面不能再写js代码了</p>
+<p>script有一个type属性，写引用的语言类型的，例如js写type="text/javascript"</p>
+<figure>
+<img src="./../../images/JavaScript/image-20240820170500629.png" srcset="/img/loading.gif" lazyload alt="如图">
+<figcaption aria-hidden="true">如图</figcaption>
+</figure>
+<h2><span id="四-js基本语法">四、JS基本语法</span></h2>
+<ul>
+<li>每一条语句后面要加分号（不强制，但要规范）</li>
+<li>JS大小写敏感</li>
+</ul>
+<p>在VScode中，搜索transform可以找到并设置选中转大小写的快捷键</p>
+<ul>
+<li><p>单行注释：//</p></li>
+<li><p>多行注释: /**/</p></li>
+<li><p>输出语句：</p></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">write</span>(<span class="hljs-string">&quot;hello world&quot;</span>); <span class="hljs-comment">//输出内容到页面</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;你好，世界&quot;</span>); <span class="hljs-comment">//以弹窗方式输出内容</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">//将内容输出到控制台---最常用</span><br></code></pre></td></tr></table></figure>
+<h2><span id="五-js数据类型">五、JS数据类型</span></h2>
+<h4><span id="1-原始类型">1、原始类型</span></h4>
+<p>不可再分的数据类型叫原始类型</p>
+<ul>
+<li>数字类型 (number)</li>
+</ul>
+<blockquote>
+<p>0o ：八进制</p>
+<p>0x ：十六进制</p>
+<p>0b ：二进制</p>
+</blockquote>
+<ul>
+<li>字符串类型 (string)</li>
+</ul>
+<blockquote>
+<p>单引号''（内容通过）</p>
+<p>双引号""（内容通过）</p>
+<p>反引号``(可以直接换行，)</p>
+</blockquote>
+<ul>
+<li>布尔类型 (boolean)</li>
+</ul>
+<blockquote>
+<p>true</p>
+<p>false</p>
+</blockquote>
+<ul>
+<li>undefined</li>
+</ul>
+<blockquote>
+<p>undefined（值未定义）</p>
+</blockquote>
+<ul>
+<li>null</li>
+</ul>
+<blockquote>
+<p>null空</p>
+</blockquote>
+<h4><span id="2-引用类型">2、引用类型</span></h4>
+<p>可以再分的数据类型叫引用类型</p>
+<ul>
+<li>对象（object）</li>
+</ul>
+<blockquote>
+<p>存放一系列数据、功能的集合体</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(&#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tom&quot;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">phone</span>: <span class="hljs-string">&quot;13200000000&quot;</span>,<br>    <span class="hljs-attr">hobby</span>:&#123;<br>        <span class="hljs-attr">football</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">game</span>: <span class="hljs-literal">undefined</span>,<br>        <span class="hljs-attr">basketball</span>: <span class="hljs-literal">null</span><br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>查看数据类型typeof</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(&#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;Tom&quot;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">phone</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;13200000000&quot;</span>,<br>    <span class="hljs-attr">hobby</span>:&#123;<br>        <span class="hljs-attr">football</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">game</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span>,<br>        <span class="hljs-attr">basketball</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span><br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="./../../images/JavaScript/image-20240821154803320.png" srcset="/img/loading.gif" lazyload alt="输出结果">
+<figcaption aria-hidden="true">输出结果</figcaption>
+</figure>
+<ul>
+<li>函数（function）</li>
+</ul>
+<h2><span id="六-js变量">六、JS变量</span></h2>
+<h4><span id="1-定义变量">1、定义变量</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> variableName;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>变量名命名：字母，下划线，美元开头，可以有数字，但不能以数字开头</p>
+</blockquote>
+<h4><span id="2-赋值变量">2、赋值变量</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> age;<br>age = <span class="hljs-number">10</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age,<span class="hljs-keyword">typeof</span> age)<br>age = <span class="hljs-string">&quot;年龄&quot;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age,<span class="hljs-keyword">typeof</span> age)<br><span class="hljs-comment">// 输出</span><br><span class="hljs-number">10</span> <span class="hljs-string">&#x27;number&#x27;</span><br>年龄 string<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>在JavaScript中，变量的类型也可以发生变化</p>
+</blockquote>
+<p>强类型语言变量可以变化，但是不能变化类型，弱类型语言可以变量变化类型。js属于弱类型语言，而Python是强类型语言。</p>
+<p>JavaScript是弱类型解释型语言，故又称js为<strong>脚本语言</strong>。</p>
+<h4><span id="3-语法糖">3、语法糖</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> age = <span class="hljs-number">10</span>;<br><span class="hljs-keyword">var</span> a=<span class="hljs-number">1</span>, b=<span class="hljs-number">2</span>, c=<span class="hljs-number">3</span>, d=<span class="hljs-number">4</span>;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>变量声明赋值一气呵成</p>
+</blockquote>
+<h4><span id="4-变量提升">4、变量提升</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age);<br></code></pre></td></tr></table></figure>
+<p>直接输出没有定义的变量会报错（Uncaught ReferenceError: age is not
+defined）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age);<br><span class="hljs-keyword">var</span> age =<span class="hljs-number">10</span>;<br></code></pre></td></tr></table></figure>
+<p>先引用再定义会变量提升，不会报错，但输出结果为（undefined）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> age; <span class="hljs-comment">//这行相当于提升了</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age);<br>age = <span class="hljs-number">10</span>;<br></code></pre></td></tr></table></figure>
+<p>这段代码是和上面的代码是等价的。</p>
+<blockquote>
+<p>变量提升范围不会超过脚本块</p>
+</blockquote>
+<figure>
+<img src="./../../images/JavaScript/image-20240823133924248.png" srcset="/img/loading.gif" lazyload alt="变量提升">
+<figcaption aria-hidden="true">变量提升</figcaption>
+</figure>
+<blockquote>
+
+</blockquote>
+<h2><span id="七-js对象">七、js对象</span></h2>
+<h4><span id="1-对象属性">1、对象属性</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 示例</span><br><span class="hljs-keyword">var</span> hero = &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tom&quot;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">phone</span>: <span class="hljs-string">&quot;13200000000&quot;</span>,<br>    <span class="hljs-attr">hobby</span>:&#123;<br>        <span class="hljs-attr">football</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">game</span>: <span class="hljs-string">&quot;CS2&quot;</span>,<br>        <span class="hljs-attr">basketball</span>: <span class="hljs-literal">null</span>&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>读取对象存在的属性（读取18）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero.<span class="hljs-property">age</span>);<br><span class="hljs-comment">// 输出: 18</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>读取对象不存在的属性(不会报错，结果是undefined)（类型也为undefined）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> hero.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: undefined &#x27;undefined&#x27;</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>读取不存在的对象（报错）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(abc.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> abc.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: Uncaught ReferenceError: abc is not defined</span><br></code></pre></td></tr></table></figure>
+<p>再次定义abc(仍然报错，因为abc没有赋值，没有赋值就是原始类型undefined，原始类型不可再拆分)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> abc;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(abc.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> abc.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: Uncaught TypeError: Cannot read properties of undefined (reading &#x27;location&#x27;)</span><br></code></pre></td></tr></table></figure>
+<p>再次将abc赋值为null(还是报错，因为null也是原始类型，不可拆分)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> abc = <span class="hljs-literal">null</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(abc.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> abc.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: Uncaught TypeError: Cannot read properties of null (reading &#x27;location&#x27;)</span><br></code></pre></td></tr></table></figure>
+<p>再次将abc赋值为大括号(不会报错，大括号表示对象，只不过现在这个大括号内为空)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> abc = &#123;&#125;;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> abc);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(abc.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> abc.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: object</span><br><span class="hljs-comment">//		undefined &#x27;undefined&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>但是，将abc赋值为数字、字符串（虽然为原始类型，但是也不会报错，就唯独undefined和null会报错）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> abc = <span class="hljs-number">1</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-keyword">typeof</span> abc);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(abc.<span class="hljs-property">location</span>, <span class="hljs-keyword">typeof</span> abc.<span class="hljs-property">location</span>);<br><span class="hljs-comment">// 输出: number</span><br><span class="hljs-comment">//		undefined &#x27;undefined&#x27;</span><br></code></pre></td></tr></table></figure>
+<h5><span id="留坑">留坑</span></h5>
+<blockquote>
+<p>undefined和null读取属性会报错</p>
+</blockquote>
+<h4><span id="2-修改属性">2、修改属性</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">hero.<span class="hljs-property">age</span> =<span class="hljs-number">19</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero.<span class="hljs-property">age</span>);<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>通过取值赋值即可</p>
+</blockquote>
+<p>类似于上面留坑，undefined和null修改属性会报错
+，原始类型不会报错但无法修改属性，引用类型正常</p>
+<h4><span id="3-增加属性">3、增加属性</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">hero.<span class="hljs-property">loaction</span> = <span class="hljs-string">&quot;USA&quot;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero.<span class="hljs-property">loaction</span>);<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>和修改属性一样，取值赋值即可</p>
+</blockquote>
+<p>类似于上面留坑，undefined和null增加属性会报错
+，原始类型不会报错但无法增加属性，引用类型正常</p>
+<h4><span id="4-删除属性">4、删除属性</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">delete</span> hero.<span class="hljs-property">hobby</span>.<span class="hljs-property">game</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>直接删（不推荐）</p>
+</blockquote>
+<p>类似于上面留坑，undefined和null删除属性会报错
+，原始类型不会报错但无法删除属性，引用类型正常</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js'">hero.hobby.game = undefined<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>将待删除的属性赋值为undefined</p>
+</blockquote>
+<p>类似于上面留坑，undefined和null修改属性会报错
+，原始类型不会报错但无法修改属性，引用类型正常</p>
+<h4><span id="5-属性表达式">5、属性表达式</span></h4>
+<p>原本读取对象是对象点属性的方式，而属性表达式是另外的一种方式。</p>
+<p>用途：一些用引号命名非法对象名称，无法通过用对象点的方式调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero.<span class="hljs-property">age</span>);<br><span class="hljs-comment">// 输出: 18</span><br></code></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero[<span class="hljs-string">&quot;age&quot;</span>]);<br><span class="hljs-comment">// 输出: 18</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>对象中括号内引号写属性名</p>
+</blockquote>
+<p><strong>其他增删改类似，同理！</strong></p>
+<h4><span id="6-动态取值">6、动态取值</span></h4>
+<p>(属性表达式第二个应用)</p>
+<p>简单案例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> hero = &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tom&quot;</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-number">18</span>,<br>    <span class="hljs-attr">phone</span>: <span class="hljs-string">&quot;13200000000&quot;</span>,<br>    <span class="hljs-attr">hobby</span>:&#123;<br>        <span class="hljs-attr">football</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">game</span>: <span class="hljs-string">&quot;CS2&quot;</span>,<br>        <span class="hljs-attr">basketball</span>: <span class="hljs-literal">null</span>&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>间接取值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> attr = <span class="hljs-string">&quot;name&quot;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero[attr]);<br><span class="hljs-comment">// 输出: Tom</span><br></code></pre></td></tr></table></figure>
+<p>通过更换var attr = "name"的值，可以打印不同的值。当var attr =
+"name"的name是用户输入的时候，应用场景就来了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">prompt</span>(<span class="hljs-string">&quot;请输入您查询的属性值&quot;</span>))<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> attr = <span class="hljs-title function_">prompt</span>(<span class="hljs-string">&quot;请输入您查询的属性值&quot;</span>)<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(hero[attr]);<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>注：以上通过弹窗获取用户指令信息，不符合es标准。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+      
+        <a href="/tags/JavaScript/" class="print-no-link">#JavaScript</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>JavaScript学习笔记</div>
+      <div>https://machomeng.pages.dev/12/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Macho Meng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月20日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年9月15日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/13/" title="中国古代计时单位">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">中国古代计时单位</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/11/" title="军官军衔和士官军衔制度">
+                        <span class="hidden-mobile">军官军衔和士官军衔制度</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="学习"
+        id="heading-4ef520d6cd20ba4a727af08e17e4939e" role="tab" data-toggle="collapse" href="#collapse-4ef520d6cd20ba4a727af08e17e4939e"
+        aria-expanded="true"
+      >
+        学习
+        <span class="list-group-count">(8)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4ef520d6cd20ba4a727af08e17e4939e"
+           role="tabpanel" aria-labelledby="heading-4ef520d6cd20ba4a727af08e17e4939e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/12/" title="JavaScript学习笔记"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">JavaScript学习笔记</span>
+        </a>
+      
+    
+      
+      
+        <a href="/5/" title="不定积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">不定积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/13/" title="中国古代计时单位"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">中国古代计时单位</span>
+        </a>
+      
+    
+      
+      
+        <a href="/6/" title="二重积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">二重积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/9/" title="概率论"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">概率论</span>
+        </a>
+      
+    
+      
+      
+        <a href="/16/" title="物理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">物理</span>
+        </a>
+      
+    
+      
+      
+        <a href="/4/" title="电子电工技术（上册）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">电子电工技术（上册）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/14/" title="运筹学"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">运筹学</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

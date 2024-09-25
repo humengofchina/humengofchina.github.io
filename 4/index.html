@@ -1,0 +1,2445 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Macho Meng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="这是大学二年级下半年，在电子电工技术上册课程学习中的笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电子电工技术（上册）">
+<meta property="og:url" content="https://machomeng.pages.dev/4/index.html">
+<meta property="og:site_name" content="爱发电的猛男妙妙屋">
+<meta property="og:description" content="这是大学二年级下半年，在电子电工技术上册课程学习中的笔记。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://machomeng.pages.dev/images/A/3d0b.jpg">
+<meta property="article:published_time" content="2024-03-11T13:14:21.000Z">
+<meta property="article:modified_time" content="2024-08-20T09:42:37.000Z">
+<meta property="article:author" content="Macho Meng">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="电子电工">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/3d0b.jpg">
+  
+  
+  
+  <title>电子电工技术（上册） - 爱发电的猛男妙妙屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"machomeng.pages.dev","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":false,"placement":"left","headingSelector":"h1,h2,h3,h4,h5","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>爱发电的猛男妙妙屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/web/" target="_self">
+                
+                <span>常用网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/browser/" target="_self">
+                
+                <span>收藏网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/informalessay/" target="_self">
+                
+                <span>随笔</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="电子电工技术（上册）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Macho Meng
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-11 21:14" pubdate>
+          2024年3月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          144 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">电子电工技术（上册）</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年8月20日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>【MachoMeng：由于服务器在国外，加载可能会有些缓慢，请耐心等待】</p>
+<p>如内容有误，欢迎在微信公众号【爱发电的猛男妙妙屋】私信指正！</p>
+<p>电工电子技术课件获取方式：微信公众号发送【电工电子技术课件】获取阿里云盘链接。</p>
+<figure>
+<img src="../../images//扫码_搜索联合传播样式-标准色版.png" srcset="/img/loading.gif" lazyload alt="微信公众号">
+<figcaption aria-hidden="true">微信公众号</figcaption>
+</figure>
+<h4><span id="目录默认关闭点击展开">目录（默认关闭，点击展开）：</span></h4>
+<h4><span id="展开目录找的更快">展开目录找的更快</span></h4>
+<details>
+<summary>
+点击展开目录
+</summary>
+<!-- toc -->
+<ul>
+<li><a href="#2024-03-04">2024-03-04</a>
+<ul>
+<li><a href="#第一章-电路的基本概念与基本定律">第一章、电路的基本概念与基本定律</a>
+<ul>
+<li><a href="#11电路的作用与组成部分">1.1电路的作用与组成部分</a></li>
+<li><a href="#12电路模型">1.2电路模型</a></li>
+<li><a href="#13电压和电流的参考方向">1.3电压和电流的参考方向</a></li>
+<li><a href="#14欧姆定律">1.4欧姆定律</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-03-05">2024-03-05</a>
+<ul>
+<li><a href="#15电源的有载工作-开路与短路">1.5电源的有载工作、开路与短路</a></li>
+<li><a href="#17电路中电位的概念以及计算">1.7电路中电位的概念以及计算</a></li>
+<li><a href="#第二章-电路的分析方法">第二章、电路的分析方法</a>
+<ul>
+<li><a href="#21电路的串并联的等效变换">2.1电路的串并联的等效变换</a></li>
+<li><a href="#附加改装电表公式">附加改装电表公式:</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-03-07">2024-03-07</a>
+<ul>
+<li><a href="#22电阻星形联结与三角形联结的等效变换">2.2电阻星形联结与三角形联结的等效变换</a></li>
+<li><a href="#23电源的两种模型及其等效变换">2.3电源的两种模型及其等效变换</a></li>
+</ul></li>
+<li><a href="#2024-03-11">2024-03-11</a>
+<ul>
+<li><a href="#16基尔霍夫定律">1.6基尔霍夫定律</a>
+<ul>
+<li><a href="#基尔霍夫电流定律">基尔霍夫电流定律：</a></li>
+<li><a href="#基尔霍夫电压定律">基尔霍夫电压定律：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-03-12">2024-03-12</a>
+<ul>
+<li><a href="#24支路电流法">2.4支路电流法：</a></li>
+</ul></li>
+<li><a href="#2024-03-14">2024-03-14</a>
+<ul>
+<li><a href="#25节点电压法">2.5节点电压法：</a>
+<ul>
+<li><a href="#节点电压法推到思路">节点电压法推到思路：</a>
+<ul>
+<li><a href="#自电导">自电导：</a></li>
+<li><a href="#互电导">互电导：</a></li>
+<li><a href="#运用">运用：</a></li>
+</ul></li>
+<li><a href="#弥尔曼定理">弥尔曼定理：</a>
+<ul>
+<li><a href="#上课遗留的问题">上课遗留的问题：</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-03-18">2024-03-18</a>
+<ul>
+<li><a href="#实验一基本电工仪表的使用及测量误差的计算">实验一：基本电工仪表的使用及测量误差的计算</a></li>
+</ul></li>
+<li><a href="#2024-03-21就只记录了一些数据">2024-03-21（就只记录了一些数据）</a>
+<ul>
+<li><a href="#实验二电压源与电流源的等效变换">实验二：电压源与电流源的等效变换</a></li>
+</ul></li>
+<li><a href="#2024-03-26">2024-03-26</a>
+<ul>
+<li><a href="#26叠加原理">2.6叠加原理：</a></li>
+</ul></li>
+<li><a href="#2024-03-28">2024-03-28</a>
+<ul>
+<li><a href="#27戴维宁定理与诺顿定理">2.7戴维宁定理与诺顿定理</a></li>
+<li><a href="#28最大输出功率">2.8最大输出功率</a></li>
+</ul></li>
+<li><a href="#第一次完成的作业">第一次完成的作业：</a></li>
+<li><a href="#2024-04-02">2024-04-02</a>
+<ul>
+<li><a href="#31电容原件">3.1电容原件</a></li>
+<li><a href="#32电感元件">3.2电感元件</a></li>
+<li><a href="#电阻和电容和电感三者的类比">电阻和电容和电感三者的类比</a></li>
+</ul></li>
+<li><a href="#2024-04-08补课">2024-04-08（补课）</a>
+<ul>
+<li><a href="#33电路暂态过程与换路定则">3.3电路暂态过程与换路定则</a></li>
+<li><a href="#34-rc电路的响应">3.4 RC电路的响应</a>
+<ul>
+<li><a href="#零输入响应">零输入响应：</a></li>
+<li><a href="#时间常数">时间常数：</a></li>
+<li><a href="#零状态响应">零状态响应：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-04-09">2024-04-09</a>
+<ul>
+<li><a href="#34-rc电路的响应续上">3.4 RC电路的响应(续上)</a>
+<ul>
+<li><a href="#全响应">全响应：</a></li>
+</ul></li>
+<li><a href="#35-rl电路的响应">3.5 RL电路的响应</a>
+<ul>
+<li><a href="#零输入响应-1">零输入响应：</a></li>
+<li><a href="#时间常数-1">时间常数：</a></li>
+<li><a href="#零状态响应-1">零状态响应：</a></li>
+<li><a href="#全响应-1">全响应：</a></li>
+</ul></li>
+<li><a href="#综合电容和电感电路响应">综合电容和电感电路响应</a>
+<ul>
+<li><a href="#三要素法求解">三要素法求解：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2024-04-11">2024-04-11</a>
+<ul>
+<li><a href="#41正弦交流电路分析">4.1正弦交流电路分析</a></li>
+<li><a href="#421电阻元件的交流电路">4.2.1电阻元件的交流电路</a></li>
+<li><a href="#422电感元件的交流电路">4.2.2电感元件的交流电路</a></li>
+<li><a href="#423电容元件的交流电路">4.2.3电容元件的交流电路</a></li>
+<li><a href="#42电阻-电感与电容元件串联的交流电路">4.2电阻、电感与电容元件串联的交流电路</a></li>
+</ul></li>
+<li><a href="#2024-04-16">2024-04-16</a>
+<ul>
+<li><a href="#43正弦稳态电路分析的相量法">4.3正弦稳态电路分析的相量法</a></li>
+<li><a href="#44阻抗的串联和并联">4.4阻抗的串联和并联</a></li>
+<li><a href="#45一般正弦交流电路解题思路">4.5一般正弦交流电路解题思路</a></li>
+</ul></li>
+<li><a href="#2024-04-18">2024-04-18</a>
+<ul>
+<li><a href="#实验五rc一阶电路的响应测试">实验五：RC一阶电路的响应测试</a></li>
+</ul></li>
+<li><a href="#2024-04-23">2024-04-23</a>
+<ul>
+<li><a href="#相量表示法">相量表示法：</a></li>
+</ul></li>
+<li><a href="#2024-04-27">2024-04-27</a>
+<ul>
+<li><a href="#46正弦稳态电路的电功率">4.6正弦稳态电路的电功率</a></li>
+<li><a href="#47功率因数的提高与最大传输功率">4.7功率因数的提高与最大传输功率</a></li>
+</ul></li>
+<li><a href="#2024-04-28">2024-04-28</a>
+<ul>
+<li><a href="#51三相电力系统介绍">5.1三相电力系统介绍</a></li>
+<li><a href="#52三相电源的连接方式">5.2三相电源的连接方式</a></li>
+<li><a href="#53三相负载的连接方式">5.3三相负载的连接方式</a></li>
+</ul></li>
+<li><a href="#2024-05-06补课">2024-05-06（补课）</a>
+<ul>
+<li><a href="#54三相电路的计算">5.4三相电路的计算</a></li>
+</ul></li>
+<li><a href="#2024-05-07">2024-05-07</a>
+<ul>
+<li><a href="#55三相电路的功率及测量">5.5三相电路的功率及测量</a></li>
+</ul></li>
+<li><a href="#第二次完成的作业">第二次完成的作业：</a></li>
+<li><a href="#2024-05-07电工电子技术上册完结">2024-05-07电工电子技术上册完结！</a></li>
+</ul>
+<!-- tocstop -->
+</details>
+<h2><span id="2024-03-04">2024-03-04</span></h2>
+<h3><span id="第一章-电路的基本概念与基本定律">第一章、电路的基本概念与基本定律</span></h3>
+<h4><span id="11电路的作用与组成部分">1.1电路的作用与组成部分</span></h4>
+<p>电路的电流的通路，作用是实现电能的传输和转换、另一种作用是传递和处理信号。</p>
+<p>激励：电源或信号源的电压或电流，也称为输入。</p>
+<p>响应： 由激励在电路各部分产生的电压和电流，也称为输出。</p>
+<h4><span id="12电路模型">1.2电路模型</span></h4>
+<p>理想电路元件：电阻元件、电感元件、电容元件、电源器件等 电能：
+（单位：J
+焦耳，表示1w的用电设备在1s内消耗的电能）（1度电=1kW·h=3.6MJ兆焦耳）
+<span class="math display">\[
+W=\int^{q_1}_{q_0}{Udq}=\int^{t_1}_{t_0}{u(t)i(t)dt}
+\]</span></p>
+<p>电功率：单位 J 焦耳</p>
+<p><span class="math display">\[
+P=UI=\frac{1}{T}\int^{T}_{0}{pdt}=\frac{1}{T}\int^{T}_{0}{uidt}
+\]</span> 色环电阻：</p>
+<figure>
+<img src="../../images/电工电子技术上/1.png" srcset="/img/loading.gif" lazyload alt="色环电阻色环色标法">
+<figcaption aria-hidden="true">色环电阻色环色标法</figcaption>
+</figure>
+<h4><span id="13电压和电流的参考方向">1.3电压和电流的参考方向</span></h4>
+<p>电流的实际方向：正电荷运动的方向（负电荷运动的反方向）</p>
+<p>参考方向：可以任意选定方向，选定的方向称为参考方向或者正方向</p>
+<p>​ 则当电流实际方向与参考方向一致时，为正值。反之为负值</p>
+<p><strong>电源电压的方向和电源电动势方向恰好相反</strong></p>
+<h4><span id="14欧姆定律">1.4欧姆定律</span></h4>
+<p><span class="math display">\[
+\frac{U}{I}=R
+\]</span>
+当电路两端电压为1V（伏特）时，通过的电流为1A（安培）时，则该电路的的电阻为1
+Ω（欧姆）</p>
+<p>当电压和电流的参考方向一致时：U = R I 当电压和电流的参考方向相反时: U
+= -R I</p>
+<h2><span id="2024-03-05">2024-03-05</span></h2>
+<h4><span id="15电源的有载工作-开路与短路">1.5电源的有载工作、开路与短路</span></h4>
+<p>当电源外部总电阻远远大于电源内阻时： <span class="math display">\[
+U  ≈ E  （即路端电压约等于电源电动势）
+\]</span> 功率与功率平衡:</p>
+<p>功率是1秒内转化1焦耳的能量,此时功率为1瓦特</p>
+<p>功率平衡</p>
+<p>电源产生的功率= 负载取用的功率 + 内阻上消耗的功率<br>
+<span class="math display">\[
+UI = EI -R_0I^2(R_0为电源内阻,此式P_输 = P_总-P_内)
+\]</span> 电源与负载的判别:</p>
+<p><code>功率大于0是负载</code></p>
+<p><code>功率小于0是电源</code></p>
+<h4><span id="17电路中电位的概念以及计算">1.7电路中电位的概念以及计算</span></h4>
+<p>参考电位：任意设定（一般有接地符号的默认为参考电位）</p>
+<p>参考电位的值为零</p>
+<p>单个点的电位是一个相对量，但是两个点的电位差值是一个绝对量</p>
+<h3><span id="第二章-电路的分析方法">第二章、电路的分析方法</span></h3>
+<h4><span id="21电路的串并联的等效变换">2.1电路的串并联的等效变换</span></h4>
+<p>等效变换:</p>
+<p>串联的电阻多合一 <span class="math display">\[
+R_总 = R_1+R_2+R_3+\cdots
+\]</span> 并联的电阻多合一 <span class="math display">\[
+\frac{1}{R_总}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\cdots
+\]</span></p>
+<p><span class="math display">\[
+或者G = G_1+G_2+G_3+.....(G为电导,且G = \frac{1}{R})
+\]</span></p>
+<h4><span id="附加改装电表公式">附加改装电表公式:</span></h4>
+<p><span class="math display">\[
+R_串 = (n-1)R_g (其中n=\frac{U_改}{U_g} 即扩大倍数)
+\]</span></p>
+<p><span class="math display">\[
+R_并=\frac{U_g}{n-1} (其中n=\frac{I_改}{I_g} )
+\]</span></p>
+<h2><span id="2024-03-07">2024-03-07</span></h2>
+<h4><span id="22电阻星形联结与三角形联结的等效变换">2.2电阻星形联结与三角形联结的等效变换</span></h4>
+<p>这个总的来说就是记住公式并且理解</p>
+<p>星形—&gt;三角形:：（关键词：分子组合积的和不变 、分母不相关) <span class="math display">\[
+R_{ab}=\frac{R_aR_b+R_aR_c+R_bR_c}{R_c}(其他R_{bc}和R_{ac}同理)
+\]</span> 三角形—&gt;星形：（关键词：分母和不变、分子相关组合积） <span class="math display">\[
+R_{a}=\frac{R_{ab}+R_{ac}}{R_{ab}+R_{ac}+R_{bc}}(其他R_{b}和R_{c}同理)
+\]</span></p>
+<h4><span id="23电源的两种模型及其等效变换">2.3电源的两种模型及其等效变换</span></h4>
+<p>电压源模型：(理想情况，内阻为零；即实际情况内阻越小越好)</p>
+<p>当内阻R =0时，U = E 是固定值，电流取决于负载电阻和电压</p>
+<figure>
+<img src="../../images/电工电子技术上/2.jpg" srcset="/img/loading.gif" lazyload alt="电压源和理想电压源的外特性曲线">
+<figcaption aria-hidden="true">电压源和理想电压源的外特性曲线</figcaption>
+</figure>
+<p>电流源模型：（理想情况：内阻无穷大；即实际情况内阻远大于负载电阻越好）</p>
+<p>当内阻R = 无穷大 时，电流是固定值，电压取决于负载电阻和电流</p>
+<p><strong>两种模型的等效变换：</strong></p>
+<p>电压源转变为电流源： <span class="math display">\[
+I_流=\frac{U_压}{R_压}
+\]</span></p>
+<p><span class="math display">\[
+R_流=R_压
+\]</span></p>
+<p>电流源转变为电压源： <span class="math display">\[
+U_压=I_流R_流
+\]</span></p>
+<p><span class="math display">\[
+R_压=R_流
+\]</span></p>
+<p>上式如下图所示：</p>
+<figure>
+<img src="../../images/电工电子技术上/cAwHIXJY.png" srcset="/img/loading.gif" lazyload alt="两种模型的等效变换">
+<figcaption aria-hidden="true">两种模型的等效变换</figcaption>
+</figure>
+<h2><span id="2024-03-11">2024-03-11</span></h2>
+<h4><span id="16基尔霍夫定律">1.6基尔霍夫定律</span></h4>
+<p>节点、支路、回路、网孔</p>
+<h5><span id="基尔霍夫电流定律">基尔霍夫电流定律：</span></h5>
+<p>KCL：任一瞬时，对电路中的任一节点，流入节点的电流之和等于流出该节点的电流之和。</p>
+<p>在任意一时刻，流入某一节点的电流之和等于由该节点流出的电流之和</p>
+<p>在任意一时刻，一个节点上的电流代数和恒等于零</p>
+<h5><span id="基尔霍夫电压定律">基尔霍夫电压定律：</span></h5>
+<p>KVL：在任一时刻，对于电路中的任一回路，按一定方向沿着回路绕行一周，回路中所有支路电压或元件电压的代数和为<strong>0</strong></p>
+<p>在任意一时刻，从回路的一点出发，任意方向绕行一周，则在绕行方向上的电位降之和等于电位升之和</p>
+<p>在任意一时刻，沿着任意回路绕行方向，回路中各段电压的代数和恒为零</p>
+<p>存在等效回路情况</p>
+<h2><span id="2024-03-12">2024-03-12</span></h2>
+<p>今天才写博客，前面的日期内容基本上都是回忆+课本</p>
+<h4><span id="24支路电流法">2.4支路电流法：</span></h4>
+<p>当电路图中有n个节点，b条支路时，则有n-1个独立电流方程，b-(n-1)个（或者网孔数个）电压方程</p>
+<p>注意：节点的判断</p>
+<p>课程最后解一个五元一次方程组没有解出来，用矩阵解会比较简便一些。</p>
+<h2><span id="2024-03-14">2024-03-14</span></h2>
+<p>今天成功找老师要到了课件，对该日期之前的进行补充完善。</p>
+<h4><span id="25节点电压法">2.5节点电压法：</span></h4>
+<p><strong>当电路中出现支路较多，节点较少的情况</strong>，运用支路电流法求解方程就很麻烦了</p>
+<p>故上述情况应该运用节点电压法</p>
+<h5><span id="节点电压法推到思路">节点电压法推到思路：</span></h5>
+<p>先判断节点个数，选定参考节点。</p>
+<p>列出n-1个节点电流方程</p>
+<p>再用该节点相对于参考节点的电压方程表示出每一个支路电流I</p>
+<p>再将表示出的电流I代入n-1个电流方程中。整理归纳得出以下的概念：</p>
+<p>注意：节点电压的参考方向为独立节点指向参考节点。</p>
+<h6><span id="自电导">自电导：</span></h6>
+<p>该节点所相关的每一个支路的电阻倒数之和（或者电导之和）</p>
+<h6><span id="互电导">互电导：</span></h6>
+<p>该节点和另外一个节点的所在支路上的电阻倒数的负数（可简单记忆“负电导”）</p>
+<h6><span id="运用">运用：</span></h6>
+<p><span class="math display">\[
+(自电导)U+(互电导)U=恒压恒流源
+\]</span></p>
+<figure>
+<img src="../../images/电工电子技术上/PbwVAOVi.png" srcset="/img/loading.gif" lazyload alt="怎么运用自电导和互电导">
+<figcaption aria-hidden="true">怎么运用自电导和互电导</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/wMlqQfF0.png" srcset="/img/loading.gif" lazyload alt="推广">
+<figcaption aria-hidden="true">推广</figcaption>
+</figure>
+<h5><span id="弥尔曼定理">弥尔曼定理：</span></h5>
+<p><span class="math display">\[
+U_a=\frac{恒流恒压电流和}{非恒流源电导和（此项含有恒压源支路）}
+\]</span></p>
+<p>理解上式可参考下图：</p>
+<figure>
+<img src="../../images/电工电子技术上/8vmK8XPf.png" srcset="/img/loading.gif" lazyload alt="通过等效变化证明弥尔曼定理">
+<figcaption aria-hidden="true">通过等效变化证明弥尔曼定理</figcaption>
+</figure>
+<h6><span id="上课遗留的问题">上课遗留的问题：</span></h6>
+<figure>
+<img src="../../images/电工电子技术上/RJRbrxDn.jpg" srcset="/img/loading.gif" lazyload alt="关于列式子的细节问题">
+<figcaption aria-hidden="true">关于列式子的细节问题</figcaption>
+</figure>
+<h2><span id="2024-03-18">2024-03-18</span></h2>
+<h4><span id="实验一基本电工仪表的使用及测量误差的计算">实验一：基本电工仪表的使用及测量误差的计算</span></h4>
+<p>绝对误差即测量值与真实值之差的绝对值，公式为： <span class="math display">\[
+绝对误差= | 示值 - 标准值 |
+\]</span> 相对误差即绝对误差所占真实值的百分比，公式为： <span class="math display">\[
+相对误差=(\frac{| 示值 - 标准值 |}{真实值}）*100\%
+\]</span> 万用表：</p>
+<figure>
+<img src="../../images/电工电子技术上/RVyDX7Uc.jpg" srcset="/img/loading.gif" lazyload alt="万用表">
+<figcaption aria-hidden="true">万用表</figcaption>
+</figure>
+<p>实验电路图：</p>
+<figure>
+<img src="../../images/电工电子技术上/K3YHDHtf.png" srcset="/img/loading.gif" lazyload alt="实验电路图">
+<figcaption aria-hidden="true">实验电路图</figcaption>
+</figure>
+<p>测电压：</p>
+<figure>
+<img src="../../images/电工电子技术上/klkn3hzr.png" srcset="/img/loading.gif" lazyload alt="测量各支路电压">
+<figcaption aria-hidden="true">测量各支路电压</figcaption>
+</figure>
+<p>测电流：</p>
+<figure>
+<img src="../../images/电工电子技术上/9y7ubH19.png" srcset="/img/loading.gif" lazyload alt="测各支路电流">
+<figcaption aria-hidden="true">测各支路电流</figcaption>
+</figure>
+<p>测量结果：（数据是我乱写的）</p>
+<table>
+
+<thead>
+<tr>
+<th style="text-align: center;">测量电阻</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">测量直流电压</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">测量交流电压</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">标称值</td>
+<td style="text-align: center;">量程</td>
+<td style="text-align: center;">测量值</td>
+<td style="text-align: center;">标称值</td>
+<td style="text-align: center;">量程</td>
+<td style="text-align: center;">测量值</td>
+<td style="text-align: center;">标称值</td>
+<td style="text-align: center;">量程</td>
+<td style="text-align: center;">测量值</td>
+</tr>
+<tr>
+<td style="text-align: center;">30Ω</td>
+<td style="text-align: center;">200Ω</td>
+<td style="text-align: center;">29Ω</td>
+<td style="text-align: center;">0.2V</td>
+<td style="text-align: center;">20v</td>
+<td style="text-align: center;">0.19v</td>
+<td style="text-align: center;">220V</td>
+<td style="text-align: center;">1000v</td>
+<td style="text-align: center;">222V</td>
+</tr>
+<tr>
+<td style="text-align: center;">1kΩ</td>
+<td style="text-align: center;">2kΩ</td>
+<td style="text-align: center;">1002Ω</td>
+<td style="text-align: center;">3V</td>
+<td style="text-align: center;">20v</td>
+<td style="text-align: center;">3.2v</td>
+<td style="text-align: center;">380V</td>
+<td style="text-align: center;">1000v</td>
+<td style="text-align: center;">384V</td>
+</tr>
+<tr>
+<td style="text-align: center;">10kΩ</td>
+<td style="text-align: center;">200kΩ</td>
+<td style="text-align: center;">10005 Ω</td>
+<td style="text-align: center;">20V</td>
+<td style="text-align: center;">200v</td>
+<td style="text-align: center;">20.5V</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>数据：（下面的数据也是我编写的，差不多可以用）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">U12</th>
+<th style="text-align: center;">U3</th>
+<th style="text-align: center;">I1</th>
+<th style="text-align: center;">I2</th>
+<th style="text-align: center;">I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">理论值</td>
+<td style="text-align: center;">10V</td>
+<td style="text-align: center;">2V</td>
+<td style="text-align: center;">0.01A</td>
+<td style="text-align: center;">0.01A</td>
+<td style="text-align: center;">0.02A</td>
+</tr>
+<tr>
+<td style="text-align: center;">实测值</td>
+<td style="text-align: center;">9.9V</td>
+<td style="text-align: center;">1.9V</td>
+<td style="text-align: center;">9.7mA</td>
+<td style="text-align: center;">9.7mA</td>
+<td style="text-align: center;">19.4mA</td>
+</tr>
+<tr>
+<td style="text-align: center;">绝对误差</td>
+<td style="text-align: center;">0.1V</td>
+<td style="text-align: center;">0.1V</td>
+<td style="text-align: center;">0.3mA</td>
+<td style="text-align: center;">0.3mA</td>
+<td style="text-align: center;">0.6mA</td>
+</tr>
+<tr>
+<td style="text-align: center;">相对误差</td>
+<td style="text-align: center;">1%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">3%</td>
+<td style="text-align: center;">3%</td>
+<td style="text-align: center;">3%</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="2024-03-21就只记录了一些数据">2024-03-21（就只记录了一些数据）</span></h2>
+<h4><span id="实验二电压源与电流源的等效变换">实验二：电压源与电流源的等效变换</span></h4>
+<p>1.测定直流稳压电源与实际电压源的外特性</p>
+<p>(1)按图1接线。Us为＋12V直流稳压电源（将R0短接）。调节R2，令其阻值由大至小变化，记录两表的读数。</p>
+<figure>
+<img src="../../images/电工电子技术上/uLcCAq8l.png" srcset="/img/loading.gif" lazyload alt="图1">
+<figcaption aria-hidden="true">图1</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/F6w9DvM9.jpg" srcset="/img/loading.gif" lazyload alt="图一实物图">
+<figcaption aria-hidden="true">图一实物图</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">R2（Ω）</th>
+<th style="text-align: center;">1k</th>
+<th style="text-align: center;">410</th>
+<th style="text-align: center;">350</th>
+<th style="text-align: center;">180</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">U（V）</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">I（mA）</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">60</td>
+</tr>
+</tbody>
+</table>
+<p>2.按图2接线，虚线框可模拟为一个实际的电压源。调节R2，令其阻值由大至小变化，记录两表的读数。</p>
+<figure>
+<img src="../../images/电工电子技术上/MWE7C1XA.png" srcset="/img/loading.gif" lazyload alt="图2">
+<figcaption aria-hidden="true">图2</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>R2（Ω）</th>
+<th>550</th>
+<th>520</th>
+<th>340</th>
+<th>99</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U（V）</td>
+<td>11.7</td>
+<td>11.34</td>
+<td>11.1</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>I（mA）</td>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<p>没有实物图，忘记拍了，反正线乱的也看不清楚</p>
+<p>3.测定电流源的外特性
+按图3接线，Is为直流恒流源，调节其输出为10mA，令Ro分别为1KΩ和∞（即接入和断开），调节电位器RL（从0至1KΩ），测出这两种情况下的电压表和电流表的读数。自拟数据表格，记录实验数据。</p>
+<figure>
+<img src="../../images/电工电子技术上/E1l7Lk25.png" srcset="/img/loading.gif" lazyload alt="图3">
+<figcaption aria-hidden="true">图3</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>U（V）</th>
+<th>0.547</th>
+<th>0.528</th>
+<th>0.510</th>
+<th>0.488</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I（A）</td>
+<td>2.6</td>
+<td>2.9</td>
+<td>3.2</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>IS（mA）</td>
+<td>7.25</td>
+<td>6.8</td>
+<td>6.5</td>
+<td>6.2</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="2024-03-26">2024-03-26</span></h2>
+<h4><span id="26叠加原理">2.6叠加原理：</span></h4>
+<p>对于含有多个电源的电路。先讨论一个电源，另外的理想电压源看成短路（就是一根导线）理想电流源看成断路（也叫开路）。</p>
+<p>然后用同样的方法再讨论另一个，最后根据方向把各个该加加该减减，该分配分配按照电路图计算。</p>
+<p><strong>注意：</strong></p>
+<figure>
+<img src="../../images/电工电子技术上/K6hMAD8o.png" srcset="/img/loading.gif" lazyload alt="叠加原理的注意事项">
+<figcaption aria-hidden="true">叠加原理的注意事项</figcaption>
+</figure>
+<p>千言万语不及一道例题：（其实就是很简单的分配问题）</p>
+<figure>
+<img src="../../images/电工电子技术上/EVxfYQgF.png" srcset="/img/loading.gif" lazyload alt="例题">
+<figcaption aria-hidden="true">例题</figcaption>
+</figure>
+<h2><span id="2024-03-28">2024-03-28</span></h2>
+<p>今天有个老师听课欸</p>
+<h4><span id="27戴维宁定理与诺顿定理">2.7戴维宁定理与诺顿定理</span></h4>
+<p>戴维宁定理：简单来说就是把待求解的那个支路去掉，剩下的就是一个等效电源（有内阻）然后求解等效电源的等效路端电压，再进一步求解该支路的其他物理量。</p>
+<p>诺顿定理：和戴维宁定理类似，但是等效电源内部是恒流源并联一个内阻。（戴维宁定理等效电源内部是恒压源串联一个内阻）。</p>
+<p>无论是戴维宁定理还是诺顿定理，都是要保证待求解支路端电压和电流和之前保持一致。</p>
+<p><strong>有源二端网络和无源二端网路</strong>：</p>
+<p>顾名思义，有源就是含有电压源或者电流源，无源就是不含有电压源和电流源。</p>
+<p>二端网络就是含有二个出线端（通俗点：线头）的部分电路（补充：二端网络也被称为<strong>单口网络</strong>或<strong>一端口网络</strong>。区别于二端口网络（四个端钮））</p>
+<p><strong>等效的电源</strong>：</p>
+<p>电压源+内阻：电压就是有源二端网络的开路电压（tips：开路就是断路，说法不一样罢了）。内阻是去掉电压源及电流源的总内阻）。</p>
+<p>电流源+内阻：电流就是待求解支路的电流，内阻是去掉电压源及电流源的总内阻。</p>
+<h4><span id="28最大输出功率">2.8最大输出功率</span></h4>
+<p>电源（等效电源）的最大输出功率取决于负载的总电阻，若负载的总电阻等于电源（等效电源）的内阻时，此时电源的输出功率最大。</p>
+<figure>
+<img src="../../images/电工电子技术上/tTSiOf11.png" srcset="/img/loading.gif" lazyload alt="最大输出功率">
+<figcaption aria-hidden="true">最大输出功率</figcaption>
+</figure>
+<h2><span id="第一次完成的作业">第一次完成的作业：</span></h2>
+<figure>
+<img src="../../images/电工电子技术上/JjgY5LDA.jpg" srcset="/img/loading.gif" lazyload alt="电工作业1">
+<figcaption aria-hidden="true">电工作业1</figcaption>
+</figure>
+<p>上图【电工作业1】最下方的5.8V应该是负号，此处没有改】</p>
+<figure>
+<img src="../../images/电工电子技术上/UzG8nuH0.jpg" srcset="/img/loading.gif" lazyload alt="电工作业2">
+<figcaption aria-hidden="true">电工作业2</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/4OqeUtaz.jpg" srcset="/img/loading.gif" lazyload alt="电工作业3">
+<figcaption aria-hidden="true">电工作业3</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/uaHSRS8F.jpg" srcset="/img/loading.gif" lazyload alt="电工作业4">
+<figcaption aria-hidden="true">电工作业4</figcaption>
+</figure>
+<h2><span id="2024-04-02">2024-04-02</span></h2>
+<p>任何应该集总电路不是电阻电路，便是动态电路（至少含有一个动态元件）。</p>
+<p>动态元件：电压电流关系都涉及对电路电压电流的微分和积分的元件。（电容、电感）。</p>
+<h4><span id="31电容原件">3.1电容原件</span></h4>
+<p>是一种存储电场能的元件（通交流，隔直流）</p>
+<p>经典公式：</p>
+<p><span class="math display">\[
+q=Cu
+\]</span></p>
+<p><span class="math display">\[
+其中C为电容，单位为F(法拉)，1F=10^6μF=10^{12}pF
+\]</span></p>
+<p>平板电容器： <span class="math display">\[
+C=\frac{εA}{d}=\frac{介电常数(F/m)×极板面积(m^2)}{板件距离(m)}
+\]</span> 若上式C为常数，则为线性电容，否则为非线性电容</p>
+<p>伏安关系： <span class="math display">\[
+i=\frac{dq}{dt}=C\frac{du}{dt}
+\]</span> 正负由u和i决定（u和i方向一致为正，反之为负）</p>
+<p>对于直流电来说，电容相对于断路。</p>
+<p>能量关系： <span class="math display">\[
+瞬时功率p(t)=u(t)i(t)=Cu(t)\frac{du(t)}{dt}
+\]</span>
+当u(t)为正值，且有增大的趋势时，p(t)&gt;0，表明电容吸收能量，电能以电场能储存在电容中</p>
+<p>当u(t)为正值，且有减小的趋势时，p(t)&lt;0，说明电容将储存在其中的电场能提供给电路</p>
+<p>故电容是一种储能元件。</p>
+<p>电场能： <span class="math display">\[
+由i=C\frac{du}{dt}两边同时乘上u，并积分后
+\]</span></p>
+<p><span class="math display">\[
+得:\int^{t}_{0}uidt=\int^{u}_{0}Cudu=\frac{1}{2}Cu^2=W(电场能)
+\]</span></p>
+<p><strong>电容的串并联：</strong></p>
+<p><strong>一句话：电容的串并联和电阻的串并联刚好相反。</strong></p>
+<h4><span id="32电感元件">3.2电感元件</span></h4>
+<p>是一种由线圈组成存储磁场能量的元件（通低频，阻高频）</p>
+<p>经典公式： <span class="math display">\[
+单匝时:Φ=BS=磁感应强度×垂直于B的面积
+\]</span></p>
+<p><span class="math display">\[
+N匝数时:Ψ=NΦ（这个叫磁链）
+\]</span></p>
+<p>电感元件的特征方程： <span class="math display">\[
+Ψ=NΦ=Li
+\]</span></p>
+<p><span class="math display">\[
+L=\frac{Ψ}{i}=\frac{NΦ}{i}
+\]</span></p>
+<p><span class="math display">\[
+其中L为电感(自感)，单位(H亨利)(mH)(μH)，磁通量Φ为Wb
+\]</span></p>
+<p>电感公式： <span class="math display">\[
+L=\frac{μN^2S}{l}=\frac{(磁导率)(匝数)^2(线圈横截面积)}{线圈纵向长度}
+\]</span> 伏安关系：</p>
+<p>感生电动势e的大小正比于磁通的变化率</p>
+<p>由楞次定律（ 感应电动势e的方向总是力图阻碍原来磁通的变化）得： <span class="math display">\[
+u=-e=L\frac{di}{dt}
+\]</span> 电感电压的大小与电流的变化率成正比，与电感量的大小成正比。</p>
+<p>电感元件属于动态元件。对于直流电来说，相当于短路。</p>
+<p>呃呃呃呃。。。。这个是方向吧，（体会一下吧）</p>
+<figure>
+<img src="../../images/电工电子技术上/aav4xDLx.png" srcset="/img/loading.gif" lazyload alt="我感觉这个是最有价值的">
+<figcaption aria-hidden="true">我感觉这个是最有价值的</figcaption>
+</figure>
+<p>能量关系： <span class="math display">\[
+瞬时功率P(t)=u(t)i(t)=Li(t)\frac{di(t)}{dt}
+\]</span>
+当i(t)为正值，且有增大的趋势时，p(t)&gt;0，表明电感吸收能量，电能以磁场能储存在电感中</p>
+<p>当i(t)为正值，且有减小的趋势时，p(t)&lt;0，说明电感将储存在其中的磁场能提供给电路</p>
+<p>电感是一种储能元件</p>
+<p>磁场能： <span class="math display">\[
+由u.=-e_L=L\frac{di}{dt}两边同时乘上i，积分后
+\]</span></p>
+<p><span class="math display">\[
+得:\int^{t}_{0}uidt=\int^{t}_{0}Lidi=\frac{1}{2}Li^2=W(磁场能)
+\]</span></p>
+<p><strong>电感的串并联：</strong></p>
+<p><strong>一句话：电感的串并联和电阻的串并联一模一样。</strong></p>
+<h4><span id="电阻和电容和电感三者的类比">电阻和电容和电感三者的类比</span></h4>
+<figure>
+<img src="../../images/电工电子技术上/1PRiGOQV.png" srcset="/img/loading.gif" lazyload alt="电阻、电容、电感">
+<figcaption aria-hidden="true">电阻、电容、电感</figcaption>
+</figure>
+<h2><span id="2024-04-08补课">2024-04-08（补课）</span></h2>
+<h4><span id="33电路暂态过程与换路定则">3.3电路暂态过程与换路定则</span></h4>
+<p>电路的稳态和暂态（暂态又称瞬态）：</p>
+<p>稳态：指电路中电流和电压等物理量在给定激励的条件下已达到某一稳定值。</p>
+<p>暂态：电路从一个稳定状态转变到另一个稳定状态需要经历的一个中间过程。</p>
+<p>暂态产生的原因：</p>
+<p>外因：换路</p>
+<p>内因（也是根本原因）：电路中含有储能元件</p>
+<p><strong>换路定则：</strong></p>
+<p>换路前后瞬间，<strong>电感元件中的电流</strong>和<strong>电容元件两端的电压</strong>不能突变的规律，即
+<span class="math display">\[
+i_L(0_+)=i_L(0_-)
+\]</span></p>
+<p><span class="math display">\[
+u_C(0_+)=u_C(0_-)
+\]</span></p>
+<p><span class="math display">\[
+上式中：t=0_-表示换路时刻前瞬间，t=0_+表示换路时刻后瞬间
+\]</span></p>
+<p>电路中的<strong>电感</strong>和<strong>电容</strong>的等效处理：</p>
+<figure>
+<img src="../../images/电工电子技术上/PfeCMMv9.jpg" srcset="/img/loading.gif" lazyload alt="等效处理">
+<figcaption aria-hidden="true">等效处理</figcaption>
+</figure>
+<p>研究暂态过程的意义：</p>
+<ol type="1">
+<li><p>利用电路暂态过程产生特定波形的电信号。如锯齿波、三角波、尖脉冲等，应用于电子电路。</p></li>
+<li><p>控制、预防可能产生的危害。暂态过程开始的瞬间可能产生过电压、过电流使电气设备或元件损坏。</p></li>
+</ol>
+<h4><span id="34-rc电路的响应">3.4 RC电路的响应</span></h4>
+<h5><span id="零输入响应">零输入响应：</span></h5>
+<p>在外界输入为零的情况下，全靠电容的初始储能作为激励所产生的响应。</p>
+<p>实质为RC电路的放电过程</p>
+<p>推导过程：</p>
+<figure>
+<img src="../../images/电工电子技术上/AvuhaVN0.png" srcset="/img/loading.gif" lazyload alt="电容两端电压初始为U">
+<figcaption aria-hidden="true">电容两端电压初始为U</figcaption>
+</figure>
+<p>由基尔霍夫电压方程得： <span class="math display">\[
+u_R+u_c=0
+\]</span> 又由图得电阻R两端电压： <span class="math display">\[
+u_R=iR
+\]</span> 又由经典公式得： <span class="math display">\[
+i=C\frac{du_C}{dt}其实是这个dq=idt和dq=Cdu
+\]</span> 把上面两个式子代入基尔霍夫电压方程得： <span class="math display">\[
+RC\frac{du_c}{dt}+u_c=0
+\]</span> 然后解这个一阶线性齐次微分方程： <span class="math display">\[
+RC\frac{du_c}{dt}+u_c=0\rightarrow u_c=-RC\frac{du_c}{dt}
+\]</span></p>
+<p><span class="math display">\[
+u_c=-RC\frac{du_c}{dt}\rightarrow \frac{1}{u_c}du_c=-\frac{1}{RC}dt
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{u_c}du_c=-\frac{1}{RC}dt \rightarrow
+\ln|u_C|=\int-\frac{1}{RC}dt+C_1
+\]</span></p>
+<p><span class="math display">\[
+|u_C|=e^{\int-\frac{1}{RC}dt+c_1} \rightarrow u_C(t)=Ae^{-\frac{1}{RC}t}
+\]</span></p>
+<p>最后确定A的值：（由换路定则可得） <span class="math display">\[
+u_C(0)=u_C(0_-)=u_C(0_+)=Ae^0=A=U
+\]</span> 故最终得： <span class="math display">\[
+u_C(t)=Ue^{-\frac{1}{RC}t}其中(t\geq0)
+\]</span>
+此式表明：电容电压uC从初始值按指数规律衰减，衰减快慢由RC决定。</p>
+<p>此式相关图像：</p>
+<figure>
+<img src="../../images/电工电子技术上/Kdipe47Z.png" srcset="/img/loading.gif" lazyload alt="红色的是U关于t的图像，蓝色电阻电流，绿色电阻电压">
+<figcaption aria-hidden="true">红色的是U关于t的图像，蓝色电阻电流，绿色电阻电压</figcaption>
+</figure>
+<h5><span id="时间常数">时间常数：</span></h5>
+<p><span class="math display">\[
+τ=RC(单位s，ms)
+\]</span></p>
+<p>时间常数决定电路暂态过程变化的快慢。 <span class="math display">\[
+u_C=Ue^{-\frac{1}{RC}t}=Ue^{-\frac{t}{τ}}
+\]</span> <img src="../../images/电工电子技术上/o2QLuSdD.png" srcset="/img/loading.gif" lazyload alt="时间常数越大，曲线变化越慢，U达到稳态所需要的时间越长"></p>
+<h5><span id="零状态响应">零状态响应：</span></h5>
+<p>在电容的初始能量为零的情况下， 仅由电源激励所产生的电路的响应。</p>
+<p>实质为RC电路的充电过程</p>
+<p>推导过程：</p>
+<figure>
+<img src="../../images/电工电子技术上/Hkh0upQY.png" srcset="/img/loading.gif" lazyload alt="电容两端电压初始为0">
+<figcaption aria-hidden="true">电容两端电压初始为0</figcaption>
+</figure>
+<p>由基尔霍夫电压方程得： <span class="math display">\[
+u_R+u_C=U
+\]</span> 又由图得电阻R两端电压： <span class="math display">\[
+u_R=iR
+\]</span> 又由经典公式得： <span class="math display">\[
+i=C\frac{du_C}{dt}
+\]</span> 把上面两个式子代入基尔霍夫电压方程得： <span class="math display">\[
+RC\frac{du_c}{dt}+u_c=U
+\]</span> 然后解这个一阶线性齐次微分方程：</p>
+<p>方程的通解 =方程的特解 + 对应齐次方程的通解 <span class="math display">\[
+u_C(t)=u^,_C+u^{,,}_C
+\]</span> 注：通解已经在上面零输入响应求出，此处不再赘述，下面是求特解
+<span class="math display">\[
+u^,_C=u_C(\infty)=U
+\]</span> 故通解为： <span class="math display">\[
+u_C=U+Ae^{-\frac{1}{RC}t}
+\]</span> 最后确定A的值：（由换路定则可得） <span class="math display">\[
+u_C(0_-)=u_C(0_+)=0=u_C(0)=U+Ae^0
+\]</span></p>
+<p><span class="math display">\[
+A=-U
+\]</span></p>
+<p>故最终得： <span class="math display">\[
+u_C(t)=U(1-e^{-\frac{t}{τ}})其中(τ=RC)且(t\geq0)
+\]</span> 此式相关图像：</p>
+<figure>
+<img src="../../images/电工电子技术上/cmMpDMgA.png" srcset="/img/loading.gif" lazyload alt="红色的是U关于t的图像，蓝色电阻电压，绿色电阻电流">
+<figcaption aria-hidden="true">红色的是U关于t的图像，蓝色电阻电压，绿色电阻电流</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/hAE0mxFG.png" srcset="/img/loading.gif" lazyload alt="这是通解和特解分开画了">
+<figcaption aria-hidden="true">这是通解和特解分开画了</figcaption>
+</figure>
+<h2><span id="2024-04-09">2024-04-09</span></h2>
+<p>今天的内容接着昨天补课的内容：</p>
+<h4><span id="34-rc电路的响应续上">3.4 RC电路的响应(续上)</span></h4>
+<h5><span id="全响应">全响应：</span></h5>
+<p>电源激励、储能元件的初始能量均不为零时，电路中的响应。 <span class="math display">\[
+u(t)=U+(U_0-U)e^{-\frac{t}{τ}}
+\]</span> <strong>全响应的结论1：</strong></p>
+<figure>
+<img src="../../images/电工电子技术上/1QqEhFvO.png" srcset="/img/loading.gif" lazyload alt="全响应=零输入响应+零状态响应">
+<figcaption aria-hidden="true">全响应=零输入响应+零状态响应</figcaption>
+</figure>
+<p>不想写了，看图片吧：</p>
+<figure>
+<img src="../../images/电工电子技术上/1cY93WLx.png" srcset="/img/loading.gif" lazyload alt="全响应结论1">
+<figcaption aria-hidden="true">全响应结论1</figcaption>
+</figure>
+<p><strong>全响应的结论2：</strong></p>
+<figure>
+<img src="../../images/电工电子技术上/j5zGpBp1.png" srcset="/img/loading.gif" lazyload alt="全响应=稳态分量+瞬态分量">
+<figcaption aria-hidden="true">全响应=稳态分量+瞬态分量</figcaption>
+</figure>
+<h4><span id="35-rl电路的响应">3.5 RL电路的响应</span></h4>
+<p>本节内容和电容的RC电路响应极其类似，分析方法思路也完全一致，故本节推导过程会简写，结论较多。</p>
+<h5><span id="零输入响应">零输入响应：</span></h5>
+<p>仅由电感元件的初始储能所产生的电路的响应。在外界输入为零的情况下，全靠电感的初始储能作为激励所产生的响应
+。</p>
+<p>实质为RL电路的放电过程</p>
+<p>结论公式：(推导过程参照RC电路响应，此处不再赘述) <span class="math display">\[
+i(t)=\frac{U}{R}e^{-\frac{R}{L}t}其中(t\geq0)
+\]</span></p>
+<h5><span id="时间常数">时间常数：</span></h5>
+<p><span class="math display">\[
+τ=\frac{L}{R}(单位s，ms)
+\]</span></p>
+<p>与RC电路一样，时间常数决定电路暂态过程变化的快慢。即结论公式可为：
+<span class="math display">\[
+i(t)=\frac{U}{R}e^{-\frac{t}{τ}}其中(t\geq0)
+\]</span></p>
+<h5><span id="零状态响应">零状态响应：</span></h5>
+<p>储能元件的初始能量为零，仅由电源激励所产生的电路的响应。</p>
+<p>实质为RL电路的充电过程</p>
+<p>结论公式： <span class="math display">\[
+i(t)=\frac{U}{R}(1-e^{-\frac{t}{τ}})其中(τ=\frac{L}{R})且(t\geq0)
+\]</span></p>
+<h5><span id="全响应">全响应：</span></h5>
+<p>电源激励、储能元件的初始能量均不为零时，电路中的响应。 <span class="math display">\[
+i(t)=\frac{U}{R}+(\frac{U_0}{R}-\frac{U}{R})e^{-\frac{t}{τ}}
+\]</span></p>
+<h4><span id="综合电容和电感电路响应">综合电容和电感电路响应</span></h4>
+<p><span class="math display">\[
+f(t)=f(\infty)+[f(0_+)-f(\infty)]e^{-\frac{t}{τ}}
+\]</span></p>
+<h5><span id="三要素法求解">三要素法求解：</span></h5>
+<p>一阶电路：仅含一个储能元件或可等效为一个储能元件的线性电路,且由一阶微分方程描述。
+<span class="math display">\[
+f(t)=f(\infty)+[f(0_+)-f(\infty)]e^{-\frac{t}{τ}}
+\]</span></p>
+<p><span class="math display">\[
+其中f(t)为一阶电路任一电流、电压
+\]</span></p>
+<p><span class="math display">\[
+f(0_+)为初始值(通过换路定则求得)
+\]</span></p>
+<p><span class="math display">\[
+f(\infty)为稳态值(达到新稳态后，电容视为开路，电感视为短路)
+\]</span></p>
+<p><span class="math display">\[
+τ为时间常数(求解除源后的总电阻，再套公式，电容用电容的公式，电感用电感的公式)
+\]</span></p>
+<figure>
+<img src="../../images/电工电子技术上/NIvZy5YN.png" srcset="/img/loading.gif" lazyload alt="要点">
+<figcaption aria-hidden="true">要点</figcaption>
+</figure>
+<h2><span id="2024-04-11">2024-04-11</span></h2>
+<p>我感觉今天学习的公式超级多。。。。( ´◔︎ ‸◔︎`)</p>
+<h4><span id="41正弦交流电路分析">4.1正弦交流电路分析</span></h4>
+<p><strong>知识回顾：</strong></p>
+<p>二倍角公式： <span class="math display">\[
+sin^2x=\frac{1-cos2x}{2}
+\]</span></p>
+<p><span class="math display">\[
+cos^2x=\frac{1+cos2x}{2}
+\]</span></p>
+<p>复数： <span class="math display">\[
+z=a+bj
+\]</span> 欧拉公式： <span class="math display">\[
+e^{ix}=cosx+isinx
+\]</span> 相量：（或相量）（说实话没有见过这样的） <span class="math display">\[
+A=re^{jψ}
+\]</span></p>
+<p>周期和频率： <span class="math display">\[
+T=\frac{1}{f}=\frac{2π}{ω}
+\]</span></p>
+<h4><span id="421电阻元件的交流电路">4.2.1电阻元件的交流电路</span></h4>
+<p>电压电流关系： <span class="math display">\[
+i(t)=I_msinωt
+\]</span></p>
+<p><span class="math display">\[
+u(t)=iR=RI_msinωt=U_msinωt
+\]</span></p>
+<p><span class="math display">\[
+由U_m=RI_m得：R=\frac{u}{i}=\frac{U_m}{I_m}=\frac{U_{有效值}}{I_{有效值}}(其中：U_m=\sqrt{2}U_{有效值})
+\]</span></p>
+<p>相量形式的欧姆定律： <span class="math display">\[
+\dot{U}=R\dot{I}
+\]</span></p>
+<p><span class="math display">\[
+向量式：\dot{U}=U\angle0^\circ;\dot{I}=I\angle0^\circ
+\]</span></p>
+<p>瞬时功率：</p>
+<p>瞬时电压与瞬时电流的乘积就是瞬时功率： <span class="math display">\[
+p(t)=u(t)i(t)=\sqrt{2}Usinωt·\sqrt{2}Isinωt=2UIsin^2ωt
+\]</span></p>
+<p><span class="math display">\[
+2UIsin^2ωt=UI(1-cos2ωt)=UI-UIcos2ωt=恒定分量-交变分量
+\]</span></p>
+<p>画出上述的函数图像得：P大于等于0，故电阻元件为消耗电能，转化为热能。</p>
+<p>平均功率：（有功功率）</p>
+<p>一个周期内瞬时功率的平均值，即瞬时功率的积分 <span class="math display">\[
+P=\frac{1}{T}\int^{T}_{0}{pdt}=\frac{1}{T}(UIt-\frac{UI}{2ω}sin2ωt|^T_0)=UI=I^2R=\frac{U^2}{R}
+\]</span></p>
+<h4><span id="422电感元件的交流电路">4.2.2电感元件的交流电路</span></h4>
+<p>电压与电流的关系： <span class="math display">\[
+i(t)=I_msinωt=\sqrt{2}Isinωt
+\]</span> 利用电感公式求得U(t)： <span class="math display">\[
+U=L\frac{di}{dt}
+\]</span></p>
+<p><span class="math display">\[
+u(t)=L\frac{d(I_msinωt)}{dt}=wLI_mcosωt=U_msin(ωt+90^\circ)其中(U_m=ωLI_m)
+\]</span></p>
+<p><span class="math display">\[
+故u(t)=U_msin(ωt+90^\circ)=\sqrt{2}Isinωt
+\]</span></p>
+<p>由上述电流和电压的公式不难看出，电感的电流和电压的相位差为90度，且为<strong>电压超前电流90度</strong>。</p>
+<p>感抗：单位Ω <span class="math display">\[
+由U_m=ωLI_m得：\frac{U_m}{I_m}=\frac{U}{I}=ωl=X_L（感抗）
+\]</span></p>
+<p><span class="math display">\[
+向量式：\dot{U}=Ue^{j90^\circ};\dot{I}=Ie^{j0^\circ}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\dot{U}}{\dot{I}}=\frac{U}{I}e^{j90^\circ}=（其中\frac{U}{I}=ωL另一个由欧拉公式得e^{j90^\circ}    =
+cos90^\circ+jsin90^\circ=j）
+\]</span></p>
+<p><span class="math display">\[
+故\frac{\dot{U}}{\dot{I}}=\frac{U}{I}e^{j90^\circ}=jωL=jX_L（其中jX_L为复感抗）
+\]</span></p>
+<p>电感性质：</p>
+<p><strong>通直流，阻交流。通低频，阻高频。</strong></p>
+<p>瞬时功率： <span class="math display">\[
+p=ui=U_mI_msinωtsin(ωt+90^\circ)=U_mI_msinωtcosωt=\frac{U_mI_m}{2}sin2ωt=UIsin2ωt
+\]</span> 平均功率： <span class="math display">\[
+p=\frac{1}{T}\int^{T}_{0}p(t)dt=\frac{1}{T}\int^{T}_{0}UIsin2ωtdt=0
+\]</span>
+P=0表明电感元件不消耗能量是非耗能元件。只有电源与电感元件间的能量互换。</p>
+<p>无功功率：</p>
+<p>电感元件的无功功率用来衡量电感与电源间能量互换的规模，规定电感元件的无功功率为瞬时功率的幅值（它并不等于单位时间内互换了多少能量）
+<span class="math display">\[
+Q_L=UI=I^2X_L
+\]</span> 电感元件的交流电路总结：</p>
+<figure>
+<img src="../../images/电工电子技术上/41JFnSan.png" srcset="/img/loading.gif" lazyload alt="电感元件的交流电路的总结">
+<figcaption aria-hidden="true">电感元件的交流电路的总结</figcaption>
+</figure>
+<h4><span id="423电容元件的交流电路">4.2.3电容元件的交流电路</span></h4>
+<p>电压电流关系： <span class="math display">\[
+u(t)=U_msinωt=\sqrt{2}Usinωt
+\]</span> 利用电容公式求得I(t)： <span class="math display">\[
+i=C\frac{du}{dt}
+\]</span></p>
+<p><span class="math display">\[
+i(t)=C\frac{d(U_msinωt)}{dt}=ωCU_mcosωt=ωCU_msin(ωt+90^\circ)=I_msin(ωt+90^\circ)（其中I_m=ωCU_m）
+\]</span></p>
+<p><span class="math display">\[
+故i(t)=I_msin(ωt+90^\circ)=\sqrt{2}Isin(ωt+90^\circ)
+\]</span></p>
+<p>由上述电流和电压的公式不难看出，电感的电流和电压的相位差为90度，且为<strong>电流超前电压90度</strong>。</p>
+<p>容抗：单位Ω <span class="math display">\[
+由I_m=ωCU_m得：\frac{U_m}{I_m}=\frac{U}{I}=\frac{1}{ωC}=X_C(容抗)
+\]</span></p>
+<p><span class="math display">\[
+向量式：\dot{U}=Ue^{j0^\circ};\dot{I}=Ie^{j90^\circ}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\dot{U}}{\dot{I}}=\frac{U}{I}e^{-j90^\circ}=-j\frac{1}{ωC}=-jX_C(其中jX_C为复容抗)
+\]</span></p>
+<p>电容性质：</p>
+<p><strong>隔直流，通交流。</strong></p>
+<p>瞬时功率： <span class="math display">\[
+p(t)=u(t)i(t)=2UIsinωt(-cosωt)=-UIsin2ωt
+\]</span> 平均功率：（有功功率） <span class="math display">\[
+p=\frac{1}{T}\int^{T}_{0}p(t)dt=\frac{1}{T}\int^{T}_{0}-UIsin2ωtdt=0
+\]</span> 和电感的结论一样。</p>
+<p>无功功率： <span class="math display">\[
+Q=-UI=-I^2X_C
+\]</span> 电容元件的交流电路总结：</p>
+<figure>
+<img src="../../images/电工电子技术上/16Meub7w.png" srcset="/img/loading.gif" lazyload alt="电容元件的交流电路总结">
+<figcaption aria-hidden="true">电容元件的交流电路总结</figcaption>
+</figure>
+<h4><span id="42电阻-电感与电容元件串联的交流电路">4.2电阻、电感与电容元件串联的交流电路</span></h4>
+<figure>
+<img src="../../images/电工电子技术上/objJgAVt.png" srcset="/img/loading.gif" lazyload alt="电阻、电感、电容，三者串联">
+<figcaption aria-hidden="true">电阻、电感、电容，三者串联</figcaption>
+</figure>
+<p>先看结论：</p>
+<figure>
+<img src="../../images/电工电子技术上/DV3gqOVD.png" srcset="/img/loading.gif" lazyload alt="这是结论">
+<figcaption aria-hidden="true">这是结论</figcaption>
+</figure>
+<p>根据基尔霍夫电压定律： <span class="math display">\[
+u=u_R+u_L+u_C=Ri+L\frac{di}{dt}+\frac{1}{C}\int{idt}
+\]</span> 设串联电路电流为正弦参考量，即 <span class="math display">\[
+i=I_msinωt
+\]</span> 则： <span class="math display">\[
+u_R=RI_msinωt=U_{Rm}sinωt
+\]</span></p>
+<p><span class="math display">\[
+u_L=I_mωLsin(ωt+90^\circ)=U_{LM}sin(ωt+90^\circ)
+\]</span></p>
+<p><span class="math display">\[
+u_c=\frac{I_m}{ωC}sin(ωt-90^\circ)=U_{Cm}sin(ωt-90^\circ)
+\]</span></p>
+<p><span class="math display">\[
+u=u_R+u_L+u_C=U_msin(ωt+Φ)
+\]</span></p>
+<p>上述公式的相量形式： <span class="math display">\[
+\dot{U}=\dot{U_R}+\dot{U_L}+\dot{U_C}
+\]</span></p>
+<p><img src="../../images/电工电子技术上/SRROxXMi.png" srcset="/img/loading.gif" lazyload alt="数形结合">
+<span class="math display">\[
+设：\dot{I}=I\angle0^\circ
+则有\dot{U}_R=\dot{I}R;\dot{U}_L=jX_L\dot{I};\dot{U}_C=-jX_C\dot{I}
+\]</span></p>
+<p><span class="math display">\[
+\dot{U}=\dot{I}R+jX_L\dot{I}-jX_L\dot{I}=[R+j(X_L-X_C)]\dot{I}
+\]</span></p>
+<p><span class="math display">\[
+\dot{U}=[R+j(X_L-X_C)]\dot{I}
+\]</span></p>
+<p>阻抗：(“复阻抗”简称“阻抗”)(实部为阻，虚部为抗，称为阻抗) <span class="math display">\[
+\dot{U}=[R+j(X_L-X_C)]\dot{I}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\dot{U}}{\dot{I}}=R+j(X_L-X_C)=Z(复阻抗)
+\]</span> <span class="math display">\[
+Z=\frac{\dot{U}}{\dot{I}}=\frac{U\angleψ_u}{I\angle{ψ_i}}=\frac{U}{I}\angleψ_u-ψ_i=|Z|\angleφ
+\]</span></p>
+<p><span class="math display">\[
+阻抗模：|Z|=\frac{U}{I};阻抗角：φ=ψ_u-ψ_i(电压与电流的相位差)
+\]</span></p>
+<p>复阻抗： <span class="math display">\[
+Z=R+j(X_L-X_C)=\sqrt{R^2+(X_L-X_C)^2}·e^{j·arctan\frac{X_L-X_C}{R}}=\sqrt{R^2+X^2}·e^{jarctan\frac{X}{R}}=|Z|e^{jφ}
+\]</span> <img src="../../images/电工电子技术上/YlWgScKS.png" srcset="/img/loading.gif" lazyload alt="阻抗三角形"></p>
+<p>瞬时功率： <span class="math display">\[
+p(t)=2UIsin(ωt+φ)sinωt=UIcosφ-UIcos(2ωt+φ)
+\]</span> <img src="../../images/电工电子技术上/yg2SkDJn.png" srcset="/img/loading.gif" lazyload alt="瞬时功率图像"></p>
+<p>平均功率：(有功功率)电路的有功功率等于消耗在电阻R上的功率。 <span class="math display">\[
+p=\frac{1}{T}\int^{T}_{0}uidt=\frac{1}{T}\int^{T}_{0}{[UIcosφ-UIcos(2ωt+φ)]dt}=UIcosφ=U_RI=I^2R
+\]</span> <img src="../../images/电工电子技术上/N7RxaiPT.png" srcset="/img/loading.gif" lazyload alt="电压三角形"></p>
+<p>无功功率：电路的无功功率等于电路中电感的无功功率+电容的无功功率 <span class="math display">\[
+Q=Q_L+Q_C=( U_L-U_C)I=U=UIsinφ
+\]</span> 视在功率：有功功率与无功功率的矢量和 <span class="math display">\[
+S=UI=|Z|I^2
+\]</span></p>
+<p><span class="math display">\[
+S=\sqrt{P^2+Q^2}
+\]</span></p>
+<figure>
+<img src="../../images/电工电子技术上/LNDANrjY.png" srcset="/img/loading.gif" lazyload alt="功率三角形">
+<figcaption aria-hidden="true">功率三角形</figcaption>
+</figure>
+<p>阻抗、电压、功率三角形：</p>
+<figure>
+<img src="../../images/电工电子技术上/rb0PHWYt.png" srcset="/img/loading.gif" lazyload alt="阻抗、电压、功率三角形">
+<figcaption aria-hidden="true">阻抗、电压、功率三角形</figcaption>
+</figure>
+<h2><span id="2024-04-16">2024-04-16</span></h2>
+<h4><span id="43正弦稳态电路分析的相量法">4.3正弦稳态电路分析的相量法</span></h4>
+<p>回顾总结：</p>
+<figure>
+<img src="../../images/电工电子技术上/PAeoPsjW.png" srcset="/img/loading.gif" lazyload alt="电阻、电感、电容">
+<figcaption aria-hidden="true">电阻、电感、电容</figcaption>
+</figure>
+<p>由于正弦稳态响应电路通过普通方法计算繁琐，故引入相量法方便计算！</p>
+<figure>
+<img src="../../images/电工电子技术上/jMqFoUsl.png" srcset="/img/loading.gif" lazyload alt="相量形式">
+<figcaption aria-hidden="true">相量形式</figcaption>
+</figure>
+<p>以后就开始慢慢用相量的形式（或复数形式）来替代之前的公式了！</p>
+<p>(复数和相量)形式的欧姆定律： <span class="math display">\[
+\dot{U}=\dot{I}Z
+\]</span>
+<strong>感觉这天学习的有很多和4月11日重复的内容，故在此笔记简单一些，只记一些解题思路！！</strong></p>
+<figure>
+<img src="../../images/电工电子技术上/9yFerNsh.png" srcset="/img/loading.gif" lazyload alt="这个涉及角度的正负">
+<figcaption aria-hidden="true">这个涉及角度的正负</figcaption>
+</figure>
+<p><strong>补充tips：计算技巧：</strong> <span class="math display">\[
+j^2=-1
+\]</span></p>
+<p><span class="math display">\[
+j=-\frac{1}{j}
+\]</span></p>
+<p>这里的j为虚数单位，用于电容的相量计算公式。</p>
+<h4><span id="44阻抗的串联和并联">4.4阻抗的串联和并联</span></h4>
+<p>无路是<strong>电阻</strong>还是<strong>电压</strong>还是<strong>电流</strong>都需要矢量合成，谁不变谁就是参考（例如串联的电流，并联的电压）</p>
+<blockquote>
+<p>电阻：U和I方向一致</p>
+<p>电感：电压超前电流90度</p>
+<p>电容：电压落后电流90度</p>
+</blockquote>
+<p>而分压公式和分流公式和之前的一样。</p>
+<h4><span id="45一般正弦交流电路解题思路">4.5一般正弦交流电路解题思路</span></h4>
+<p>根据原电路图画出相量形式的电路图（只是标注的字母变了，电路结构还是原结构）</p>
+<blockquote>
+<p>电阻就是电阻R，没什么变动</p>
+<p>电感和电容换成虚数单位的</p>
+<p>电源瞬时电压表达式得相量形式的电压（有效值乘以相位）（也包括电流也是这样的）</p>
+<p>按要求求解（注意指数形式和相量形式的转化）</p>
+</blockquote>
+<p><strong>学到这里，后面的题就是对前面学过的知识点的整合综合运用，再做笔记会很繁琐！具体问题还需具体分析，只有多加练习，熟练运用后，再碰到类似的公式就会信手拈来，问题也会迎刃而解！</strong></p>
+<h2><span id="2024-04-18">2024-04-18</span></h2>
+<p>今天做的电工实验</p>
+<h4><span id="实验五rc一阶电路的响应测试">实验五：RC一阶电路的响应测试</span></h4>
+<p>验证电容的充电和放电过程的</p>
+<blockquote>
+<ol type="1">
+<li>连接好电路元件</li>
+<li>调整电压U为3V，频率f=1KHz的方形电压信号</li>
+<li>调整电路中的电阻R为10K欧姆，电容C为6800皮法，计算时间常数</li>
+<li>调整示波器的两个图像与参考线对齐</li>
+<li>显示出一大堆数据，找出电压的峰值，</li>
+<li>若为充电过程，则峰值乘以0.632；若为放电过程，则峰值乘以0.368。这个结果就是纵坐标的值</li>
+<li>而上述计算的时间常数是横坐标的值</li>
+<li>一般情况下，两条线的交点会落在充电或者放电的线上。</li>
+<li>重复上述步骤，验证另一个你没有做的过程</li>
+<li>通过调节电阻R，和电容C的值，观察示波器图像变化。（此步为拓展步骤）</li>
+<li>则验证实验结束。</li>
+</ol>
+</blockquote>
+<figure>
+<img src="../../images/电工电子技术上/ygfSN5Sg.jpg" srcset="/img/loading.gif" lazyload alt="显示的一大堆数据">
+<figcaption aria-hidden="true">显示的一大堆数据</figcaption>
+</figure>
+<p>当调整曲线的位置时，发现旋钮可以控制两条曲线，解决办法就是只选一个（有个a，b，ab，好像还有CH1，CH2）</p>
+<h2><span id="2024-04-23">2024-04-23</span></h2>
+<p>今天好像没有学习新的内容。。就是复习，因为老师之前跳着讲课了<strong>(￣ー￣〃)</strong></p>
+<p>才发现，又补了一下</p>
+<p>复习内容：</p>
+<h4><span id="相量表示法">相量表示法：</span></h4>
+<p>复常数和复函数：</p>
+<p>正弦量--&gt;相量（复数）——&gt;相量方程（复数方程）——&gt;相量解——&gt;正弦量</p>
+<p>正弦量运算方法：同频率正弦量相加或相减，正弦量的微分或者积分</p>
+<p>基本方程的相量形式：</p>
+<p>基尔霍夫电流方程的相量形式</p>
+<p>基尔霍夫电压方程的相量形式</p>
+<p>电容电感电阻的相量模型</p>
+<p>电路的相量模型</p>
+<p><strong>正弦量与相量之间的关系：</strong></p>
+<p>复常数： <span class="math display">\[
+R= r\cosθ+jr\sinθ=re^{jθ}
+\]</span> 复函数： <span class="math display">\[
+R(t)=re^{j(wt+θ)}=r\cos(wt+θ)+jr\sin(wt+θ)
+\]</span> 正弦量： <span class="math display">\[
+rcos(wt+θ)=Re[re^{j(wt+θ)}]=Re[re^{jθ}*e^{wt}]
+\]</span> 同一频率下，正弦量对应的复函数，称为相量： <span class="math display">\[
+r\cos(wt+θ)——re^{jθ}——U\angle θ
+\]</span> 同频率正弦量的相加减：</p>
+<p>例如： <span class="math display">\[
+u_1=\sqrt{2}U_1\cos(wt+θ_1)——&gt;\dot{U}_1=U_1e^{jθ}
+\]</span></p>
+<p><span class="math display">\[
+u_2=\sqrt{2}U_1\cos(wt+θ_2)——&gt;\dot{U}_2=U_2e^{jθ}
+\]</span></p>
+<p><span class="math display">\[
+u=u_1+u_2——&gt;\dot{U}=\dot{U}_1+\dot{U}_2
+\]</span></p>
+<p>正弦量的微分、积分： <span class="math display">\[
+u=\sqrt{2}Ucos(wt+θ)——&gt;\dot{U}=Ue^{jθ}
+\]</span></p>
+<p><span class="math display">\[
+U_d=\frac{du}{dt}——&gt;\dot{U}=jw\dot{U}
+\]</span></p>
+<p><span class="math display">\[
+u_1=\int{udt——&gt;}\dot{U_1}=\frac{\dot{U}}{jw}
+\]</span></p>
+<p>不要积分常数的不定积分。</p>
+<h2><span id="2024-04-27">2024-04-27</span></h2>
+<p><strong>哎呀，班里电脑课件缺了，今天才知道老师之前讲课跳着讲了，第四章刚开始就跳到4.2就给我干懵了，当时觉得就很奇怪。心累！</strong></p>
+<h4><span id="46正弦稳态电路的电功率">4.6正弦稳态电路的电功率</span></h4>
+<p><strong>1、瞬时功率</strong></p>
+<p><strong>定义：</strong>能量对时间的导数，是由同一时刻的电压与电流的乘积确定
+<span class="math display">\[
+p(t)=\frac{dW}{dt}=u(t)·i(t)
+\]</span></p>
+<p>单位：瓦特w</p>
+<blockquote>
+<p>P(t)&gt;0：能量流入元件或网络，可以理解为负载</p>
+<p>P(t)&lt;0：能量流出元件或网络，可以理解为电源</p>
+<p>若瞬时功率P随着时间变化，且在特殊位置的正负值也发生周期性变换，说明网络内与外路有能量往返，即网络内含有储能元件。</p>
+</blockquote>
+<p><strong>电阻R、电感L、电容C元件的瞬时功率：</strong></p>
+<p>电阻R： <span class="math display">\[
+φ=0
+\]</span></p>
+<p><span class="math display">\[
+P_R(t)=UI[1+\cos2ωt]\geq 0
+\]</span></p>
+<p>瞬时功率恒大于0，电阻是耗能元件</p>
+<p>电感L： <span class="math display">\[
+φ=\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+p_L(t)=UIcos(2ωt+\frac{π}{2})=-UIsin2ωt
+\]</span></p>
+<p>瞬时功率正负周期性变化，在一个周期内吸收的能量=释放的能量，电感是储能元件。</p>
+<p>电容C： <span class="math display">\[
+φ=-\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+p_C(t)=UIcos(2ωt-\frac{π}{2})=UIsin2ωt
+\]</span></p>
+<p>瞬时功率正负周期性变化，在一个周期内吸收的能量=释放的能量，电容是储能元件。</p>
+<p><strong>2、平均功率（有功功率）</strong></p>
+<p>定义：瞬时功率在一个周期内的平均值，表示电路吸收或产生电功率的平均速率
+<span class="math display">\[
+P=\frac{1}{T}\int^{T}_{0}{p(t)dt}=\frac{1}{T}\int^{T}_{0}{[UI\cosφ+UIcos(2ωt+φ)]dt}
+\]</span></p>
+<p><span class="math display">\[
+P=UIcosφ=UIλ
+\]</span></p>
+<p>单位：瓦特W</p>
+<p><strong>电阻R、电感L、电容C元件的平均功率：</strong></p>
+<p>电阻R： <span class="math display">\[
+φ=0
+\]</span></p>
+<p><span class="math display">\[
+P_R=\frac{U^2}{R}
+\]</span></p>
+<p>电感L： <span class="math display">\[
+φ=\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+p_L=UIcos(\frac{π}{2})=0
+\]</span></p>
+<p>电容C： <span class="math display">\[
+φ=-\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+p_C=UIcos(-\frac{π}{2})=0
+\]</span></p>
+<p><strong>3、视在功率（表观功率）</strong></p>
+<p>定义： <span class="math display">\[
+S=UI
+\]</span> 单位：伏安、千伏安</p>
+<p><strong>4、无功功率</strong></p>
+<p>定义： <span class="math display">\[
+Q=UIsinφ
+\]</span> 单位：乏（var）、千乏（Kvar）</p>
+<blockquote>
+<p>φ&gt;0 则为感性电路 Q&gt;0</p>
+<p>φ&lt;0 则为容性电路 Q&lt;0</p>
+</blockquote>
+<p><strong>电阻R、电感L、电容C元件的无功功率：</strong></p>
+<p>电阻R： <span class="math display">\[
+φ=0
+\]</span></p>
+<p><span class="math display">\[
+Q_R=UIsinφ=0
+\]</span></p>
+<p>电阻不吸收无功功率</p>
+<p>电感L： <span class="math display">\[
+φ=\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+Q_L=UIsinφ=UI
+\]</span></p>
+<p>电感吸收正值的无功功率</p>
+<p>电容C： <span class="math display">\[
+φ=-\frac{π}{2}
+\]</span></p>
+<p><span class="math display">\[
+Q_C=UIsinφ=-UI
+\]</span></p>
+<p>电容吸收负值的无关功率</p>
+<p><strong>5、复功率</strong></p>
+<p>定义： <span class="math display">\[
+\widetilde{s}=\dot{U}\dot{I}^*=U\angle θ_u·I\angle -θ_i=UI\angle φ
+\]</span></p>
+<p><span class="math display">\[
+\widetilde{s}=UI\angle φ=S\angle φ=UIcosφ+UIsinφ j=P+Qj
+\]</span></p>
+<p>实部为有功功率，虚部为无功功率</p>
+<p>复功率守恒：</p>
+<p>网络中所吸收总的复功率 =
+该网络内所有各元件的复功率之和（包含着有功功率守恒，无功功率守恒）</p>
+<h4><span id="47功率因数的提高与最大传输功率">4.7功率因数的提高与最大传输功率</span></h4>
+<p><strong>1、功率因数：</strong></p>
+<p>对电源利用程度的衡量。 <span class="math display">\[
+\cosφ
+\]</span></p>
+<blockquote>
+<p>φ为电压和电流的相位差，阻抗的辐角。</p>
+</blockquote>
+<p>影响：（提高cosφ）</p>
+<ol type="1">
+<li>使发电设备的容量得以充分利用</li>
+<li>减小线路和发电机绕组的损耗</li>
+</ol>
+<p>功率因数的提高：</p>
+<p>原则：</p>
+<p>保证原负载的电压和有功功率不变</p>
+<p>措施：</p>
+<p>在感性负载两端并电容</p>
+<figure>
+<img src="../../images/电工电子技术上/zGxPbv6l.png" srcset="/img/loading.gif" lazyload alt="结论">
+<figcaption aria-hidden="true">结论</figcaption>
+</figure>
+<p><strong>2、正弦稳态最大功率传输定理：</strong></p>
+<p>情况一：最大功率匹配（或共轭匹配）</p>
+<p>若负载Z的实部和虚部可以独立变化</p>
+<p>则当 <span class="math display">\[
+Z_L=Z^{*}_{S}
+\]</span> 电源的输出功率（或负载的吸收功率）最大，为 <span class="math display">\[
+P_{Lmax}=\frac{U^{2}_{S}}{4R_S}
+\]</span> 情况二：负载与电源内<strong>阻抗模</strong>匹配</p>
+<p>若负载Z的模可以变化，阻抗角不能变</p>
+<p>则当 <span class="math display">\[
+|Z|=|Z_内|
+\]</span> 电源的输出功率（或负载的吸收功率）最大，为 <span class="math display">\[
+P_{max}=\frac{U^2_S\cosφ_L}{2|Z_S|[1+\cos(φ_S-φ_L)]}
+\]</span> <strong>参考文章【<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/435310988">点击进入</a>】</strong></p>
+<h2><span id="2024-04-28">2024-04-28</span></h2>
+<h4><span id="51三相电力系统介绍">5.1三相电力系统介绍</span></h4>
+<figure>
+<img src="../../images/电工电子技术上/image-20240428151714994.png" srcset="/img/loading.gif" lazyload alt="三相交流发电机示意图">
+<figcaption aria-hidden="true">三相交流发电机示意图</figcaption>
+</figure>
+<p>转子装有磁极并以w的角速度旋转。三个线圈中便产生三个单相电动势；三相绕组所产生的三个电动势具有三个特征：最大值相等,频率相同,相位依次互差120°，对称三相电压（对称就是大小相等）</p>
+<p><strong>电压瞬时值：</strong> <span class="math display">\[
+u_U=U_m\sin(ωt)=\sqrt{2}U\sin(ωt)
+\]</span></p>
+<p><span class="math display">\[
+u_V=U_m\sin(ωt-120^\circ)=\sqrt{2}U\sin(ωt-120^\circ)
+\]</span></p>
+<p><span class="math display">\[
+u_W=U_m\sin(ωt+120^\circ)=\sqrt{2}U\sin(ωt+120^\circ)
+\]</span></p>
+<p>相量形式： <span class="math display">\[
+\dot{U}_U=\frac{U_m}{\sqrt{2}}\angle0^\circ=U\angle0^\circ
+\]</span></p>
+<p><span class="math display">\[
+\dot{U}_V=\frac{U_m}{\sqrt{2}}\angle-120^\circ=U\angle-120^\circ
+\]</span></p>
+<p><span class="math display">\[
+\dot{U}_W=\frac{U_m}{\sqrt{2}}\angle+120^\circ=U\angle+120^\circ
+\]</span></p>
+<p>由上式可得： <span class="math display">\[
+u_U+u_V+u_W=0和\dot{U}_U+\dot{U}_V+\dot{U}_W=0
+\]</span> 即电压瞬时值和为零。</p>
+<p><strong>相序：</strong></p>
+<p>三相电源中每相电压依次出现正幅值的顺序</p>
+<blockquote>
+<p>正序（顺序）: U V W</p>
+<p>负序（逆序）： 其他组合</p>
+</blockquote>
+<h4><span id="52三相电源的连接方式">5.2三相电源的连接方式</span></h4>
+<p><strong>1、三相电源星形（Y形）连接</strong>：</p>
+<p>1-1、相电压和线电压以及之间的关系：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430181750123.png" srcset="/img/loading.gif" lazyload alt="Y形连接（三相四线制）">
+<figcaption aria-hidden="true">Y形连接（三相四线制）</figcaption>
+</figure>
+<p>根据基尔霍夫电压定律KVL得</p>
+<blockquote>
+<p>线电压是相电压的根号3倍，且线电压超前对应的相电压30度</p>
+<p>tips：380除以根号3约等于220</p>
+</blockquote>
+<p>即：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430182531361.png" srcset="/img/loading.gif" lazyload alt="相电压矢量合成为线电压">
+<figcaption aria-hidden="true">相电压矢量合成为线电压</figcaption>
+</figure>
+<p>1-2、相电流和线电流的关系：</p>
+<blockquote>
+<p>相电流 = 线电流</p>
+</blockquote>
+<p><strong>2、三相电源的三角形连接</strong>：</p>
+<p>注意：三角形连接只有<strong>三相三线制</strong></p>
+<p>2-1、相电压和线电压以及之间的关系：</p>
+<blockquote>
+<p>相电压 = 线电压</p>
+</blockquote>
+<p>2-2、相电流和线电流的关系：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430194005708.png" srcset="/img/loading.gif" lazyload alt="三角形内的应该是相电流吧">
+<figcaption aria-hidden="true">三角形内的应该是相电流吧</figcaption>
+</figure>
+<p>根据基尔霍夫电流定律KCL得： <span class="math display">\[
+\dot{I}_{L1}=\dot{I}_1-\dot{I}_3
+\]</span></p>
+<p><span class="math display">\[
+\dot{I}_{L2}=\dot{I}_2-\dot{I}_1
+\]</span></p>
+<p><span class="math display">\[
+\dot{I}_{L3}=\dot{I}_3-\dot{I}_2
+\]</span></p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430194558180.png" srcset="/img/loading.gif" lazyload alt="相电流矢量合成为线电流">
+<figcaption aria-hidden="true">相电流矢量合成为线电流</figcaption>
+</figure>
+<blockquote>
+<p>线电流是相电流的根号3倍，且线电流落后对应的相电流30度。</p>
+<p>类似于Y形接法的电压，同样是根号3倍关系，红色落后黑色30度（这个表述，仁者见仁智者见智(
+´◔︎ ‸◔︎`)）</p>
+</blockquote>
+<h4><span id="53三相负载的连接方式">5.3三相负载的连接方式</span></h4>
+<blockquote>
+<p>负载</p>
+<blockquote>
+<p>三相负载：需三相电源同时供电</p>
+<blockquote>
+<p>对称三相负载：阻抗相同</p>
+<p>不对称三相负载：阻抗不同</p>
+</blockquote>
+<p>单相负载：只需一相电源供电，家用电器居多</p>
+</blockquote>
+</blockquote>
+<p><strong>1、负载的星形（Y形）连接：</strong></p>
+<p>1-1、三相四线制</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430201007031.png" srcset="/img/loading.gif" lazyload alt="电源与负载三相四线制连接且为星形连接">
+<figcaption aria-hidden="true">电源与负载三相四线制连接且为星形连接</figcaption>
+</figure>
+<blockquote>
+<p>tips：当负载为对称三相负载时，中性线可以去掉，变成三相三线制。</p>
+</blockquote>
+<p>相电压和线电压以及之间的关系：</p>
+<blockquote>
+<p>线电压是相电压的根号3倍，且线电压超前对应的相电压30度。</p>
+</blockquote>
+<p>线电流如下： <span class="math display">\[
+\dot{I}_U、\dot{I}_V 、\dot{I}_W
+\]</span> 相电流存在于负载中，可以理解通入负载中的电流。</p>
+<p>相电流和线电流的关系：</p>
+<blockquote>
+<p>相电流 = 线电流</p>
+</blockquote>
+<p>存在： <span class="math display">\[
+\dot{I}_N=\dot{I}_U+\dot{I}_V+\dot{I}_W
+\]</span> tips：欧姆定律，三相电源Y形的结论在此都可以运用。</p>
+<p><strong>定性分析：</strong></p>
+<blockquote>
+<p>情景一：</p>
+<blockquote>
+<p>某一条支路短路：</p>
+<blockquote>
+<p>中性线未断：</p>
+<blockquote>
+<p>对其他支路无影响</p>
+</blockquote>
+<p>中线线断开：</p>
+<blockquote>
+<p>其他支路超过额定电压，危险</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>情景二：</p>
+<blockquote>
+<p>某一条支路开路：</p>
+<blockquote>
+<p>中性线未断：</p>
+<blockquote>
+<p>对其他支路无影响</p>
+</blockquote>
+<p>中线线断开：</p>
+<blockquote>
+<p>其他支路组合成为一个回路，变为单相电路。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>1-2、三相三线制：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430203648253.png" srcset="/img/loading.gif" lazyload alt="电源与负载三相三线制连接且为星形连接">
+<figcaption aria-hidden="true">电源与负载三相三线制连接且为星形连接</figcaption>
+</figure>
+<p>由<a href="./#25节点电压法">节点电压法</a>得： <span class="math display">\[
+\dot{U}_{NN^{&#39;}}=\frac{-\frac{\dot{U}_U}{Z_U}-\frac{\dot{U}_V}{Z_V}-\frac{\dot{U}_W}{Z_W}}{\frac{1}{Z_U}+\frac{1}{Z_V}+\frac{1}{Z_W}}
+\]</span> 由基尔霍夫电压定律KVL得： <span class="math display">\[
+\dot{I}_U=\frac{\dot{U}_{NN^{&#39;}}+\dot{U_U}}{Z_U}
+\]</span></p>
+<p><span class="math display">\[
+\dot{I}_V=\frac{\dot{U}_{NN^{&#39;}}+\dot{U_V}}{Z_V}
+\]</span></p>
+<p><span class="math display">\[
+\dot{I}_W=\frac{\dot{U}_{NN^{&#39;}}+\dot{U_W}}{Z_W}
+\]</span></p>
+<p><strong>2、负载的三角形连接：</strong></p>
+<p>三角形连接只有三相三线制：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430210346210.png" srcset="/img/loading.gif" lazyload alt="电源与负载三相三线制连接且为三角形连接">
+<figcaption aria-hidden="true">电源与负载三相三线制连接且为三角形连接</figcaption>
+</figure>
+<p>1、不论负载是否对称：负载相电压 = 电源线电压 <span class="math display">\[
+U_{UV}=U_{UW}=U_{VW}=U_L=U_P
+\]</span> 2、负载的相电流：</p>
+<blockquote>
+<p>当负载对称时：</p>
+<blockquote>
+<p>由欧姆定律得：相电流也对称</p>
+</blockquote>
+<p>当然负载不对称时，负载的相电流也不对称，先不讨论此情况</p>
+</blockquote>
+<p>3、电源的线电流：</p>
+<blockquote>
+<p>当负载对称时：</p>
+<blockquote>
+<p>由基尔霍夫电流定律KCL得：线电流也对称</p>
+</blockquote>
+<p>当然负载不对称时，电源的线电流也不对称，先不讨论此情况</p>
+</blockquote>
+<p>此时注意：线电流并不等于相电流 <span class="math display">\[
+\dot{I}_U=\dot{I}_V=\dot{I}_W=\dot{I}_L=\sqrt{3}\dot{I}_P
+\]</span> 即：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240430213133411.png" srcset="/img/loading.gif" lazyload alt="矢量合成图">
+<figcaption aria-hidden="true">矢量合成图</figcaption>
+</figure>
+<p>当负载不对称时，上述的2和3内容都被推翻了，只能进行逐一计算，倍数关系不再适用。</p>
+<p><strong>3、三相负载连接原则：</strong></p>
+<p>目的使得加于每相负载上的电压都等于额定电压，与三相电源的连接方式无关。</p>
+<p>总结：</p>
+<blockquote>
+<p>星形连接：负载的额定电压 = 电源的线电压除以根号3</p>
+<p>三角形连接：负载的额定电压 = 电源的线电压</p>
+</blockquote>
+<h2><span id="2024-05-06补课">2024-05-06（补课）</span></h2>
+<h4><span id="54三相电路的计算">5.4三相电路的计算</span></h4>
+<p>一、对称三相电路的计算--星形联接</p>
+<p>1、三相四线制</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509160915454.png" srcset="/img/loading.gif" lazyload alt="三相四线制且对称电路">
+<figcaption aria-hidden="true">三相四线制且对称电路</figcaption>
+</figure>
+<p>如图所示虚线，根据KVL得： <span class="math display">\[
+Z_1\dot{I}_A+Z\dot{I}_A+\dot{U}_{N^{&#39;}N}=\dot{U}_A
+\]</span> 其中根据弥尔曼定理得：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509161605591.png" srcset="/img/loading.gif" lazyload alt="由弥尔曼定理得">
+<figcaption aria-hidden="true">由弥尔曼定理得</figcaption>
+</figure>
+<p>求的其中一条支路的相电流和相电压后，先减120度，再加120度得到其他两路的相电流和相电压。</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509162404625.png" srcset="/img/loading.gif" lazyload alt="其他两支路">
+<figcaption aria-hidden="true">其他两支路</figcaption>
+</figure>
+<p>由星型（Y型）连接结论得：</p>
+<blockquote>
+<p>线电压是相电压的根号3倍，线电流等于相电流</p>
+</blockquote>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509162719191.png" srcset="/img/loading.gif" lazyload alt="注意各个量之间的关系">
+<figcaption aria-hidden="true">注意各个量之间的关系</figcaption>
+</figure>
+<p>2、三相三线制</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509162809183.png" srcset="/img/loading.gif" lazyload alt="三相三线制且对称电路">
+<figcaption aria-hidden="true">三相三线制且对称电路</figcaption>
+</figure>
+<p>同上： <span class="math display">\[
+Z_1\dot{I}_A+Z\dot{I}_A+\dot{U}_{N^{&#39;}N}=\dot{U}_A
+\]</span> 也是弥尔曼定理：</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509163033134.png" srcset="/img/loading.gif" lazyload alt="和上面一样">
+<figcaption aria-hidden="true">和上面一样</figcaption>
+</figure>
+<p>因为为对称电路，所以中线有没有无影响了，故三相四线制的结论和三相三线制结论一样，但是三线制不存在中线电流等于0</p>
+<p>对称三相电路星形联接分析方法：</p>
+<blockquote>
+<p>1.抽出一相（A相），单独计算。</p>
+</blockquote>
+<blockquote>
+<p>2.其余两相利用对称关系得到。</p>
+</blockquote>
+<blockquote>
+<p>3.线、相之间，利用对应关系得到。</p>
+</blockquote>
+<p>二、对称三相电路的计算--三角形联接</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509163403959.png" srcset="/img/loading.gif" lazyload alt="对称电路的三角形连接">
+<figcaption aria-hidden="true">对称电路的三角形连接</figcaption>
+</figure>
+<p>三、不对称三相电路的计算--星形联接</p>
+<p>1、三相四线制</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509163541286.png" srcset="/img/loading.gif" lazyload alt="三相四线制且不对称电路">
+<figcaption aria-hidden="true">三相四线制且不对称电路</figcaption>
+</figure>
+<p>三相相互独立，互不影响</p>
+<p>2、三相三线制</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509163624102.png" srcset="/img/loading.gif" lazyload alt="三相三线制且不对称电路">
+<figcaption aria-hidden="true">三相三线制且不对称电路</figcaption>
+</figure>
+<p>四、不对称三相电路的计算--三角形联接</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240509163704328.png" srcset="/img/loading.gif" lazyload alt="不对称电路的三角形连接">
+<figcaption aria-hidden="true">不对称电路的三角形连接</figcaption>
+</figure>
+<h2><span id="2024-05-07">2024-05-07</span></h2>
+<h4><span id="55三相电路的功率及测量">5.5三相电路的功率及测量</span></h4>
+<p>一、三相电路的功率计算</p>
+<p>无论负载为星形或三角形联结，三相负载总的有功功率等于各相有功功率之和，即：
+<span class="math display">\[
+P=P_U+P_V+P_W=U_UI_U\cosφ_{U}+U_VI_V\cosφ_{V}+U_WI_W\cosφ_{W}
+\]</span> 当负载对称时： <span class="math display">\[
+P=3U_PI_P\cosφ
+\]</span> 负载不对称就逐个相加</p>
+<p>1)同样大小的电源电压下，三角形联结消耗的功率是星形联结的3倍。</p>
+<p>2)电源电压为220V时（线电压），负载常用三角形联结；电源电压为380V时（线电压），负载常用星形联结，这样两种情况的功率是一样的。</p>
+<p>二、三相电路功率测量</p>
+<p>二瓦计法：</p>
+<p>​
+在三相三线制电路中，不论对称与否，都可以使用两个功率表的方法测量三相功率。</p>
+<figure>
+<img src="../../images/电工电子技术上/image-20240508153519646.png" srcset="/img/loading.gif" lazyload alt="二瓦计法不适合于三相四线制电路">
+<figcaption aria-hidden="true">二瓦计法不适合于三相四线制电路</figcaption>
+</figure>
+<p>两只功率表读数的代数和就是三相电路的总功率</p>
+<h2><span id="第二次完成的作业">第二次完成的作业：</span></h2>
+<figure>
+<img src="../../images/电工电子技术上/d98d9f60d073708863cdf33d76aca0a3_.jpg" srcset="/img/loading.gif" lazyload alt="第一张">
+<figcaption aria-hidden="true">第一张</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/278dccd5f2c58641c15124b96a729c71_.jpg" srcset="/img/loading.gif" lazyload alt="第二张">
+<figcaption aria-hidden="true">第二张</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/409f8cec92e745c50e6fffe90b4479ce_.jpg" srcset="/img/loading.gif" lazyload alt="第三张">
+<figcaption aria-hidden="true">第三张</figcaption>
+</figure>
+<figure>
+<img src="../../images/电工电子技术上/f9a5a6937ec17d4189898787ae96e5f7_.jpg" srcset="/img/loading.gif" lazyload alt="第四张">
+<figcaption aria-hidden="true">第四张</figcaption>
+</figure>
+<h2><span id="2024-05-07电工电子技术上册完结">2024-05-07电工电子技术上册完结！</span></h2>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+      
+        <a href="/tags/%E7%89%A9%E7%90%86/" class="print-no-link">#物理</a>
+      
+        <a href="/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%B7%A5/" class="print-no-link">#电子电工</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>电子电工技术（上册）</div>
+      <div>https://machomeng.pages.dev/4/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Macho Meng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年8月20日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/5/" title="不定积分的求解方法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">不定积分的求解方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/3/" title="高中语文古诗词64篇">
+                        <span class="hidden-mobile">高中语文古诗词64篇</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="学习"
+        id="heading-4ef520d6cd20ba4a727af08e17e4939e" role="tab" data-toggle="collapse" href="#collapse-4ef520d6cd20ba4a727af08e17e4939e"
+        aria-expanded="true"
+      >
+        学习
+        <span class="list-group-count">(8)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4ef520d6cd20ba4a727af08e17e4939e"
+           role="tabpanel" aria-labelledby="heading-4ef520d6cd20ba4a727af08e17e4939e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/12/" title="JavaScript学习笔记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JavaScript学习笔记</span>
+        </a>
+      
+    
+      
+      
+        <a href="/5/" title="不定积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">不定积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/13/" title="中国古代计时单位"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">中国古代计时单位</span>
+        </a>
+      
+    
+      
+      
+        <a href="/6/" title="二重积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">二重积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/9/" title="概率论"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">概率论</span>
+        </a>
+      
+    
+      
+      
+        <a href="/16/" title="物理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">物理</span>
+        </a>
+      
+    
+      
+      
+        <a href="/4/" title="电子电工技术（上册）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">电子电工技术（上册）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/14/" title="运筹学"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">运筹学</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

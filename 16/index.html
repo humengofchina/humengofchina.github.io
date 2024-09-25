@@ -1,0 +1,914 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Macho Meng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="研究物质及其运动规律的科学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="物理">
+<meta property="og:url" content="https://machomeng.pages.dev/16/index.html">
+<meta property="og:site_name" content="爱发电的猛男妙妙屋">
+<meta property="og:description" content="研究物质及其运动规律的科学">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://machomeng.pages.dev/images/A/physics.jpg">
+<meta property="article:published_time" content="2024-09-19T08:36:21.000Z">
+<meta property="article:modified_time" content="2024-09-22T07:30:51.204Z">
+<meta property="article:author" content="Macho Meng">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="物理">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/physics.jpg">
+  
+  
+  
+  <title>物理 - 爱发电的猛男妙妙屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"machomeng.pages.dev","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":false,"placement":"left","headingSelector":"h1,h2,h3,h4,h5","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>爱发电的猛男妙妙屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/web/" target="_self">
+                
+                <span>常用网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/browser/" target="_self">
+                
+                <span>收藏网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/informalessay/" target="_self">
+                
+                <span>随笔</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="物理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Macho Meng
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-09-19 16:36" pubdate>
+          2024年9月19日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">物理</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年9月22日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h4><span id="目录默认关闭点击展开">目录（默认关闭，点击展开）：</span></h4>
+<h4><span id="展开目录找的更快">展开目录找的更快</span></h4>
+<details>
+<summary>
+点击展开目录
+</summary>
+<!-- toc -->
+<ul>
+<li><a href="#高中物理">高中物理</a>
+<ul>
+<li><a href="#新人教版必修一">新人教版必修一</a>
+<ul>
+<li><a href="#一-运动的描述">一、运动的描述</a>
+<ul>
+<li><a href="#1-质点-参考系">1、质点 参考系</a></li>
+<li><a href="#2-时间-位移">2、时间 位移</a></li>
+<li><a href="#3-位置变化快慢的描述-速度">3、位置变化快慢的描述-速度</a></li>
+<li><a href="#4-速度变化快慢的描述-加速度">4、速度变化快慢的描述-加速度</a></li>
+</ul></li>
+<li><a href="#二-匀变速直线运动的研究">二、匀变速直线运动的研究</a>
+<ul>
+<li><a href="#1-实验小车速度随时间变化规律">1、实验：小车速度随时间变化规律</a></li>
+<li><a href="#2-匀变速直线运动的速度与时间的关系">2、匀变速直线运动的速度与时间的关系</a></li>
+<li><a href="#3-匀变速直线运动的位移与时间的关系">3、匀变速直线运动的位移与时间的关系</a></li>
+<li><a href="#4-自由落体运动">4、自由落体运动</a></li>
+</ul></li>
+<li><a href="#三-相互作用-力">三、相互作用-力</a>
+<ul>
+<li><a href="#1-重力和弹力">1、重力和弹力</a></li>
+<li><a href="#2-摩擦力">2、摩擦力</a></li>
+<li><a href="#3-牛顿第三定律">3、牛顿第三定律</a></li>
+<li><a href="#4-力的合成和分解">4、力的合成和分解</a></li>
+<li><a href="#5-共点力的平衡">5、共点力的平衡</a></li>
+</ul></li>
+<li><a href="#四-运动和力的关系">四、运动和力的关系</a>
+<ul>
+<li><a href="#1-牛顿第一定律">1、牛顿第一定律</a></li>
+<li><a href="#2-实验探究加速度与力-质量的关系">2、实验：探究加速度与力、质量的关系</a></li>
+<li><a href="#3-牛顿第二定律">3、牛顿第二定律</a></li>
+<li><a href="#4-力学单位制">4、力学单位制</a></li>
+<li><a href="#5-牛顿运动定律的应用">5、牛顿运动定律的应用</a></li>
+<li><a href="#6-超重和失重">6、超重和失重</a></li>
+</ul></li>
+<li><a href="#课题研究">课题研究</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- tocstop -->
+</details>
+<h2><span id="高中物理">高中物理</span></h2>
+<h3><span id="新人教版必修一">新人教版必修一</span></h3>
+<h4><span id="一-运动的描述">一、运动的描述</span></h4>
+<h5><span id="1-质点-参考系">1、质点 参考系</span></h5>
+<p>质点：在所研究的物理问题中，物体的形状和大小不影响所探究的物理过程，则该物体就可以看作一个只有质量，而大小形状忽略的点。</p>
+<p>参考系：描述一个物体的运动，一定要选取一个参考系；动中选静，一般选择大地地球为参考系；参考系可以选择静止或运动的物体；同一个物体相对于不同的参考系而言，运动形式一般不相同。参考系选取得当，所研究的物理问题也会变得简洁。</p>
+<h5><span id="2-时间-位移">2、时间 位移</span></h5>
+<p>时刻：某一瞬间的时间</p>
+<p>时间间隔：两个时刻之间的差值叫时间间隔；若这个差值无限趋向于0，则时间间隔就变成了时刻。</p>
+<p>路程：物体运动轨迹的长度</p>
+<p>位移：位移是矢量，表示物体初末位置的变化的有向线段；方向由初位置指向末位置。</p>
+<p>直线运动的位移：由于直线运动已经规定方向，所以在此只计算位移的大小即可，<span class="math inline">\(Δx\)</span>叫位移的变化量（末位移减初位移）</p>
+<p><span class="math inline">\(\displaystyle Δx=x_2-x_1\)</span></p>
+<blockquote>
+<p>若<span class="math inline">\(Δx\)</span>结果为正值，则运动方向为<span class="math inline">\(x\)</span>正方向</p>
+</blockquote>
+<blockquote>
+<p>若<span class="math inline">\(Δx\)</span>结果为负值，则运动方向为<span class="math inline">\(x\)</span>负方向</p>
+</blockquote>
+<h5><span id="3-位置变化快慢的描述-速度">3、位置变化快慢的描述-速度</span></h5>
+<p>速度（也叫平均速度）：物体发生位置变化产生的位移与发生这段位置变化所用时间的比值就叫速度。</p>
+<p><span class="math inline">\(\displaystyle v=
+\frac{Δx}{Δt}\)</span></p>
+<p>因为<span class="math inline">\(Δx\)</span>为矢量，<span class="math inline">\(Δt\)</span>为标量，所以速度为矢量</p>
+<p>瞬时速度：当<span class="math inline">\(Δt\)</span>无限趋于0时，平均速度就可以代表该时刻的瞬时速度。瞬时速度也是矢量。</p>
+<p>速率：瞬时速度的大小叫速率，速率是标量。</p>
+<p>速度-时间图像（<span class="math inline">\(v-t\)</span>图像）：</p>
+<p><img src="./../../images/物理/5-179-jpg_6_0_______-299-0-0-299.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>曲线代表每个时刻对应的瞬时速度</p>
+<p>与水平轴围成的面积为位移</p>
+<p>斜率代表加速度</p>
+<p>注意：图像可能位于第四象限，注意正负意义</p>
+</blockquote>
+<h5><span id="4-速度变化快慢的描述-加速度">4、速度变化快慢的描述-加速度</span></h5>
+<p>加速度：物体发生速度变化产生的速度差与发生这段速度变化所用时间的比值就叫加速度。</p>
+<p><span class="math inline">\(\displaystyle a=
+\frac{Δv}{Δt}\)</span></p>
+<p>因为<span class="math inline">\(Δv\)</span>为矢量，<span class="math inline">\(Δt\)</span>为标量，所以加速度也为矢量</p>
+<p>加速度的方向：与<span class="math inline">\(Δv\)</span>的方向相同，<span class="math inline">\(Δv=v_2-v_1\)</span></p>
+<p><span class="math inline">\(a-t\)</span>图像：</p>
+<blockquote>
+<p>面积代表速度的变化量</p>
+</blockquote>
+<h4><span id="二-匀变速直线运动的研究">二、匀变速直线运动的研究</span></h4>
+<h5><span id="1-实验小车速度随时间变化规律">1、实验：小车速度随时间变化规律</span></h5>
+<p>小车在重物牵引下速度随时间变化的规律，增减所挂的槽码（或者小车上放置重物）更换纸带，共做三次实验。</p>
+<p>数据处理：舍弃纸带前面比较密集的点，选择一个适当的点作为计时起点，可选每隔<span class="math inline">\(0.1s\)</span>的若干计数点进行测量</p>
+<p>逐差法求解加速度：<span class="math inline">\(\displaystyle
+Δx=at^2=S_n-S_{n-1}\)</span></p>
+<p><span class="math inline">\(\displaystyle a_1=\frac{(S_4-S_1)}{3T^2}
+,a_2=\frac{(S_5-S_2)}{3T^2}, a_3=\frac{(S_6-S_3)}{3T^2}\)</span></p>
+<p><span class="math inline">\(\displaystyle
+a=\frac{a_1+a_2+a_3}{3}=\frac{(S_4-S_1)+(S_5-S_2)+(S_6-S_3)}{9T^2}\)</span></p>
+<h5><span id="2-匀变速直线运动的速度与时间的关系">2、匀变速直线运动的速度与时间的关系</span></h5>
+<p><span class="math inline">\(\displaystyle v=v_0+at\)</span></p>
+<h5><span id="3-匀变速直线运动的位移与时间的关系">3、匀变速直线运动的位移与时间的关系</span></h5>
+<p><span class="math inline">\(\displaystyle
+x=v_0t+\frac{1}{2}at^2\)</span></p>
+<p><span class="math inline">\(\displaystyle v^2-v_0^2=2ax\)</span></p>
+<h5><span id="4-自由落体运动">4、自由落体运动</span></h5>
+<p>初速度为零的匀加速直线运动，且加速度为重力加速度<span class="math inline">\(g=9.8m/s^2\)</span></p>
+<p>重力加速度从赤道两极地逐渐稍微变大</p>
+<p><span class="math inline">\(\displaystyle v=gt\)</span></p>
+<p><span class="math inline">\(\displaystyle
+h=\frac{1}{2}gt^2\)</span></p>
+<p><span class="math inline">\(\displaystyle v^2=2gh\)</span></p>
+<h4><span id="三-相互作用-力">三、相互作用-力</span></h4>
+<p>力的单位为牛顿，简称牛，符号为<span class="math inline">\(N\)</span></p>
+<p><img src="./../../images/物理/image-20240922150338497.png" srcset="/img/loading.gif" lazyload></p>
+<h5><span id="1-重力和弹力">1、重力和弹力</span></h5>
+<p>重力：由于地球的吸引而使物体受到的力叫作重力。</p>
+<p>物体所受到的重力<span class="math inline">\(G\)</span>与物体质量<span class="math inline">\(m\)</span>的关系<span class="math inline">\(G=mg\)</span></p>
+<p>重力加速度<span class="math inline">\(g\)</span>的单位可以是<span class="math inline">\(N/kg\)</span>也可以是<span class="math inline">\(m/s^2\)</span>，其中<span class="math inline">\(1N/kg=1m/s^2\)</span></p>
+<p>重心：一个物体各个部位都受到重力的作用，从效果上看，可以认为各部分受到的重力集中于一点，这个点叫作重心。</p>
+<p>通过二力平衡的实验可以确定物体的重心（重心也有可能不在物体上）</p>
+<p>弹力：发生形变的物体，要回复原状，与它接触的物体会产生力的作用，这种力叫作弹力。</p>
+<blockquote>
+<p>物体之间相互接触产生接触力，而接触力可以分为弹力和摩擦力。</p>
+</blockquote>
+<blockquote>
+<p>物体在力的作用下形状或体积会发生变化，这种变化叫作形变，有时物体形变很小不易被察觉。</p>
+</blockquote>
+<p>弹性形变：物体发生形变后，如果撤去外力能够恢复原状，这种形变叫弹性形变。</p>
+<p>弹性限度：</p>
+<p>胡克定律：<span class="math inline">\(F=kx\)</span></p>
+<h5><span id="2-摩擦力">2、摩擦力</span></h5>
+<h5><span id="3-牛顿第三定律">3、牛顿第三定律</span></h5>
+<h5><span id="4-力的合成和分解">4、力的合成和分解</span></h5>
+<h5><span id="5-共点力的平衡">5、共点力的平衡</span></h5>
+<h4><span id="四-运动和力的关系">四、运动和力的关系</span></h4>
+<h5><span id="1-牛顿第一定律">1、牛顿第一定律</span></h5>
+<h5><span id="2-实验探究加速度与力-质量的关系">2、实验：探究加速度与力、质量的关系</span></h5>
+<h5><span id="3-牛顿第二定律">3、牛顿第二定律</span></h5>
+<h5><span id="4-力学单位制">4、力学单位制</span></h5>
+<h5><span id="5-牛顿运动定律的应用">5、牛顿运动定律的应用</span></h5>
+<h5><span id="6-超重和失重">6、超重和失重</span></h5>
+<h4><span id="课题研究">课题研究</span></h4>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+      
+        <a href="/tags/%E7%89%A9%E7%90%86/" class="print-no-link">#物理</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>物理</div>
+      <div>https://machomeng.pages.dev/16/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Macho Meng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年9月19日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年9月22日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/14/" title="运筹学">
+                        <span class="hidden-mobile">运筹学</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="学习"
+        id="heading-4ef520d6cd20ba4a727af08e17e4939e" role="tab" data-toggle="collapse" href="#collapse-4ef520d6cd20ba4a727af08e17e4939e"
+        aria-expanded="true"
+      >
+        学习
+        <span class="list-group-count">(8)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4ef520d6cd20ba4a727af08e17e4939e"
+           role="tabpanel" aria-labelledby="heading-4ef520d6cd20ba4a727af08e17e4939e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/12/" title="JavaScript学习笔记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JavaScript学习笔记</span>
+        </a>
+      
+    
+      
+      
+        <a href="/5/" title="不定积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">不定积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/13/" title="中国古代计时单位"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">中国古代计时单位</span>
+        </a>
+      
+    
+      
+      
+        <a href="/6/" title="二重积分的求解方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">二重积分的求解方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/9/" title="概率论"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">概率论</span>
+        </a>
+      
+    
+      
+      
+        <a href="/16/" title="物理"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">物理</span>
+        </a>
+      
+    
+      
+      
+        <a href="/4/" title="电子电工技术（上册）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">电子电工技术（上册）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/14/" title="运筹学"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">运筹学</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
