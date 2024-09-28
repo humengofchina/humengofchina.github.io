@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-09-25T09:20:01.173Z">
+<meta property="article:modified_time" content="2024-09-28T15:39:00.651Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          3.7k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          39 分钟
+          47 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年9月25日 下午
+                    本文最后更新于 2024年9月28日 晚上
                   
                 
               </p>
@@ -369,6 +369,13 @@
 <li><a href="#第四周2024年9月25日165839">第四周：2024年9月25日16:58:39</a>
 <ul>
 <li><a href="#数据包络分析">数据包络分析：</a></li>
+<li><a href="#线性规划的对偶问题">线性规划的对偶问题：</a>
+<ul>
+<li><a href="#1-线性规划的对偶问题">1、线性规划的对偶问题：</a></li>
+<li><a href="#2-对称形式下对偶问题的一般形式">2、对称形式下对偶问题的一般形式：</a></li>
+<li><a href="#3-非对称形式的原对偶问题关系">3、非对称形式的原—对偶问题关系：</a></li>
+</ul></li>
+<li><a href="#单纯形法计算的矩阵描述">单纯形法计算的矩阵描述:</a></li>
 </ul></li>
 </ul>
 <!-- tocstop -->
@@ -660,6 +667,7 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
 <blockquote>
 <p>当<span class="math inline">\(θ\)</span>值相同时：若存在人工变量，则优先选择人工变量出基；若不存在人工变量，则保持角码最大或最小出基。可以避免陷入循环。</p>
 </blockquote>
+<p><img src="./../../images/运筹学/f0fe13c84016d2081a2eb93d0fce506f97b546f7.png" srcset="/img/loading.gif" lazyload></p>
 <figure>
 <img src="./../../images/运筹学/3d01b612d.png" srcset="/img/loading.gif" lazyload alt="解的判别">
 <figcaption aria-hidden="true">解的判别</figcaption>
@@ -669,7 +677,67 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
 <p>数据包络分析（<span class="math inline">\(Data\)</span> <span class="math inline">\(envelopment\)</span> <span class="math inline">\(analysis，DEA\)</span>）是一种基于线性规划的用于评价同类型组织工作绩效相对有效的工具手段。</p>
 <p><img src="./../../images/运筹学/image-20240925171216104.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="./../../images/运筹学/image-20240925171343541.png" srcset="/img/loading.gif" lazyload></p>
-<p>废话不多说，了解、会列式，知道思路即可（运筹学教程第五版<span class="math inline">\(P37\)</span>~<span class="math inline">\(P41\)</span>）</p>
+<p>废话不多说，直接开始做（了解、会列式，知道思路即可）（运筹学教程第五版<span class="math inline">\(P37\)</span>~<span class="math inline">\(P41\)</span>）</p>
+<p>例题：振华银行的4个分理处的投入产出情况如下图所示。要求分别确定各分理处的运行是否<span class="math inline">\(DEA\)</span>有效。</p>
+<p><img src="./../../images/运筹学/image-20240926151106579.png" srcset="/img/loading.gif" lazyload></p>
+<p>解：</p>
+<p>先确定分理处1的运行是否<span class="math inline">\(DEA\)</span>有效：</p>
+<p><span class="math inline">\(minE\)</span></p>
+<p><span class="math inline">\(1800λ_1+1000λ_2+800λ_3+900λ_4 \geq
+1800\)</span></p>
+<p><span class="math inline">\(200λ_1+350λ_2+450λ_3+420λ_4 \geq
+200\)</span></p>
+<p><span class="math inline">\(1600λ_1+1000λ_2+1300λ_3+1500λ_4 \geq
+1600\)</span></p>
+<p><span class="math inline">\(15λ_1+20λ_2+21λ_3+20λ_4 \leq
+15E\)</span></p>
+<p><span class="math inline">\(140λ_1+130λ_2+120λ_3+135λ_4 \leq
+140E\)</span></p>
+<p><span class="math inline">\(λ_1+λ_2+λ_3+λ_4=1\)</span></p>
+<p>$λ_j (j=1,...,4) $</p>
+<p>然后再列分理处2、分理处3、分理处4的方程，并分别计算<span class="math inline">\(E\)</span></p>
+<p>若<span class="math inline">\(E=1\)</span>，则<span class="math inline">\(DEA\)</span>有效。</p>
+<p><br></p>
+<h4><span id="线性规划的对偶问题">线性规划的对偶问题：</span></h4>
+<p>（2024年9月28日22:27:44）</p>
+<h5><span id="1-线性规划的对偶问题">1、线性规划的对偶问题：</span></h5>
+<p>对偶问题概念：任何一个线性规划问题都有一个伴生的线性规划问题，称为其“对偶”问题。</p>
+<p>例如：工厂最大化利润的线性规划对偶问题是——收购该工厂所用的最小的资金。</p>
+<h5><span id="2-对称形式下对偶问题的一般形式">2、对称形式下对偶问题的一般形式：</span></h5>
+<p>定义:满足下列条件的线性规划问题称为具有对称形式:</p>
+<p>（1）其变量均具有非负约束；</p>
+<p>（2）其约束条件当目标函数求极大时均取“≤"号,当目标函数求极小时均取“≥”号。</p>
+<p><img src="./../../images/运筹学/image-20240928230117713.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>原问题的对偶问题，对偶问题的对偶问题就变成原问题。</p>
+</blockquote>
+<p><strong>例：</strong></p>
+<p><img src="./../../images/运筹学/image-20240928223535650.png" srcset="/img/loading.gif" lazyload></p>
+<p>解：由题可知</p>
+<p>如下图，取约束条件的右端项向量，为目标函数的价值系数，得：</p>
+<p><span class="math inline">\(maxW=7y_1+11y_2+14y_3\)</span></p>
+<p><img src="./../../images/运筹学/image-20240928223947447.png" srcset="/img/loading.gif" lazyload></p>
+<p>如下图所示：</p>
+<p>系数矩阵是转置关系，约束条件的符号由原变量的符号得到（对偶问题约束条件的符号与原问题变量符号<strong>相反</strong>），约束条件的资源限额由原目标函数的价值系数得到。故得：</p>
+<p><span class="math inline">\(4y_1+8y_2+12y_3 \geq 4\)</span></p>
+<p><span class="math inline">\(5y_1+-9y_2+13y_3 = 2\)</span></p>
+<p><span class="math inline">\(-6y_1+10y_2 \leq 3\)</span></p>
+<p><img src="./../../images/运筹学/image-20240928231445169.png" srcset="/img/loading.gif" lazyload></p>
+<p>最后是变量的符号判断（如下图）</p>
+<blockquote>
+<p>对偶问题变量的符号与原问题的约束条件的符号<strong>相同</strong></p>
+</blockquote>
+<p><img src="./../../images/运筹学/image-20240928231359705.png" srcset="/img/loading.gif" lazyload></p>
+<p>最后得对偶问题答案：</p>
+<p><img src="./../../images/运筹学/image-20240928231840668.png" srcset="/img/loading.gif" lazyload></p>
+<h5><span id="3-非对称形式的原对偶问题关系">3、非对称形式的原—对偶问题关系：</span></h5>
+<p>利用<span class="math inline">\(x\geq 1\)</span>和<span class="math inline">\(x\leq 1\)</span>能得到<span class="math inline">\(x=1\)</span>的思想，可拆分等号。但是这都不重要，直接上结论！</p>
+<p><img src="./../../images/运筹学/image-20240928201009580.png" srcset="/img/loading.gif" lazyload></p>
+<p>例题：（<span class="math inline">\(P75\)</span>）</p>
+<p><img src="./../../images/运筹学/d4e140245f4432496546e784da9d580.jpg" srcset="/img/loading.gif" lazyload></p>
+<h4><span id="单纯形法计算的矩阵描述">单纯形法计算的矩阵描述:</span></h4>
+<p>最后讲的，还没讲完。ლ(｡-﹏-｡ ლ)</p>
+<p>ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ</p>
 
                 
               </div>
@@ -740,7 +808,7 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月25日</div>
+          <div>2024年9月28日</div>
         </div>
       
       
@@ -771,9 +839,9 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/16/" title="物理">
+                      <a href="/15/" title="汽车构造">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">物理</span>
+                        <span class="hidden-mobile">汽车构造</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -781,8 +849,8 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
                   <article class="post-next col-6">
                     
                     
-                      <a href="/15/" title="汽车构造">
-                        <span class="hidden-mobile">汽车构造</span>
+                      <a href="/13/" title="中国古代计时单位">
+                        <span class="hidden-mobile">中国古代计时单位</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
