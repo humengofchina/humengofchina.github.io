@@ -222,7 +222,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="韶光易逝 劝君惜取少年时"></span>
+            <span id="subtitle" data-typed-text="不知足，不常乐"></span>
           
         </div>
 
@@ -402,79 +402,6 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/15/" target="_self">
-          <img src="/images/A/operations_research.jpg" srcset="/img/loading.gif" lazyload alt="汽车构造">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/15/" target="_self">
-          汽车构造
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/15/" target="_self">
-        <div>
-          汽车上册部分，大部分都是发动机！
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-09-07 21:36" pubdate>
-              2024-09-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
-            
-              <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
-            
-              <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%93%E4%B8%9A%E8%AF%BE/">#大三专业课</a>
-            
-              <a href="/tags/%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">#汽车构造</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/14/" target="_self">
           <img src="/images/A/OR.png" srcset="/img/loading.gif" lazyload alt="运筹学">
         </a>
@@ -537,6 +464,79 @@
               <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%93%E4%B8%9A%E8%AF%BE/">#大三专业课</a>
             
               <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/">#运筹学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/15/" target="_self">
+          <img src="/images/A/operations_research.jpg" srcset="/img/loading.gif" lazyload alt="汽车构造">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/15/" target="_self">
+          汽车构造
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/15/" target="_self">
+        <div>
+          汽车上册部分，大部分都是发动机！
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-07 21:36" pubdate>
+              2024-09-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
+            
+              <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+            
+              <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%93%E4%B8%9A%E8%AF%BE/">#大三专业课</a>
+            
+              <a href="/tags/%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">#汽车构造</a>
             
           </div>
         
@@ -776,7 +776,37 @@
       }
       var text = subtitle.getAttribute('data-typed-text');
       
-        typing(text);
+        jQuery.ajax({
+          type: 'GET',
+          url: 'https://v1.hitokoto.cn/',
+          headers: {},
+          dataType: 'json',
+          success: function(result) {
+            var apiText;
+            if (result) {
+              var keys = 'hitokoto'.split(',');
+              if (result instanceof Array) {
+                result = result[0];
+              }
+              for (const k of keys) {
+                var value = result[k];
+                if (typeof value === 'string') {
+                  apiText = value;
+                  break;
+                } else if (value instanceof Object) {
+                  result = value;
+                }
+              }
+            }
+            apiText ? typing(apiText) : typing(text);
+          },
+          error: function(xhr, status, error) {
+            if (error) {
+              console.error('Failed to request https://v1.hitokoto.cn/:', error);
+            }
+            typing(text);
+          }
+        })
       
     })(window, document);
   </script>
