@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-09-28T15:39:00.651Z">
+<meta property="article:modified_time" content="2024-10-09T09:48:26.013Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.7k 字
+          4.3k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          47 分钟
+          54 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年9月28日 晚上
+                    本文最后更新于 2024年10月9日 下午
                   
                 
               </p>
@@ -376,6 +376,20 @@
 <li><a href="#3-非对称形式的原对偶问题关系">3、非对称形式的原—对偶问题关系：</a></li>
 </ul></li>
 <li><a href="#单纯形法计算的矩阵描述">单纯形法计算的矩阵描述:</a></li>
+</ul></li>
+<li><a href="#第六周2024年10月9日142631">第六周：2024年10月9日14:26:31</a>
+<ul>
+<li><a href="#单纯形法计算的矩阵描述接上">单纯形法计算的矩阵描述（接上）</a></li>
+<li><a href="#老师说的有问题的题">老师说的有问题的题：</a></li>
+<li><a href="#对偶问题的基本性质">对偶问题的基本性质：</a>
+<ul>
+<li><a href="#1-弱对偶性">1、弱对偶性</a></li>
+<li><a href="#2-最优性">2、最优性</a></li>
+<li><a href="#3-强对偶性对偶定理">3、强对偶性（对偶定理）</a></li>
+<li><a href="#4-互补松弛性">4、互补松弛性</a></li>
+</ul></li>
+<li><a href="#影子价格">影子价格：</a></li>
+<li><a href="#对偶单纯形法">对偶单纯形法：</a></li>
 </ul></li>
 </ul>
 <!-- tocstop -->
@@ -737,7 +751,50 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
 <p><img src="./../../images/运筹学/d4e140245f4432496546e784da9d580.jpg" srcset="/img/loading.gif" lazyload></p>
 <h4><span id="单纯形法计算的矩阵描述">单纯形法计算的矩阵描述:</span></h4>
 <p>最后讲的，还没讲完。ლ(｡-﹏-｡ ლ)</p>
-<p>ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ</p>
+<h2><span id="第六周2024年10月9日142631">第六周：2024年10月9日14:26:31</span></h2>
+<h4><span id="单纯形法计算的矩阵描述接上">单纯形法计算的矩阵描述（接上）</span></h4>
+<p>废话不多说，直接上结论：原问题的检验数的相反数恰好是对偶问题的一个可行解。</p>
+<p>上例题：</p>
+<p><img src="./../../images/运筹学/3e784c5ca552766bf42f4326536d9da.jpg" srcset="/img/loading.gif" lazyload></p>
+<figure>
+<img src="./../../images/运筹学/image-20241009150716051.png" srcset="/img/loading.gif" lazyload alt="表2-5">
+<figcaption aria-hidden="true">表2-5</figcaption>
+</figure>
+<figure>
+<img src="./../../images/运筹学/image-20241009151156423.png" srcset="/img/loading.gif" lazyload alt="表2-6">
+<figcaption aria-hidden="true">表2-6</figcaption>
+</figure>
+<p>从上面的两个表格中可得：只需要求解其中一个问题，从最优解的单纯形表可得到另一个问题的最优解。</p>
+<h4><span id="老师说的有问题的题">老师说的有问题的题：</span></h4>
+<p><span class="math inline">\(P77-2.9\)</span>第二问</p>
+<p><img src="./../../images/运筹学/c24e6661f46f920e4c533a9da6b8005.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/运筹学/06.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>故可以由表可得：根据对偶理论，对偶问题的最优解为</p>
+<p><span class="math inline">\(\displaystyle
+y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
+<h4><span id="对偶问题的基本性质">对偶问题的基本性质：</span></h4>
+<h5><span id="1-弱对偶性">1、弱对偶性</span></h5>
+<p><span class="math inline">\(\displaystyle \sum_{j=1}^{n}c_jx_j\leq
+\sum_{i=1}^{m}b_iy_i\)</span></p>
+<p>原问题的最大值 小于等于 对偶问题的最小值</p>
+<p>推论：</p>
+<blockquote>
+<p>1、原问题最优解的目标函数值是其对偶函数目标函数值的下界；反之，对偶问题最优解的目标函数值是其原问题目标函数值的上界。</p>
+<p>2、若原问题有无界解，则对偶问题无界；反之，若对偶问题有无界解，则原问题无界。（注意：若则反之不成立）</p>
+<p>3、若原问题有解而对偶问题无解，则原问题目标函数值无界；反之，若对偶问题有解而原问题无解，则对偶问题目标函数值无界。</p>
+</blockquote>
+<h5><span id="2-最优性">2、最优性</span></h5>
+<p>原问题和对偶问题的可行解相等时，则该可行解为最优解。</p>
+<h5><span id="3-强对偶性对偶定理">3、强对偶性（对偶定理）</span></h5>
+<p>若原问题及其对偶问题均具有可行解，则二者都具有最优解，且值相等。</p>
+<h5><span id="4-互补松弛性">4、互补松弛性</span></h5>
+<p>对偶变量与松弛变量相乘为零</p>
+<h4><span id="影子价格">影子价格：</span></h4>
+<p>ლ(｡-﹏-｡ ლ)</p>
+<h4><span id="对偶单纯形法">对偶单纯形法：</span></h4>
+<p>废话不多说，直接上结论：</p>
+<p><img src="./../../images/运筹学/image-20241009174739712.png" srcset="/img/loading.gif" lazyload></p>
+<p>待完善ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ</p>
 
                 
               </div>
@@ -808,7 +865,7 @@ X=(0,\frac{5}{2},\frac{3}{2},0,0)^T\)</span>由检验数可得，是最优解。
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月28日</div>
+          <div>2024年10月9日</div>
         </div>
       
       
