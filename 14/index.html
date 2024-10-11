@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-10-09T09:48:26.013Z">
+<meta property="article:modified_time" content="2024-10-11T15:11:09.723Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.3k 字
+          5.6k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          54 分钟
+          71 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年10月9日 下午
+                    本文最后更新于 2024年10月11日 晚上
                   
                 
               </p>
@@ -390,6 +390,13 @@
 </ul></li>
 <li><a href="#影子价格">影子价格：</a></li>
 <li><a href="#对偶单纯形法">对偶单纯形法：</a></li>
+<li><a href="#灵敏度分析">灵敏度分析：</a>
+<ul>
+<li><a href="#1-分析c_j的变化">1、分析<span class="math inline">\(c_j\)</span>的变化：</a></li>
+<li><a href="#2-分析b_i的变化">2、分析<span class="math inline">\(b_i\)</span>的变化：</a></li>
+<li><a href="#3-增加一个变量x_j的分析">3、增加一个变量<span class="math inline">\(x_j\)</span>的分析：</a></li>
+<li><a href="#4-分析参数a_ij的变化">4、分析参数<span class="math inline">\(a_{ij}\)</span>的变化:</a></li>
+</ul></li>
 </ul></li>
 </ul>
 <!-- tocstop -->
@@ -789,11 +796,131 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
 <p>若原问题及其对偶问题均具有可行解，则二者都具有最优解，且值相等。</p>
 <h5><span id="4-互补松弛性">4、互补松弛性</span></h5>
 <p>对偶变量与松弛变量相乘为零</p>
+<p><img src="./../../images/JavaScript/image-20241011182650702.png" srcset="/img/loading.gif" lazyload></p>
 <h4><span id="影子价格">影子价格：</span></h4>
 <p>ლ(｡-﹏-｡ ლ)</p>
+<p><img src="./../../images/JavaScript/image-20241011183435339.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/JavaScript/image-20241011183652256.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/JavaScript/image-20241011183708190.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/JavaScript/image-20241011183738732.png" srcset="/img/loading.gif" lazyload></p>
 <h4><span id="对偶单纯形法">对偶单纯形法：</span></h4>
 <p>废话不多说，直接上结论：</p>
+<blockquote>
+<p>1、根据线性规划问题，列出初始单纯形表。检查<span class="math inline">\(b\)</span>列的数字，若都为非负，检验数都为非正，则已得到最优解。停止计算</p>
+<p>若检查<span class="math inline">\(b\)</span>列的数字时，至少还有一个负分量，检验数保持非正，那么进行以下计算。</p>
+<p>2、确定换出变量。按<span class="math inline">\(min\{bi｜bi＜0\}\)</span>对应的基变量<span class="math inline">\(x_i\)</span>为换出变量</p>
+<p>3、确定换入变量。在单纯形表中检查<span class="math inline">\(x_i\)</span>所在行的各系数<span class="math inline">\(α_{ij}(j=1,2,…，n)\)</span>。若所有<span class="math inline">\(α_{ij}≥0\)</span>，则无可行解，停止计算。</p>
+<p>若存在<span class="math inline">\(α_{ij}＜0  (j=1,2,…，n)\)</span>,
+计算<span class="math inline">\(\displaystyle
+θ=\min(\frac{σ}{a_{ij}}|a_{ij}&lt;0)\)</span>按<span class="math inline">\(θ\)</span>规则所对应的列的非基变量<span class="math inline">\(x_k\)</span>为换入变量，这样才能保持得到的对偶问题解仍为可行解。</p>
+<p>4、以<span class="math inline">\(a_{ik}\)</span>为主元素，按原单纯形法在表中进行迭代运算，得到新的计算表。</p>
+</blockquote>
 <p><img src="./../../images/运筹学/image-20241009174739712.png" srcset="/img/loading.gif" lazyload></p>
+<h4><span id="灵敏度分析">灵敏度分析：</span></h4>
+<blockquote>
+<p>（2024年10月11日21:05:57）</p>
+</blockquote>
+<p>当这些参数一个或者几个发生变化时，问题的最优解会有什么变化，或者这些参数在一个多大范围内变化时，问题的最优解或最优基不变。这就是灵敏度分析所要研究解决的问题。</p>
+<p>灵敏度分析的步骤可归纳如下：</p>
+<p>1.将参数的改变通过计算反映到最终单纯形表上来。</p>
+<blockquote>
+<p>具体计算方法是，按下列公式计算出由参数<span class="math inline">\(a_{ij},b_i,c_j\)</span>的变化而引起的最终单纯形表上有关数字的变化。</p>
+<p><span class="math inline">\(∆b^`=B^{-1}∆b\)</span></p>
+<p><span class="math inline">\(∆P_j^`=B^{-1}∆P_j\)</span></p>
+</blockquote>
+<p>2.检查原问题是否仍为可行解。</p>
+<p>3.检查对偶问题是否仍为可行解。</p>
+<p>4.按下表所列情况得出结论或决定继续计算的步骤。</p>
+<table>
+
+<thead>
+<tr>
+<th><strong>原问题</strong></th>
+<th><strong>对偶问题</strong></th>
+<th><strong>结论或继续计算的步骤</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>可行解</strong></td>
+<td><strong>可行解</strong></td>
+<td><strong>问题的最优解或最优基不变</strong></td>
+</tr>
+<tr>
+<td><strong>可行解</strong></td>
+<td><strong>非可行解</strong></td>
+<td><strong>用单纯形法继续迭代求最优解</strong></td>
+</tr>
+<tr>
+<td><strong>非可行解</strong></td>
+<td><strong>可行解</strong></td>
+<td><strong>用对偶单纯形法继续迭代求最优解</strong></td>
+</tr>
+<tr>
+<td><strong>非可行解</strong></td>
+<td><strong>非可行解</strong></td>
+<td><strong>引进人工变量，编制新的单纯形表重新计算</strong></td>
+</tr>
+</tbody>
+</table>
+<p>若B是最优基，则最优表形式如下</p>
+<p><img src="./../../images/运筹学/image-20241011212101868.png" srcset="/img/loading.gif" lazyload></p>
+<p>看不懂？我们废话不多说，直接开始做。</p>
+<h5><span id="1-分析c_j的变化">1、分析<span class="math inline">\(c_j\)</span>的变化：</span></h5>
+<p>线性规划目标函数中变量系数<span class="math inline">\(C_j\)</span>的变化仅仅影响到检验数（<span class="math inline">\(c_j-z_j\)</span>）的变化。所以将<span class="math inline">\(c_j\)</span>的变化直接反映到最终单纯形表中，只可能出现（原问题可行解，对偶问题可行解）（原问题可行解，对偶问题非可行解）这两种情况。</p>
+<p>在第一章美佳公司的例子中：</p>
+<p><img src="./../../images/运筹学/dc2ef4951a5a9e34ed824b8976ee852.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>（1）若家电Ⅰ的利润降至1.5元/件，而家电Ⅱ的利润增至2元/件时，美佳公司最优生产计划有何变化?</p>
+<p>（2）若家电Ⅰ的利润不变，则家电Ⅱ的利润在什么范围内变化时，该公司的最优生产计划将不发生变化？</p>
+<p>解：（1）<span class="math inline">\(\max z=2x_1+x_2\)</span></p>
+<p><span class="math inline">\(5x_2\leq 15\)</span></p>
+<p><span class="math inline">\(6x_1+2x_2 \leq24\)</span></p>
+<p><span class="math inline">\(x_1+x_2 \leq 5\)</span></p>
+<p><span class="math inline">\(x_1,x_2 \geq0\)</span></p>
+<p><img src="./../../images/运筹学/image-20241011213722164.png" srcset="/img/loading.gif" lazyload></p>
+<p>即美佳公司随家电Ⅰ，Ⅱ的利润变化应调整为生产2件Ⅰ，生产3件Ⅱ。</p>
+<p>(2)设家电Ⅱ的利润为<span class="math inline">\(（1+λ）\)</span>元，如下:</p>
+<p><img src="./../../images/运筹学/image-20241011220628451.png" srcset="/img/loading.gif" lazyload></p>
+<p>为保证最优解，$ -1/4+1/4λ≤0<span class="math inline">\(，\)</span>
+-1/2-3/2λ ≤0$</p>
+<p>解得:<span class="math inline">\(-1/3 ≤λ≤1\)</span></p>
+<p>即家电Ⅱ的利润<span class="math inline">\(c_2\)</span>的变化范围应满足:<span class="math inline">\(2/3 ≤ c_2 ≤2\)</span></p>
+<h5><span id="2-分析b_i的变化">2、分析<span class="math inline">\(b_i\)</span>的变化：</span></h5>
+<p>在美佳公司的例子中：</p>
+<p><img src="./../../images/运筹学/dc2ef4951a5a9e34ed824b8976ee852.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>（1）若设备A和调试工序的每天能力不变，而设备B每天的能力增加到<span class="math inline">\(32h\)</span>，分析公司最优计划的变化；</p>
+<p>（2）设设备A和设备B每天可用能力不变，则调试工序能力在什么范围内变化时，问题的最优基不变。</p>
+<p>解：（1）</p>
+<p><img src="./../../images/运筹学/image-20241011221712305.png" srcset="/img/loading.gif" lazyload></p>
+<p>将上式反映到最终单纯形法中得到以下表格，并继续用对偶单纯形法进行计算，得：</p>
+<p><img src="./../../images/运筹学/image-20241011222033190.png" srcset="/img/loading.gif" lazyload></p>
+<p>由上表得，最优计划是只生产5件家电Ⅰ</p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p>设调试工序每天可用能力为<span class="math inline">\(（5+λ）h\)</span>，因有：</p>
+<p><img src="./../../images/运筹学/e3a24bdea12a02ea8210cf7f13df883105301fbf.png" srcset="/img/loading.gif" lazyload></p>
+<p>将其反映到最终单纯形表中，其b列数字为：</p>
+<p><img src="./../../images/运筹学/9fda7b9edf05c7cb23cd271d504d01f70bfe67da.png" srcset="/img/loading.gif" lazyload></p>
+<p>因<span class="math inline">\(b&gt;0\)</span>时最优基不变，故<span class="math inline">\(-1≤λ≤1\)</span>。调试工序的能力应在<span class="math inline">\(4h-6h\)</span>之间。</p>
+<h5><span id="3-增加一个变量x_j的分析">3、增加一个变量<span class="math inline">\(x_j\)</span>的分析：</span></h5>
+<p>增加一个变量在实际问题中反映为增加一种新的产品，其分析步骤如下：</p>
+<blockquote>
+<p>1、计算<span class="math inline">\(\displaystyle
+σ_{j}^`=c_j-z_j=c_j-\sum_{i=1}^{m} a_{ij}y_i^*\)</span></p>
+<p>2、计算<span class="math inline">\(P_j^`=B^{-1}P_j\)</span></p>
+<p>3、若 <span class="math inline">\(σ_j^′≤0\)</span>，原最优解不变，只需将计算得到的<span class="math inline">\(P_j^′\)</span>和<span class="math inline">\(σ_j^′\)</span>直接写入最终单纯形表中；</p>
+<p>若<span class="math inline">\(σ_j^′&gt;0\)</span>，则按单纯形法继续迭代计算找出最优。</p>
+</blockquote>
+<p>在美佳公司的例子中：</p>
+<p><img src="./../../images/运筹学/dc2ef4951a5a9e34ed824b8976ee852.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>设美佳公司又计划推出新型号的家电Ⅲ，生产一件所需设备<span class="math inline">\(A、B\)</span>及调试工序的时间分别为<span class="math inline">\(3h、4h、2h\)</span>，该产品的预期盈利为3元/件，试分析该产品是否值得投产；如投产，对该公司的最优生产计划有何影响。</p>
+<p>解：</p>
+<p>设生产<span class="math inline">\(x_6\)</span>件家电Ⅲ，有<span class="math inline">\(c_6=3，P_6=(3，4，2)^T\)</span></p>
+<p><img src="./../../images/运筹学/image-20241011230647224.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/运筹学/image-20241011230711537.png" srcset="/img/loading.gif" lazyload></p>
+<p>最优生产计划应为每天生产<span class="math inline">\(7/2\)</span>件家电Ⅰ，<span class="math inline">\(3/4\)</span>件家电Ⅲ</p>
+<h5><span id="4-分析参数a_ij的变化">4、分析参数<span class="math inline">\(a_{ij}\)</span>的变化:</span></h5>
 <p>待完善ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ኈ ቼ</p>
 
                 
@@ -865,7 +992,7 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月9日</div>
+          <div>2024年10月11日</div>
         </div>
       
       
@@ -945,7 +1072,7 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
         aria-expanded="true"
       >
         学习
-        <span class="list-group-count">(9)</span>
+        <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -1026,6 +1153,15 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">电子电工技术（上册）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/17/" title="网络相关知识"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">网络相关知识</span>
         </a>
       
     
