@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-10-12T14:10:18.775Z">
+<meta property="article:modified_time" content="2024-10-16T08:35:56.491Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.8k 字
+          7.7k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          86 分钟
+          97 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年10月12日 晚上
+                    本文最后更新于 2024年10月16日 下午
                   
                 
               </p>
@@ -400,9 +400,13 @@
 </ul></li>
 <li><a href="#参数线性规划">参数线性规划：</a></li>
 </ul></li>
-<li><a href="#第七周">第七周：</a>
+<li><a href="#第七周2024年10月16日152928">第七周：2024年10月16日15:29:28</a>
 <ul>
-<li><a href="#待续">待续...</a></li>
+<li><a href="#运输问题">运输问题：</a>
+<ul>
+<li><a href="#产销平衡运输问题数学模型">产销平衡运输问题数学模型</a></li>
+<li><a href="#用表上作业法求解运输问题">用表上作业法求解运输问题：</a></li>
+</ul></li>
 </ul></li>
 </ul>
 <!-- tocstop -->
@@ -1001,8 +1005,78 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
 <figcaption aria-hidden="true">被遮住：目标函数能改进</figcaption>
 </figure>
 <p><img src="./../../images/运筹学/image-20241012152216606.png" srcset="/img/loading.gif" lazyload></p>
-<h2><span id="第七周">第七周：</span></h2>
-<h4><span id="待续">待续...</span></h4>
+<h2><span id="第七周2024年10月16日152928">第七周：2024年10月16日15:29:28</span></h2>
+<h4><span id="运输问题">运输问题：</span></h4>
+<p>如果运输问题的总产量等于其总销量，则称该运输问题为产销平衡运输问题；反之，称<strong>产销不平衡运输问题</strong>（后面再讲）。</p>
+<p>产销平衡运输问题的数学模型可表示如下：</p>
+<p><img src="./../../images/运筹学/dflksfmls.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/运筹学/172904c8651c57a0a16f25bf8825def582da2abe.png" srcset="/img/loading.gif" lazyload></p>
+<h5><span id="产销平衡运输问题数学模型">产销平衡运输问题数学模型</span></h5>
+<p>1、运输问题一定有最优解；基变量的个数<span class="math inline">\(=m+n-1\)</span>（运输问题有优先最优解）；</p>
+<p>2、运输问题约束条件的系数矩阵</p>
+<p><img src="./../../images/运筹学/b56b869d20ea09fcab1c91e413ada3d46a429efe.png" srcset="/img/loading.gif" lazyload></p>
+<p>运输问题具有下述特点：</p>
+<blockquote>
+<ol type="1">
+<li><p>约束条件系数矩阵的元素等于0或1；</p></li>
+<li><p>约束条件系数矩阵的每一列有两个非零元素，这对应于每一个变量在前m个约束方程中出现一次，在后n个约束方程中也出现一次。</p></li>
+</ol>
+<p>对产销平衡运输问题，除上述两个特点外，还有以下特点：</p>
+<blockquote>
+<ol type="1">
+<li><p>所有结构约束条件都是等式约束；</p></li>
+<li><p>各产地产量之和等于各销地销量之和。</p></li>
+</ol>
+</blockquote>
+</blockquote>
+<p>废话不多说，直接上例题：</p>
+<p>【例1】<span class="math inline">\(P83\)</span>：某部门有3个生产同类产品的工厂(产地)，生产的产品由4个销售点(销地)出售，各工厂的生产量、各销售点的销售量(假定单位均为<span class="math inline">\(t\)</span>)以及各工厂到各销售点的单位运价(元／t)示于下表中，要求研究产品如何调运才能使总运费最小?</p>
+<p><img src="./../../images/运筹学/image-20241016153252071.png" srcset="/img/loading.gif" lazyload></p>
+<p>解：由于总产量和总销量均为48，故得知这是一个产销平衡运输问题。</p>
+<p>用<span class="math inline">\(x_{ij}\)</span>表示由第<span class="math inline">\(i\)</span>个产地到第<span class="math inline">\(j\)</span>个销地的产品数量，即可写出数学模型，如下图：</p>
+<p><img src="./../../images/运筹学/kfjsdjfskjd.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/运筹学/7a485aea7776d0d4ce55ccbbd9b8ed5.jpg" srcset="/img/loading.gif" lazyload></p>
+<h5><span id="用表上作业法求解运输问题">用表上作业法求解运输问题：</span></h5>
+<p>1、给出运输问题的初始基可行解（初始调运方案）</p>
+<blockquote>
+<p>基本思想：同单纯形法的基本思想</p>
+<p>方法：西北角法、最小元素法、沃格尔法</p>
+</blockquote>
+<p><strong>西北角法</strong>：（从西北角（左上角）格开始，在格内的右下角标上允许取得的最大数。然后按行（列）标下一格的数。若某行（列）的产量（销量）已满足，则把该行（列）的其他格划去。如此进行下去，直至得到一个基本可行解。）</p>
+<p>步骤：</p>
+<p>1、先满足最左上角的，<span class="math inline">\(B_1\)</span>需要8，<span class="math inline">\(A_1\)</span>产量16可以一次满足，<span class="math inline">\(B_1\)</span>满足则划去该列</p>
+<p><img src="./../../images/运筹学/image-20241016161528990.png" srcset="/img/loading.gif" lazyload></p>
+<p>2、再进行到下一步</p>
+<p><img src="./../../images/运筹学/image-20241016161729562.png" srcset="/img/loading.gif" lazyload></p>
+<p>3、</p>
+<p><img src="./../../images/运筹学/image-20241016161903682.png" srcset="/img/loading.gif" lazyload></p>
+<p>4、</p>
+<p><img src="./../../images/运筹学/image-20241016162021401.png" srcset="/img/loading.gif" lazyload></p>
+<p>5、</p>
+<p><img src="./../../images/运筹学/image-20241016162239337.png" srcset="/img/loading.gif" lazyload></p>
+<p>6、</p>
+<p><img src="./../../images/运筹学/image-20241016162513122.png" srcset="/img/loading.gif" lazyload></p>
+<p>由西北角法得一组初始基可行解：<span class="math inline">\(X_{11}=8,X_{12}=8,X_{22}=6,X_{23}=4,X_{33}=8,X_{34}=14\)</span>。总费用：<span class="math inline">\(372\)</span></p>
+<p><strong>最小元素法</strong>：</p>
+<p><img src="./../../images/运筹学/image-20241016163104044.png" srcset="/img/loading.gif" lazyload></p>
+<p>由最小元素法得一组初始基可行解：<span class="math inline">\(X_{13}=10,X_{14}=6,X_{21}=8,X_{23}=2,X_{32}=14,X_{34}=8\)</span>。总费用：<span class="math inline">\(246\)</span></p>
+<p><strong>沃格尔法</strong>：</p>
+<blockquote>
+<p>罚数=次小费用-最小费用（行罚数和列罚数）；</p>
+<p>找出最大的罚数行或列所对应的最小费用优先安排；</p>
+<p>重复计算步骤</p>
+</blockquote>
+<p><img src="./../../images/运筹学/image-20241016163429069.png" srcset="/img/loading.gif" lazyload></p>
+<p>2、解的最优性检验（待续.....）</p>
+<p>解的最优性检验就是检查所得到的方案是不是最优方案。检查的方法与单纯形方法中的原理相同，即计算检验数。由于目标要求极小，因此，当所有的检验数都大于或等于零时该调运方案就是最优方案；否则就不是最优，需要进行调整。</p>
+<blockquote>
+<p>方法： 闭回路法、位势法</p>
+</blockquote>
+<p>3、解的改进</p>
+<blockquote>
+<p>方法：闭回路调整法</p>
+</blockquote>
+<p>4、几点说明</p>
 
                 
               </div>
@@ -1073,7 +1147,7 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月12日</div>
+          <div>2024年10月16日</div>
         </div>
       
       
@@ -1114,8 +1188,8 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/15/" title="汽车构造">
-                        <span class="hidden-mobile">汽车构造</span>
+                      <a href="/13/" title="中国古代计时单位">
+                        <span class="hidden-mobile">中国古代计时单位</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -1153,7 +1227,7 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
         aria-expanded="true"
       >
         学习
-        <span class="list-group-count">(10)</span>
+        <span class="list-group-count">(9)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -1207,15 +1281,6 @@ y_1=\frac{4}{5},y_2=\frac{3}{5},y_3=1\)</span></p>
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">概率论</span>
-        </a>
-      
-    
-      
-      
-        <a href="/15/" title="汽车构造"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">汽车构造</span>
         </a>
       
     
