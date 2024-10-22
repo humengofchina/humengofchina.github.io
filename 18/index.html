@@ -16,26 +16,25 @@
   <meta name="author" content="Macho Meng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="大一高等数学关于不定积分的求解方法（换元积分法，分布积分法，附：基本积分表）">
+    <meta name="description" content="明明已经学会了，但又还给老师了，这一次我要拿回来！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不定积分的求解方法">
-<meta property="og:url" content="https://machomeng.pages.dev/5/index.html">
+<meta property="og:title" content="进制的相互转化">
+<meta property="og:url" content="https://machomeng.pages.dev/18/index.html">
 <meta property="og:site_name" content="爱发电的猛男妙妙屋">
-<meta property="og:description" content="大一高等数学关于不定积分的求解方法（换元积分法，分布积分法，附：基本积分表）">
+<meta property="og:description" content="明明已经学会了，但又还给老师了，这一次我要拿回来！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://machomeng.pages.dev/images/A/nkjiasi.PNG">
-<meta property="article:published_time" content="2024-04-13T16:07:58.000Z">
-<meta property="article:modified_time" content="2024-09-21T13:45:09.893Z">
+<meta property="og:image" content="https://machomeng.pages.dev/images/A/jinzhi.png">
+<meta property="article:published_time" content="2024-10-20T00:36:21.000Z">
+<meta property="article:modified_time" content="2024-10-22T07:19:26.929Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="不定积分">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/nkjiasi.PNG">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/jinzhi.png">
   
   
   
-  <title>不定积分的求解方法 - 爱发电的猛男妙妙屋</title>
+  <title>进制的相互转化 - 爱发电的猛男妙妙屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -237,7 +236,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="不定积分的求解方法"></span>
+            <span id="subtitle" data-typed-text="进制的相互转化"></span>
           
         </div>
 
@@ -253,8 +252,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-14 00:07" pubdate>
-          2024年4月14日 凌晨
+        <time datetime="2024-10-20 08:36" pubdate>
+          2024年10月20日 早上
         </time>
       </span>
     
@@ -265,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          845 字
+          1.2k 字
         
       </span>
     
@@ -276,7 +275,7 @@
         
         
         
-          11 分钟
+          16 分钟
         
       </span>
     
@@ -313,12 +312,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">不定积分的求解方法</h1>
+            <h1 id="seo-header">进制的相互转化</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年9月21日 晚上
+                    本文最后更新于 2024年10月22日 下午
                   
                 
               </p>
@@ -334,205 +333,423 @@
 </summary>
 <!-- toc -->
 <ul>
-<li><a href="#不定积分的求解方法">不定积分的求解方法</a>
+<li><a href="#二进制">二进制</a>
 <ul>
-<li><a href="#一-不定积分">一、不定积分</a></li>
-<li><a href="#二-基本积分表">二、基本积分表</a></li>
-<li><a href="#三-换元积分法">三、换元积分法</a> * <a href="#一类换元积分法凑微分法配元法">一类换元积分法：（凑微分法，配元法）</a></li>
-<li><a href="#四-分步积分法">四、分步积分法</a></li>
+<li><a href="#1-二进制转八进制">1、二进制转八进制：</a>
+<ul>
+<li><a href="#11-取三合一查表法">1.1、取三合一查表法：</a></li>
 </ul></li>
+<li><a href="#2-二进制转十进制">2、二进制转十进制：</a>
+<ul>
+<li><a href="#21-按权相加法">2.1、按权相加法：</a></li>
+</ul></li>
+<li><a href="#3-二进制转十六进制">3、二进制转十六进制：</a>
+<ul>
+<li><a href="#31-取四合一查表法">3.1、取四合一查表法：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#八进制">八进制</a>
+<ul>
+<li><a href="#4-八进制转二进制">4、八进制转二进制：</a>
+<ul>
+<li><a href="#41-一分为三查表法">4.1、一分为三查表法：</a></li>
+</ul></li>
+<li><a href="#5-八进制转十进制">5、八进制转十进制：</a>
+<ul>
+<li><a href="#51-按权相加法">5.1、按权相加法：</a></li>
+</ul></li>
+<li><a href="#6-八进制转十六进制">6、八进制转十六进制：</a>
+<ul>
+<li><a href="#61-直接法">6.1、直接法：</a></li>
+<li><a href="#62-间接法">6.2、间接法：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#十进制">十进制</a>
+<ul>
+<li><a href="#7-十进制转二进制">7、十进制转二进制：</a>
+<ul>
+<li><a href="#71-除二取余法">7.1、除二取余法：</a></li>
+<li><a href="#72-对照比较法">7.2、对照比较法：</a></li>
+</ul></li>
+<li><a href="#8-十进制转八进制">8、十进制转八进制：</a>
+<ul>
+<li><a href="#81-除八取余法">8.1、除八取余法：</a></li>
+</ul></li>
+<li><a href="#9-十进制转十六进制">9、十进制转十六进制：</a>
+<ul>
+<li><a href="#91-除十六取余法">9.1、除十六取余法：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#十六进制">十六进制</a>
+<ul>
+<li><a href="#10-十六进制转二进制">10、十六进制转二进制：</a>
+<ul>
+<li><a href="#101-一分为四查表法">10.1、一分为四查表法：</a></li>
+</ul></li>
+<li><a href="#11-十六进制转八进制">11、十六进制转八进制：</a>
+<ul>
+<li><a href="#111-直接法">11.1、直接法：</a></li>
+<li><a href="#112-间接法">11.2、间接法：</a></li>
+</ul></li>
+<li><a href="#12-十六进制转十进制">12、十六进制转十进制：</a>
+<ul>
+<li><a href="#121-按权相加法">12.1、按权相加法</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#总结">总结</a></li>
 </ul>
 <!-- tocstop -->
 </details>
-<h2><span id="不定积分的求解方法">不定积分的求解方法</span></h2>
-<h3><span id="一-不定积分">一、不定积分</span></h3>
-<p><span class="math display">\[
-当F^{&#39;}(x)=f(x)或者dF(x)=f(x)dx则F(x)为f(x)在区间I上的一个原函数，而不定积分是f(x)的全体原函数
-\]</span></p>
-<p>初等函数（连续函数）必有原函数</p>
-<p>被积表达式： <span class="math display">\[
-\int{f(x)dx}
-\]</span></p>
-<p><span class="math display">\[
-\int 积分符号，f(x)被积函数，x积分变量
-\]</span></p>
-<p>不定积分的几何意义：</p>
+<hr>
+<h2><span id="二进制">二进制</span></h2>
+<h3><span id="1-二进制转八进制">1、二进制转八进制：</span></h3>
+<h5><span id="11-取三合一查表法">1.1、取三合一查表法：</span></h5>
+<p>原理：对应表</p>
+<table>
+<thead>
+<tr>
+<th>二进制：</th>
+<th>000</th>
+<th>001</th>
+<th>010</th>
+<th>011</th>
+<th>100</th>
+<th>101</th>
+<th>110</th>
+<th>111</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>八进制：</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
 <blockquote>
-<p>不定积分</p>
+<p>二进制：1100011011010010.011</p>
+</blockquote>
+<p>经过分组补零查表可得：</p>
+<p>001 100 011 011 010 010 . 011</p>
+<p>1 4 3 3 2 2 . 3</p>
+<p>故得转化为八进制为：143322.3</p>
+<h3><span id="2-二进制转十进制">2、二进制转十进制：</span></h3>
+<h5><span id="21-按权相加法">2.1、按权相加法：</span></h5>
+<p>原理：</p>
+<p>举例：</p>
 <blockquote>
-<p>全体原函数</p>
-<p>平行曲线族</p>
+<p>二进制：1100 0110 1101 0010.011</p>
 </blockquote>
-</blockquote>
+<p>整数部分：<span class="math inline">\(1(2^{15})+1(2^{14})+1(2^{10})+1(2^{9})+1(2^{7})+1(2^6)+1(2^4)+1(2^1)=50898\)</span></p>
+<p>小数部分：<span class="math inline">\(1(2^{-2})+1(2^{-3})=0.375\)</span></p>
+<p>故得转化为十进制为：50898.375</p>
+<h3><span id="3-二进制转十六进制">3、二进制转十六进制：</span></h3>
+<h5><span id="31-取四合一查表法">3.1、取四合一查表法：</span></h5>
+<table>
+
+<thead>
+<tr>
+<th>二进制</th>
+<th>0000</th>
+<th>0001</th>
+<th>0010</th>
+<th>0011</th>
+<th>0100</th>
+<th>0101</th>
+<th>0110</th>
+<th>0111</th>
+<th>1000</th>
+<th>1001</th>
+<th>1010</th>
+<th>1011</th>
+<th>1100</th>
+<th>1101</th>
+<th>1110</th>
+<th>1111</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十六进制</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>d</td>
+<td>e</td>
+<td>f</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
 <blockquote>
-<p>导数</p>
+<p>二进制：1100011011010010.011</p>
+</blockquote>
+<p>经过分组补零查表可得：</p>
+<p>1100 0110 1101 0010. 0110</p>
+<p>c 6 d 2 . 6</p>
+<p>故得转化为十六进制为：c6d2.6</p>
+<hr>
+<h2><span id="八进制">八进制</span></h2>
+<h3><span id="4-八进制转二进制">4、八进制转二进制：</span></h3>
+<h5><span id="41-一分为三查表法">4.1、一分为三查表法：</span></h5>
+<p>原理：对应表的逆运用</p>
+<table>
+<thead>
+<tr>
+<th>二进制：</th>
+<th>000</th>
+<th>001</th>
+<th>010</th>
+<th>011</th>
+<th>100</th>
+<th>101</th>
+<th>110</th>
+<th>111</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>八进制：</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
 <blockquote>
-<p>增量比的极限</p>
-<p>切线的斜率</p>
+<p>八进制：143322.3</p>
 </blockquote>
-</blockquote>
-<p>案例： <span class="math display">\[
-\int{\frac{1}{x}dx}=ln|x|+C
-\]</span></p>
-<p><span class="math display">\[
-\frac{d}{dx}{\int{f(x)dx}}=f(x)
-\]</span></p>
-<p>不定积分的性质和定积分的性质一样</p>
-<h3><span id="二-基本积分表">二、基本积分表</span></h3>
-<p><span class="math display">\[
-\int{kdx}=kx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{x^udx}=\frac{1}{u+1}x^{u+1}+C(注意u\neq-1)
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{x}dx}=ln|x|+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{1+x^2}dx}=arctanx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{\sqrt{1-x^2}}dx}=arcsinx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{cosx}dx=sinx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{sinxdx}=-cosx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{cos^2x}dx}=\int sec^2xdx=tanx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{sin^2x}dx}=\int {csc^2x}dx=-cotx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{secxtanx dx}=secx+C
-\]</span></p>
-<p><span class="math display">\[
-\int {cscx}{cotxdx}=-cscx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{e^xdx}=e^x+C
-\]</span></p>
-<p><span class="math display">\[
-\int{a^x}dx=\frac{1}{lna}a^x+C
-\]</span></p>
-<p>双曲线函数积分公式 <span class="math display">\[
-\int{shxdx}=chx+C
-\]</span></p>
-<p><span class="math display">\[
-\int{chxdx=shx+C}
-\]</span></p>
-<p>补充 <span class="math display">\[
-\int{tanxdx}=-ln{|cosx|}+C
-\]</span></p>
-<p><span class="math display">\[
-\int{cotxdx}=ln{|sinx|}+C
-\]</span></p>
-<p><span class="math display">\[
-\int{secxdx}={ln|secx+tanx|}+C
-\]</span></p>
-<p><span class="math display">\[
-\int{cscxdx}=ln|cscx-cotx|+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{a^2+x^2}dx}=\frac{1}{a}arctan\frac{x}{a}+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{x^2-a^2}dx}=\frac{1}{2a}ln|\frac{x-a}{x+a}|+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{\sqrt{a^2-x^2}}dx}=arcsin\frac{x}{a}+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{\sqrt{x^2+a^2}}dx}=ln(x+\sqrt{x^2+a^2})+C
-\]</span></p>
-<p><span class="math display">\[
-\int{\frac{1}{\sqrt{x^2-a^2}}dx}=ln|x+\sqrt{x^2-a^2}|+C
-\]</span></p>
-<h3><span id="三-换元积分法">三、换元积分法</span></h3>
-<h6><span id="一类换元积分法凑微分法配元法">一类换元积分法：（凑微分法，配元法）</span></h6>
-<p><span class="math display">\[
-\int{f[φ(x)φ^{,}(x)]dx}=\int{f(u)du}(其中u=φ(x)，du=φ^{,}(x)dx)
-\]</span></p>
-<p>步骤：</p>
-<ol type="1">
-<li>凑微分</li>
-<li>换元求微分</li>
-<li>回代变量</li>
-</ol>
-<p>常用的配元形式： <span class="math display">\[
-\int{f(ax+b)dx}=\frac{1}{a}\int{f(ax+b)d(ax+b)}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(sinx)cosxdx}=\int{f(sinx)dsinx}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(cosx)sinxdx}=-\int{f(cosx)dcosx}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(tanx)sec^2xdx}=\int{f(tanx)dtanx}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(e^x)e^x}dx=\int{f(e^x)de^x}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(lnx)\frac{1}{x}dx}=\int{f(lnx)dlnx}
-\]</span></p>
-<p>万能凑幂法： <span class="math display">\[
-\int{f(x^n)x^{n-1}dx}=\frac{1}{n}\int{f(x^n)dx^n}
-\]</span></p>
-<p><span class="math display">\[
-\int{f(x^n)\frac{1}{x}dx}=\frac{1}{n}\int{f(x^n)\frac{1}{x^n}dx^n}
-\]</span></p>
-<p>例题： <span class="math display">\[
-\int{2cos2xdx}
-\]</span></p>
+<p>经过分组补零查表可得：</p>
+<p>1 4 3 3 2 2 . 3</p>
+<p>001 100 011 011 010 010 . 011</p>
+<p>故得转化为二进制为：1100011011010010.011</p>
+<h3><span id="5-八进制转十进制">5、八进制转十进制：</span></h3>
+<h5><span id="51-按权相加法">5.1、按权相加法：</span></h5>
+<p>原理：</p>
+<p>举例：</p>
 <blockquote>
-<p>cos2x</p>
+<p>八进制：143322.3</p>
+</blockquote>
+<p>整数部分：<span class="math inline">\(1(8^5)+4(8^4)+3(8^3)+3(8^2)+2(8^1)+2(8^0)=50898\)</span></p>
+<p>小数部分：<span class="math inline">\(3(8^{-1})=0.375\)</span></p>
+<p>故得转化为十进制为：50898.375</p>
+<h3><span id="6-八进制转十六进制">6、八进制转十六进制：</span></h3>
+<h5><span id="61-直接法">6.1、直接法：</span></h5>
+<p>目前我没有找到直接转化的方法，只有间接的将八进制转为二进制（或十进制）再转化为十六进制。</p>
+<h5><span id="62-间接法">6.2、间接法：</span></h5>
+<p>举例：</p>
 <blockquote>
-<p>cosu</p>
-<p>u=2x</p>
+<p>八进制：143322.3</p>
 </blockquote>
+<p>先转化为二进制：（如<strong>4.1</strong>）</p>
+<p>再讲二进制转化为十六进制：（如<strong>3.1)</strong></p>
+<hr>
+<h2><span id="十进制">十进制</span></h2>
+<h3><span id="7-十进制转二进制">7、十进制转二进制：</span></h3>
+<h5><span id="71-除二取余法">7.1、除二取余法：</span></h5>
+<p>全称：（整数部分除二取余，逆序排列；小数部分乘二取整，正序排列法）</p>
+<p>原理:</p>
+<p>举例：</p>
+<blockquote>
+<p>十进制：38.5</p>
 </blockquote>
-<p><span class="math display">\[
-du=2dx
-\]</span></p>
-<p><span class="math display">\[
-原式=\int{cosu}du=sinu+C=sin2x+C
-\]</span></p>
-<p>二类换元积分法：是第一类换元积分法的逆思维 <span class="math display">\[
-设x=φ(t)是单调可导函数，且φ^{,}(t)\neq0，f[φ(t)]φ^{,}(t)具有原函数，则有
-\]</span></p>
-<p><span class="math display">\[
-\int{f(x)dx}=\int{f[φ(t)]φ^{,}dt|_{t=φ^{-1}(x)}}
-\]</span></p>
-<p><span class="math display">\[
-其中t=φ^{-1}(x)是x=φ(t)的反函数
-\]</span></p>
-<p>常见类型： <span class="math display">\[
-\int{f(x,\sqrt{a^2-x^2})dx},令x=asint或x=acost
-\]</span></p>
-<p><span class="math display">\[
-\int{f(x,\sqrt{a^2+x^2})dx},令x=atant
-\]</span></p>
-<p><span class="math display">\[
-\int{f(x,\sqrt{x^2-a^2})dx},令x=asect
-\]</span></p>
-<p><span class="math display">\[
-\int{f(a^x)dx},令x=a^x
-\]</span></p>
-<h3><span id="四-分步积分法">四、分步积分法</span></h3>
-<p><strong>技巧：反对幂指三，前u后v‘</strong> <span class="math display">\[
-由导数公式(uv)^{,}=u^{,}v+uv^{,}积分得uv=\int {u^{,}v}dx+\int{uv^{,}dx}
-\]</span> 移项得： <span class="math display">\[
-\int{uv^{,}dx}=uv-\int {u^{,}v}dx
-\]</span></p>
-<p><span class="math display">\[
-\int{udv}=uv-\int {v}du
-\]</span></p>
-<p>上述式子就是<strong>分步积分公式</strong></p>
+<p>整数部分：100110（步骤如下图）</p>
+<p><img src="../../images/18进制的相互转化/image-20241020214849202.png" srcset="/img/loading.gif" lazyload></p>
+<p>小数部分：1（步骤如下图）</p>
+<p><img src="./../../images/18进制的相互转化/image-20241022142253051.png" srcset="/img/loading.gif" lazyload></p>
+<p>故得二进制数为：100110.1</p>
+<h5><span id="72-对照比较法">7.2、对照比较法：</span></h5>
+<p>这种方法我姑且叫它<strong>投机取巧</strong>法：</p>
+<p>因为它有点类似于编程语言的布尔值属性，二进制只有0和1，类似于真和假（true
+and
+false），世间万物，像这样对立的属性可太多了。并且当十进制有小数怎么比较。</p>
+<p>通过比较下表（也就是2的n次方）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">256</th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>举例：十进制数：100</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">256</th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>故得二进制数为：1100100</p>
+<h3><span id="8-十进制转八进制">8、十进制转八进制：</span></h3>
+<h5><span id="81-除八取余法">8.1、除八取余法：</span></h5>
+<p>全称：（整数部分除八取余，逆序排列；小数部分乘八取整，正序排列法）</p>
+<p>原理:</p>
+<p>举例：</p>
+<blockquote>
+<p>十进制：50898.375</p>
+</blockquote>
+<p>整数部分：143322</p>
+<p>小数部分：3</p>
+<p>故得八进制数为：143322.3</p>
+<h3><span id="9-十进制转十六进制">9、十进制转十六进制：</span></h3>
+<h5><span id="91-除十六取余法">9.1、除十六取余法：</span></h5>
+<p>全称：（整数部分除十六取余，逆序排列；小数部分乘十六取整，正序排列法）</p>
+<p>原理:</p>
+<p>举例：</p>
+<blockquote>
+<p>十进制：50898.375</p>
+</blockquote>
+<p>整数部分：<span class="math inline">\(c6d2\)</span></p>
+<p>小数部分：6</p>
+<p>故得十六进制数为：<span class="math inline">\(c6d2.6\)</span></p>
+<hr>
+<h2><span id="十六进制">十六进制</span></h2>
+<h3><span id="10-十六进制转二进制">10、十六进制转二进制：</span></h3>
+<h5><span id="101-一分为四查表法">10.1、一分为四查表法：</span></h5>
+<p>原理：</p>
+<table>
+
+<thead>
+<tr>
+<th>二进制</th>
+<th>0000</th>
+<th>0001</th>
+<th>0010</th>
+<th>0011</th>
+<th>0100</th>
+<th>0101</th>
+<th>0110</th>
+<th>0111</th>
+<th>1000</th>
+<th>1001</th>
+<th>1010</th>
+<th>1011</th>
+<th>1100</th>
+<th>1101</th>
+<th>1110</th>
+<th>1111</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十六进制</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>d</td>
+<td>e</td>
+<td>f</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
+<blockquote>
+<p>十六进制：<span class="math inline">\(c6d2.6\)</span></p>
+</blockquote>
+<p>经过查表可得：</p>
+<p>c 6 d 2 . 6</p>
+<p>1100 0110 1101 0010 . 0110</p>
+<p>故得二进制数为：1100011011010010.011</p>
+<h3><span id="11-十六进制转八进制">11、十六进制转八进制：</span></h3>
+<h5><span id="111-直接法">11.1、直接法：</span></h5>
+<p>目前我没有找到直接转化的方法，只有间接的将十六进制转为二进制（或十进制）再转化为八进制。</p>
+<h5><span id="112-间接法">11.2、间接法：</span></h5>
+<p>举例：</p>
+<blockquote>
+<p>十六进制：<span class="math inline">\(c6d2.6\)</span></p>
+</blockquote>
+<p>先转化为十进制：（如下面的<strong>12.1</strong>）</p>
+<p>再将十进制转化为八进制：（如上面的<strong>8.1</strong>）</p>
+<h3><span id="12-十六进制转十进制">12、十六进制转十进制：</span></h3>
+<h5><span id="121-按权相加法">12.1、按权相加法</span></h5>
+<p>举例：</p>
+<blockquote>
+<p>十六进制：<span class="math inline">\(c6d2.6\)</span></p>
+</blockquote>
+<p>整数部分：<span class="math inline">\(c(16^3)+6(16^2)+d(16^1)+2(16^0)=50898\)</span></p>
+<p>小数部分：<span class="math inline">\(6(16^{-1})=0.375\)</span></p>
+<p>故得转化为十进制为：50898.375</p>
+<hr>
+<p>[TOC]</p>
+<h2><span id="总结">总结</span></h2>
+<p>进制的转化方法不唯一，我列出了一个表格，供需要时查询：</p>
+<p><img src="./../../images/18进制的相互转化/image-20241022145755172.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -568,9 +785,7 @@ du=2dx
       
         <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
       
-        <a href="/tags/%E6%95%B0%E5%AD%A6/" class="print-no-link">#数学</a>
-      
-        <a href="/tags/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" class="print-no-link">#不定积分</a>
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
       
     </div>
   
@@ -582,8 +797,8 @@ du=2dx
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>不定积分的求解方法</div>
-      <div>https://machomeng.pages.dev/5/</div>
+      <div>进制的相互转化</div>
+      <div>https://machomeng.pages.dev/18/</div>
     </div>
     <div class="license-meta">
       
@@ -595,13 +810,13 @@ du=2dx
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月14日</div>
+          <div>2024年10月20日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月21日</div>
+          <div>2024年10月22日</div>
         </div>
       
       
@@ -632,18 +847,12 @@ du=2dx
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/6/" title="二重积分的求解方法">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">二重积分的求解方法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/4/" title="电子电工技术（上册）">
-                        <span class="hidden-mobile">电子电工技术（上册）</span>
+                      <a href="/17/" title="网络相关知识">
+                        <span class="hidden-mobile">网络相关知识</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -706,7 +915,7 @@ du=2dx
       
         <a href="/5/" title="不定积分的求解方法"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">不定积分的求解方法</span>
         </a>
       
@@ -778,7 +987,7 @@ du=2dx
       
         <a href="/18/" title="进制的相互转化"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">进制的相互转化</span>
         </a>
       
