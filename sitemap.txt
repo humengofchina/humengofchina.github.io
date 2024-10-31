@@ -19,8 +19,8 @@ https://machomeng.pages.dev/tags/index-1.html
 https://machomeng.pages.dev/about/index-1.html
 https://machomeng.pages.dev/404/index.html
 https://machomeng.pages.dev/about/index.html
-https://machomeng.pages.dev/categories/index.html
 https://machomeng.pages.dev/friends/index.html
+https://machomeng.pages.dev/categories/index.html
 https://machomeng.pages.dev/tags/index.html
 https://machomeng.pages.dev/
 https://machomeng.pages.dev/tags/%E5%AD%A6%E4%B9%A0/
