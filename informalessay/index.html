@@ -24,7 +24,7 @@
 <meta property="og:description" content="日期·目录（默认关闭，点击展开）： 使用浏览器关键字搜索定位更加快捷   点击展开目录    2024-8-8 2024-8-9 2024-8-10 2024-8-12 2024-9-12 2024年8月15日09:10:04  套了cdn的ip查询网  2024年8月19日23:45:27  文章隐藏，但仍然可以通过链接访问 文章在首页的封面图  20">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-08T07:53:57.000Z">
-<meta property="article:modified_time" content="2024-10-14T03:08:44.949Z">
+<meta property="article:modified_time" content="2024-11-10T00:49:41.988Z">
 <meta property="article:author" content="Macho Meng">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -312,6 +312,7 @@ defender是否禁用成功</a></li>
 <ul>
 <li><a href="#windows查看系统dns缓存命令">Windows查看系统DNS缓存命令</a></li>
 </ul></li>
+<li><a href="#2024年11月10日084908">2024年11月10日08:49:08</a></li>
 </ul>
 <!-- tocstop -->
 </details>
@@ -429,6 +430,9 @@ defender是否禁用成功</span></h5>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html">要清除本地 DNS 服务器缓存，请使用命令行：<br>Clear-DnsServerCache<br>要清除客户端缓存，请使用以下命令：<br>Clear-DnsClientCache<br></code></pre></td></tr></table></figure>
 <p>Windows 10 中禁用 DNS 缓存</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs html">如果出于任何原因您希望在 Windows 10 PC 上禁用 DNS 缓存，您可以使用“服务控制器”工具来停止服务：<br><br>按 Win + R 键，输入“services.msc”（无引号），然后按 Enter 或单击 OK。<br>找到 DNS 客户端服务（或某些计算机上的 Dnscache）并双击它以打开其属性。<br>将启动类型更改为已禁用。<br>要重新启用该服务，请重复上述步骤并将启动类型更改为自动。<br>或者，您可以使用 Windows 系统配置停用 DNS 客户端：<br><br>按 Win + R 键，在“运行”对话框中键入“msconfig”（不带引号），然后按 Enter 或单击“确定”。<br>移动到服务选项卡并找到 DNS 客户端。<br>取消选中服务旁边的框，然后单击应用 &gt; 确定。<br>要重新启用服务，请重复上述步骤并再次勾选复选框。<br>请记住，禁用此服务会影响您计算机的整体性能，并且 DNS 查询的网络流量会增加，这意味着网站的加载速度会比正常情况慢得多。<br></code></pre></td></tr></table></figure>
+<h4><span id="2024年11月10日084908">2024年11月10日08:49:08</span></h4>
+<p>解除文件占用限制的代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html">DEL /F /A /Q \\?\%1<br>RD/S/Q\\%1<br></code></pre></td></tr></table></figure>
 
 
   

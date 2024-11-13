@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-11-02T13:43:21.376Z">
+<meta property="article:modified_time" content="2024-11-13T14:31:55.395Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          10k 字
+          11k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          131 分钟
+          142 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年11月2日 晚上
+                    本文最后更新于 2024年11月13日 晚上
                   
                 
               </p>
@@ -431,13 +431,18 @@
 <li><a href="#解纯整数规划的割平面法">解纯整数规划的割平面法：</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#第十周">第十周：</a>
+<li><a href="#第十周2024年11月6日193632">第十周：2024年11月6日19:36:32</a>
 <ul>
 <li><a href="#续上整数规划">（续上）整数规划</a>
 <ul>
 <li><a href="#分支定界法">分支定界法：</a></li>
-<li><a href="#待续">待续........</a></li>
+<li><a href="#0-1型整数规划">0-1型整数规划：</a></li>
+<li><a href="#指派问题">指派问题：</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#第十一周2024年11月13日222018">第十一周：2024年11月13日22:20:18</a>
+<ul>
+<li><a href="#动态规划">动态规划：</a></li>
 </ul></li>
 </ul>
 <!-- tocstop -->
@@ -1287,10 +1292,90 @@ k}(-f_{i0·j})x_j\leq-f_{i0}\)</span></p>
 <p><img src="./../../images/运筹学/image-20241102213637902.png" srcset="/img/loading.gif" lazyload></p>
 <p>得最终解为：<span class="math inline">\(X=(1,2,4,3,1,0,0)^T\)</span></p>
 <p>故：<span class="math inline">\(x_1=1,x_2=2,max z=1\)</span></p>
-<h2><span id="第十周">第十周：</span></h2>
+<h2><span id="第十周2024年11月6日193632">第十周：2024年11月6日19:36:32</span></h2>
 <h4><span id="续上整数规划">（续上）整数规划</span></h4>
 <h5><span id="分支定界法">分支定界法：</span></h5>
-<h5><span id="待续">待续........</span></h5>
+<p>任意选一个非整数解的变量<span class="math inline">\(x_i\)</span>在松弛问题中加上约束：<span class="math inline">\(x_i\leq [x_i]\)</span>和<span class="math inline">\(x_i\geq[x_i]+1\)</span>
+，组成两个新的松弛问题，称为分支。</p>
+<p>当原问题是求最大值时，松弛问题目标值是分支问题的上界;</p>
+<p>当原问题是求最小值时，松弛问题目标值是分支问题的下界。</p>
+<p>我们废话不多说，我们直接上例题：</p>
+<p><span class="math inline">\(P131\)</span>求解:</p>
+<p><span class="math inline">\(max Z=x_1+x_2\)</span></p>
+<p><span class="math inline">\(s.t.
+    \left\{
+        \begin{matrix}
+            x_1+\frac{9}{14}x_2\leq\frac{51}{14} \\
+            -2x_1+x_2\leq \frac{1}{3} \\
+            x_1,x_2\geq0\\
+            x_1,x_2取整数
+        \end{matrix}
+    \right.\)</span></p>
+<p>解：</p>
+<p>记整数规划问题为<span class="math inline">\(IP\)</span>,它的松弛问题为<span class="math inline">\(LP\)</span>。</p>
+<p>将<span class="math inline">\(LP\)</span>标准化。</p>
+<p>用单纯形法解<span class="math inline">\(LP\)</span>得最优解为：<span class="math inline">\(x_1=\frac{3}{2},x_2=\frac{10}{3}\)</span>最大值为：<span class="math inline">\(max Z=\frac{29}{6}\)</span></p>
+<p>易知<span class="math inline">\(LP\)</span>的最优解不符合整数要求，故可任选一个变量，如<span class="math inline">\(x_1=\frac{3}{2}\)</span>进行分支。</p>
+<p>可分为：<span class="math inline">\(x_1\geq 2\)</span>和<span class="math inline">\(x_1\leq
+1\)</span>两个分支部分（如下图），中间的部分都是小数被舍去。</p>
+<p><img src="./../../images/运筹学/image-20241106211040310.png" srcset="/img/loading.gif" lazyload></p>
+<p>如上图，左侧绿色部分的分支求解为<span class="math inline">\(x_1=1,x_2=\frac{7}{3}\)</span>，<span class="math inline">\(maxZ=\frac{10}{3}\)</span></p>
+<p>右侧紫色部分的分支求解为<span class="math inline">\(x_1=2,x_2=\frac{23}{9}\)</span>,<span class="math inline">\(maxZ=\frac{41}{9}\)</span></p>
+<p>由于<span class="math inline">\(\frac{41}{9}&gt;\frac{10}{3}\)</span>,所以优先选择右侧紫色部分再次进行分支，对<span class="math inline">\(x_2\)</span>进行分支。</p>
+<p>可分为：<span class="math inline">\(x_2\geq3\)</span>和<span class="math inline">\(x_2\leq2\)</span>两个分支部分（如下图），可行域就只剩如图所示部分。</p>
+<p><img src="./../../images/运筹学/image-20241106212633045.png" srcset="/img/loading.gif" lazyload></p>
+<p>上面为<span class="math inline">\(x_2\geq
+3\)</span>没有交集，故无可行解</p>
+<p>下面为<span class="math inline">\(x_2\leq2\)</span>最优解为<span class="math inline">\(x_1=\frac{33}{14},x_2=2,maxZ=\frac{61}{14}\)</span></p>
+<p>因为<span class="math inline">\(x_2\)</span>为整数，故再次将<span class="math inline">\(x_1\)</span>分支为<span class="math inline">\(x_1\leq2,x_1\geq3\)</span>，二者之间的被舍去。（如下图）</p>
+<p><img src="./../../images/运筹学/image-20241106213646825.png" srcset="/img/loading.gif" lazyload></p>
+<p>左边<span class="math inline">\(x_1\leq2\)</span>得最优解为<span class="math inline">\(x_1=2,x_2=2,maxZ=4\)</span></p>
+<p>右边<span class="math inline">\(x_1\geq3\)</span>得最优解为<span class="math inline">\(x_1=3,x_2=1,maxZ=4\)</span></p>
+<p>这两个解都是该整数规划的最优解。</p>
+<p>逻辑流程图：</p>
+<p><img src="./../../images/运筹学/image-20241106214056872.png" srcset="/img/loading.gif" lazyload></p>
+<h5><span id="0-1型整数规划">0-1型整数规划：</span></h5>
+<p>背包问题模型：</p>
+<p><span class="math inline">\(\displaystyle
+maxZ=\sum_{i=1}^{n}c_ix_i\)</span></p>
+<p><span class="math inline">\(s.t.
+    \left\{
+        \begin{matrix}
+            \displaystyle\sum_{i=1}^{n}a_ix_i \leq b \\
+            x_{i}=0或1(i=1,2,3..n)
+        \end{matrix}
+    \right.\)</span></p>
+<blockquote>
+<p>含有相互排斥的约束条件的问题</p>
+<p>固定费用问题</p>
+<p>工件排序问题</p>
+</blockquote>
+<p>0-1型整数规划的求解方法：隐枚举法</p>
+<h5><span id="指派问题">指派问题：</span></h5>
+<p>指派问题的标准形式及其数学模型：</p>
+<p>指派问题的标准形式（以人和事为例）是：有<span class="math inline">\(n\)</span>个人和<span class="math inline">\(n\)</span>件事，已知第<span class="math inline">\(i\)</span>做第<span class="math inline">\(j\)</span>件事的费用为<span class="math inline">\(c_{ij}\)</span>，要求确定人和事一一对应的关系，使得完成这些事情的总费用最小。</p>
+<p><span class="math inline">\(min
+Z=\displaystyle\sum_{i=1}^{n}\sum_{j=1}^{n}c_{ij}x_{ij}\)</span></p>
+<p><span class="math inline">\(s.t.
+    \left\{
+        \begin{matrix}
+            \displaystyle\sum_{i=1}^{n}x_{ij} = 1 \\
+            \displaystyle\sum_{j=1}^{n}x_{ij} = 1
+\\x_{ij}=0或1(i=1,2,3..n)
+        \end{matrix}
+    \right.\)</span></p>
+<p>匈牙利解法：（只针对最小化的目标函数）</p>
+<blockquote>
+<p>各行元素分别减去本行最小元素，此时出现0元素；</p>
+<p>对每行每列画零元素</p>
+<p>继续变换系数矩阵；各行元素分别减去本行最小元素，此时出现负元素，加上该值的绝对值使其变为零；</p>
+<p>再对每行每列画零元素</p>
+<p>直到有全部的独立零元素</p>
+</blockquote>
+<p>（非标准形式的指派问题化为标准形式即可（虚拟行，虚拟列））</p>
+<h2><span id="第十一周2024年11月13日222018">第十一周：2024年11月13日22:20:18</span></h2>
+<h4><span id="动态规划">动态规划：</span></h4>
+<p>注：非线性规划本科不讲</p>
 
                 
               </div>
@@ -1361,7 +1446,7 @@ k}(-f_{i0·j})x_j\leq-f_{i0}\)</span></p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年11月2日</div>
+          <div>2024年11月13日</div>
         </div>
       
       

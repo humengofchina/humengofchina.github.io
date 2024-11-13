@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/javascript.jpg">
 <meta property="article:published_time" content="2024-08-20T08:15:21.000Z">
-<meta property="article:modified_time" content="2024-09-15T10:15:43.000Z">
+<meta property="article:modified_time" content="2024-11-04T07:24:50.822Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -265,7 +265,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          2.3k 字
         
       </span>
     
@@ -276,7 +276,7 @@
         
         
         
-          22 分钟
+          29 分钟
         
       </span>
     
@@ -318,7 +318,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年9月15日 晚上
+                    本文最后更新于 2024年11月4日 下午
                   
                 
               </p>
@@ -362,6 +362,14 @@
 <li><a href="#5-属性表达式">5、属性表达式</a></li>
 <li><a href="#6-动态取值">6、动态取值</a></li>
 </ul></li>
+<li><a href="#八-js全局对象">八、JS全局对象</a>
+<ul>
+<li><a href="#1-特殊的name引例">1、特殊的name（引例）</a></li>
+<li><a href="#2-全局对象">2、全局对象</a></li>
+<li><a href="#3-定义变量">3、定义变量</a></li>
+<li><a href="#4-window的打印输出">4、window的打印输出</a></li>
+</ul></li>
+<li><a href="#九">九、</a></li>
 </ul>
 <!-- tocstop -->
 </details>
@@ -616,6 +624,88 @@ defined）</p>
 <blockquote>
 <p>注：以上通过弹窗获取用户指令信息，不符合es标准。</p>
 </blockquote>
+<h2><span id="八-js全局对象">八、JS全局对象</span></h2>
+<h4><span id="1-特殊的name引例">1、特殊的name（引例）</span></h4>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">var</span> name;<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(name)<br></code></pre></td></tr></table></figure>
+<p>没有赋值的name的值并不是undefined，而是一个什么都没显示的内容，并且类型为字符串类型。</p>
+<figure>
+<img src="./../../images/JavaScript/640.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>当赋值给name数字1时，类型仍然为字符串类型：相比于其他关键字，name显得与众不同。</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971519-1.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971520-2.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>当删除name的赋值语句后，仍然能访问到上次赋值的值（重启服务后恢复默认值）</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971520-3.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>这是因为name是<strong>全局对象window</strong>的一个<strong>属性</strong>。可以不用通过对象，直接可以访问的属性。</p>
+<h4><span id="2-全局对象">2、全局对象</span></h4>
+<p>所有的JS宿主环境，都会提供一个全局对象，这个<strong>全局对象</strong>以及<strong>全局对象的属性</strong>，可以<strong>直接访问</strong>。</p>
+<p>全局对象的名称和属性，会因宿主环境的不同而不同。其中在浏览器这个宿主环境中，全局对象叫window</p>
+<p>window对象代表当前浏览器窗口，提供对宿主环境的API访问。</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971521-4.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>name默认为空字符串，不论给name赋予什么类型的值，都会转化为字符串类型：</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971521-5.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<h4><span id="3-定义变量">3、定义变量</span></h4>
+<p>定义的所有变量，都会作为window对象的属性，存在全局对象里面。</p>
+<p>如果定义的变量没有赋值，不会用undefined覆盖已经存在的变量值。未赋值的对象也不会覆盖window对象的属性。</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">var a<span class="hljs-operator">=</span><span class="hljs-number">10</span><span class="hljs-comment">;var a;</span><br></code></pre></td></tr></table></figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971521-6.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>但是变量的提升不会超过脚本块。</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971521-7.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971521-8.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>但是不同脚本块在window对象中是一样的，说明undefined不能覆盖window对象的属性值。</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971522-9.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<h4><span id="4-window的打印输出">4、window的打印输出</span></h4>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(window.<span class="hljs-built_in">console</span>)window.<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(window.<span class="hljs-built_in">console</span>)<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971522-10.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>其中window对象的console属性里面的log函数，就对应打印的功能</p>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971522-11.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>通过给console属性复制可以使其语句失效：</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">var</span> <span class="hljs-built_in">console</span> = <span class="hljs-string">&quot;abc&quot;</span>;<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(window.<span class="hljs-built_in">console</span>);<span class="hljs-comment">//报错信息：//TypeError: console.log is not a function//类型错误：console.log不是函数</span><br></code></pre></td></tr></table></figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971522-12.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<p>可以通过其他打印函数展现：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">alert</span>(console);<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="./../../images/JavaScript/640-1730704971522-13.webp" srcset="/img/loading.gif" lazyload alt="图片">
+<figcaption aria-hidden="true">图片</figcaption>
+</figure>
+<h2><span id="九">九、</span></h2>
 
                 
               </div>
@@ -684,7 +774,7 @@ defined）</p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月15日</div>
+          <div>2024年11月4日</div>
         </div>
       
       
