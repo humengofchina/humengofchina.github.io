@@ -16,25 +16,25 @@
   <meta name="author" content="Macho Meng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="网络拓扑结构，以及抓包与解包。">
+    <meta name="description" content="听说这个值一百块大洋。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络相关知识">
-<meta property="og:url" content="https://machomeng.pages.dev/17/index.html">
+<meta property="og:title" content="实训周机械设计">
+<meta property="og:url" content="https://machomeng.pages.dev/19/index.html">
 <meta property="og:site_name" content="爱发电的猛男妙妙屋">
-<meta property="og:description" content="网络拓扑结构，以及抓包与解包。">
+<meta property="og:description" content="听说这个值一百块大洋。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://machomeng.pages.dev/images/A/ipv4.jpg">
-<meta property="article:published_time" content="2024-10-10T00:36:21.000Z">
-<meta property="article:modified_time" content="2024-10-12T14:18:14.865Z">
+<meta property="og:image" content="https://machomeng.pages.dev/images/A/shixun.jpg">
+<meta property="article:published_time" content="2024-11-18T13:08:21.000Z">
+<meta property="article:modified_time" content="2024-11-19T04:47:10.501Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
-<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="实训">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/ipv4.jpg">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/A/shixun.jpg">
   
   
   
-  <title>网络相关知识 - 爱发电的猛男妙妙屋</title>
+  <title>实训周机械设计 - 爱发电的猛男妙妙屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -236,7 +236,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="网络相关知识"></span>
+            <span id="subtitle" data-typed-text="实训周机械设计"></span>
           
         </div>
 
@@ -252,8 +252,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-10 08:36" pubdate>
-          2024年10月10日 早上
+        <time datetime="2024-11-18 21:08" pubdate>
+          2024年11月18日 晚上
         </time>
       </span>
     
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          613 字
+          1.1k 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          8 分钟
+          15 分钟
         
       </span>
     
@@ -312,12 +312,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">网络相关知识</h1>
+            <h1 id="seo-header">实训周机械设计</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年10月12日 晚上
+                    本文最后更新于 2024年11月19日 下午
                   
                 
               </p>
@@ -333,49 +333,152 @@
 </summary>
 <!-- toc -->
 <ul>
-<li><a href="#cmd命令">CMD命令</a></li>
-<li><a href="#内网ipv4">内网IPV4</a></li>
-<li><a href="#ipv6">IPV6</a></li>
-<li><a href="#子网掩码">子网掩码</a></li>
+<li><a href="#一-准备工作">一、准备工作</a>
+<ul>
+<li><a href="#1-文件">1、文件：</a></li>
+<li><a href="#2-数据">2、数据：</a></li>
+<li><a href="#3-题干">3、题干：</a></li>
+<li><a href="#4-理论">4、理论：</a></li>
+</ul></li>
+<li><a href="#二-选择电动机">二、选择电动机</a>
+<ul>
+<li><a href="#1-计算电动机的额定功率">1、计算电动机的额定功率：</a></li>
+<li><a href="#2-确定电动机的转速">2、确定电动机的转速：</a></li>
+</ul></li>
+<li><a href="#三-设计传动装置">三、设计传动装置</a></li>
+<li><a href="#四-计算各个轴相关数据">四、计算各个轴相关数据</a>
+<ul>
+<li><a href="#1-传动比分配-各轴转速">1、传动比分配、各轴转速</a></li>
+<li><a href="#2-各轴输入功率">2、各轴输入功率</a></li>
+<li><a href="#3-各轴输入转矩">3、各轴输入转矩</a></li>
+</ul></li>
+<li><a href="#五-等待指导教师检查数据">五、等待指导教师检查数据</a></li>
 </ul>
 <!-- tocstop -->
 </details>
-<h2><span id="cmd命令">CMD命令</span></h2>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs py">ipconfig		 <span class="hljs-comment"># 查看网卡基本参数</span><br>ipconfig -a		 <span class="hljs-comment"># 查看网卡全部参数</span><br>arp -a			<span class="hljs-comment"># ARP缓存表</span><br>arp -d *  		<span class="hljs-comment">#删除ARP缓存表</span><br></code></pre></td></tr></table></figure>
-<h2><span id="内网ipv4">内网IPV4</span></h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">10.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>~<span class="hljs-number">10.255</span><span class="hljs-number">.255</span><span class="hljs-number">.255</span>     <span class="hljs-comment">#16777216-2个</span><br><span class="hljs-number">172.16</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>~<span class="hljs-number">172.31</span><span class="hljs-number">.255</span><span class="hljs-number">.255</span>   <span class="hljs-comment">#172.00010000~172.00011111   1048576-2个</span><br><span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>~<span class="hljs-number">192.168</span><span class="hljs-number">.255</span><span class="hljs-number">.255</span> <span class="hljs-comment">#65536-2个</span><br>特殊保留IP<br><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>~<span class="hljs-number">127.255</span><span class="hljs-number">.255</span><span class="hljs-number">.255</span>   <span class="hljs-comment">#一般是本地测试</span><br></code></pre></td></tr></table></figure>
-<h2><span id="ipv6">IPV6</span></h2>
-<p>IPV6分为八组，每组四个十六进制数，整整128位</p>
-<p>IPV6的前64位为前缀，用于确定网络位</p>
-<p>后64位为后缀，用于确定主机位</p>
-<p>范围：2的128次方</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">0000000000000000.0000000000000000</span><span class="hljs-number">.0000000000000000</span><span class="hljs-number">.0000000000000000</span><span class="hljs-number">.00000000000000000</span><span class="hljs-number">.0000000000000000</span><span class="hljs-number">.000000000000000</span><span class="hljs-number">.0000000000000000</span><br>类似上方全f<br>FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFF<br></code></pre></td></tr></table></figure>
-<p>例如</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-number">2408</span>:80f0:<span class="hljs-number">4</span>10c:1d:<span class="hljs-number">0</span>:ff:39af<br><span class="hljs-number">0010010000001000.1000000011110000</span><span class="hljs-number">.0100000100001100</span><span class="hljs-number">.0000000000011101</span><span class="hljs-number">.0000000000000000</span><span class="hljs-number">.0000000011111111</span><span class="hljs-number">.1011000001111010</span><span class="hljs-number">.0011100110101111</span><br></code></pre></td></tr></table></figure>
-<p>IPV6的简写：</p>
-<ol type="1">
-<li>省略前导0</li>
-</ol>
-<p>每16位一组，冒号隔开，每组的前导0可以省略，:0000:省略作:0:。</p>
-<p>例如， <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">2001</span>:0DB8:<span class="hljs-number">0000</span>:0023:<span class="hljs-number">0000</span>:<span class="hljs-number">0000</span>:200C:417A<br>可以缩写成：<br><span class="hljs-number">2001</span>:DB8 :  <span class="hljs-number">0</span> : <span class="hljs-number">23</span> :  <span class="hljs-number">0</span> :  <span class="hljs-number">0</span> :200C:417A<br></code></pre></td></tr></table></figure></p>
-<ol start="2" type="1">
-<li>缩写连续0</li>
-</ol>
-<p>如果出现:0:，可以仅一次地将连续的:0:缩写成::</p>
-<p>上面的例子可以进一步缩写成： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">2001</span>:DB8 : <span class="hljs-number">0</span>  :  <span class="hljs-number">23</span>:         :200C:417A<br>或<br><span class="hljs-number">2001</span>:DB8 :    :  <span class="hljs-number">23</span>:   <span class="hljs-number">0</span>:   <span class="hljs-number">0</span>:200C:417A<br>另外也可以写成：<br><span class="hljs-number">2001</span>:0DB8:    :0023:<span class="hljs-number">0000</span>:<span class="hljs-number">0000</span>:200C:417A<br></code></pre></td></tr></table></figure></p>
-<p>例如我的电脑</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs py">fe80::b832:c7ad:6acd:8ffb%<span class="hljs-number">14</span><br>fe80:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:<span class="hljs-number">0</span>:b832:c7ad:6acd:8ffb%<span class="hljs-number">14</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">fe80::b832:c7ad:6acd:8ffb<br>压缩地址	fe80::b832:c7ad:6acd:8ffb<br>扩展地址	fe80:<span class="hljs-number">0000</span>:<span class="hljs-number">0000</span>:<span class="hljs-number">0000</span>:b832:c7ad:6acd:8ffb<br>二进制地址	<span class="hljs-number">11111110100000000000000000000000000000000000000000000000000000001011100000110010110001111010110101101010110011011000111111111011</span><br>子网	<br>子网掩码	<br>上一个地址	fe80::b832:c7ad:6acd:8ffa<br>下一个地址	fe80::b832:c7ad:6acd:8ffc<br>起始地址（第一个可用的IP）	<br>结束地址（最后一个可用的IP）	<br>Pattern	<br>IPv4 映射的 IPv6 地址	<br>转为 IPv4	<br>转为 IPv6	<br>反向 DNS 查询	b.f.f<span class="hljs-number">.8</span>.d.c.a<span class="hljs-number">.6</span>.d.a<span class="hljs-number">.7</span>.c<span class="hljs-number">.2</span><span class="hljs-number">.3</span><span class="hljs-number">.8</span>.b<span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-number">.8</span>.e.f.ip6.arpa<br></code></pre></td></tr></table></figure>
-<p>https://blog.csdn.net/lwljh134/article/details/140549910</p>
-<h2><span id="子网掩码">子网掩码</span></h2>
-<p>现在我的网卡信息为（校园网）</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html">无线局域网适配器 WLAN:<br><br>   连接特定的 DNS 后缀 . . . . . . . :<br>   本地链接 IPv6 地址. . . . . . . . : fe80::b832:c7ad:6acd:8ffb%14<br>   IPv4 地址 . . . . . . . . . . . . : 10.19.62.206<br>   子网掩码  . . . . . . . . . . . . : 255.255.0.0<br>   默认网关. . . . . . . . . . . . . : 10.19.1.1<br></code></pre></td></tr></table></figure>
-<p><img src="./../../images/网络编程/image-20241010091508399.png" srcset="/img/loading.gif" lazyload></p>
-<p>IPV4地址转化：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">10.19</span><span class="hljs-number">.62</span><span class="hljs-number">.206</span> . . . . . . . . . . . <span class="hljs-number">.00001010</span><span class="hljs-number">.00010011</span><span class="hljs-number">.00111110</span><span class="hljs-number">.11001110</span><br></code></pre></td></tr></table></figure>
-<p>子网掩码：</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-number">225.255</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>  . . . . . . . . . . . <span class="hljs-number">.11111111</span><span class="hljs-number">.11111111</span><span class="hljs-number">.00000000</span><span class="hljs-number">.00000000</span><br></code></pre></td></tr></table></figure>
-<p>子网掩码用来区分不同的网段，子网掩码固定网络位（网络位相同就属于同一个网段）（上述子网掩码表示IPV4的地址前16为保持不变）</p>
+<hr>
+<h2><span id="一-准备工作">一、准备工作</span></h2>
+<h4><span id="1-文件">1、文件：</span></h4>
+<p><img src="./../../images/实训周机械设计/image-20241118211534773.png" srcset="/img/loading.gif" lazyload></p>
+<p>这些文件的链接：【<a target="_blank" rel="noopener" href="https://wwzl.lanzouw.com/ibDU72fg9vfe">蓝奏云</a>】【<a target="_blank" rel="noopener" href="https://www.alipan.com/s/xGDhq6G4F76/folder/673b3d7692a0e9b573a44d7190d6a317804edace">阿里云盘</a>】</p>
+<h4><span id="2-数据">2、数据：</span></h4>
+<p>我的序号是12号，<strong>下面的过程都以我的数据为基础</strong></p>
+<p><img src="./../../images/实训周机械设计/image-20241118213430133.png" srcset="/img/loading.gif" lazyload></p>
+<h4><span id="3-题干">3、题干：</span></h4>
+<p>​
+<strong>某带式运输机输送物品为粉粒物(如煤、砂等)、单向传动，工作中载荷平稳，滚筒效率<span class="math inline">\(0.96\)</span>，工作年限<span class="math inline">\(10\)</span>年,大修期限<span class="math inline">\(3\)</span>年．每年工作<span class="math inline">\(300\)</span>天，两班制工作，工作机允许速度误差<span class="math inline">\(±5\%\)</span>；在专门工厂小批量生产。</strong></p>
+<h4><span id="4-理论">4、理论：</span></h4>
+<p>废话理论不多说，直接开始做</p>
+<h2><span id="二-选择电动机">二、选择电动机</span></h2>
+<h4><span id="1-计算电动机的额定功率">1、计算电动机的额定功率：</span></h4>
+<p>由上述序号12的数据可得，已知：</p>
+<p>运输机转矩：<span class="math inline">\(\displaystyle
+T=1700N·m\)</span></p>
+<p>运输带工作速度：<span class="math inline">\(v=1.25m/s\)</span></p>
+<p>卷筒直径：<span class="math inline">\(D=370mm=0.37m\)</span></p>
+<p>卷筒效率：<span class="math inline">\(η=96\%\)</span></p>
+<p>由理论公式： <span class="math display">\[
+\displaystyle P_w=\frac{Tω}{η}
+\]</span></p>
+<p><span class="math display">\[
+\displaystyle ω=\frac{v}{r}
+\]</span></p>
+<p>得：</p>
+<p><span class="math inline">\(\displaystyle
+P_w=\frac{Tω}{η}=\frac{Tv}{ηr}=\frac{2Tv}{ηD}\)</span></p>
+<p><span class="math inline">\(\displaystyle
+P_w=\frac{2Tv}{ηD}=\frac{2*1700*1.25}{0.96*0.37}\approx11965.09W\approx11.97kW\)</span></p>
+<p>由计算得，需选用输出功率为<span class="math inline">\(11.97kW\)</span>的电动机，而额定功率<span class="math inline">\(\displaystyle
+P_0=\frac{P_w}{η_电}\)</span>，但是我没有在已知条件中找到电机的效率<span class="math inline">\(η_电\)</span>，按照经验来说，电机的工作效率往往处于<span class="math inline">\(80\%-92\%\)</span>之间，<strong>所以这里我进行取舍</strong>，取额定功率为<span class="math inline">\(15kW\)</span>电机。</p>
+<p>故选择额定功率为<span class="math inline">\(P_m=15kW\)</span>的Y型电机（中等功率电机）。</p>
+<h4><span id="2-确定电动机的转速">2、确定电动机的转速：</span></h4>
+<p><img src="./../../images/实训周机械设计/image-20241119085935361.png" srcset="/img/loading.gif" lazyload></p>
+<p>由理论公式： <span class="math display">\[
+ω=2πn
+\]</span> 得：</p>
+<p><span class="math inline">\(\displaystyle
+n_0=\frac{ω}{2π}*60=\frac{v}{2πr}*60=\frac{v}{πD}*60\approx
+1.08*60=64.8\approx65rpm\)</span></p>
+<p><img src="./../../images/实训周机械设计/image-20241119092804020.png" srcset="/img/loading.gif" lazyload></p>
+<p>由上图可知：</p>
+<p><span class="math inline">\(\displaystyle
+i_{20}=i_{21}*i_{10}=\frac{n_2}{n_1}*\frac{n_1}{n_0}=\frac{n_2}{n_0}\)</span></p>
+<p>题目要求：</p>
+<blockquote>
+<p>功率相同的电机有不同的转速：<span class="math inline">\(750,1000,1500,3000 rpm\)</span></p>
+<p><span class="math inline">\(P_m\)</span>一定，电机<span class="math inline">\(n_m\)</span>高、转矩小→外廓尺寸小、重量轻、价格便宜；</p>
+<p><span class="math inline">\(n_w\)</span> 一定，<span class="math inline">\(n_m\)</span>高、总传动比大→减速器尺寸及重量大、价格高；</p>
+<p>注：此处<span class="math inline">\(n_w=n_0\)</span></p>
+</blockquote>
+<p>分别计算传动比：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">电机转速：rpm</th>
+<th>750</th>
+<th>1000</th>
+<th>1500</th>
+<th>3000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">传动比：</td>
+<td>11.54</td>
+<td>15.38</td>
+<td>23.08</td>
+<td>46.15</td>
+</tr>
+</tbody>
+</table>
+<p>由上表可知：</p>
+<p><span class="math inline">\(1500rpm\)</span>的电机和<span class="math inline">\(1000rpm\)</span>的电机二者传动比合适，只不过<span class="math inline">\(1000rpm\)</span>的电机所需的减速器更加紧凑，质量同时也更轻。</p>
+<p>故待确定<span class="math inline">\(1500rpm\)</span>和<span class="math inline">\(1000rpm\)</span>两个电机，我选择转速为<span class="math inline">\(n_m=1000rpm\)</span>的电机（别问为什么，问就是自由发挥）</p>
+<h2><span id="三-设计传动装置">三、设计传动装置</span></h2>
+<blockquote>
+<p>注：设计具有创新性，无标准答案，只有优劣之分</p>
+</blockquote>
+<p><img src="./../../images/实训周机械设计/image-20241119101642564.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/实训周机械设计/无标题.png" srcset="/img/loading.gif" lazyload></p>
+<p>上图为自由发挥</p>
+<p>由上述理论公式： <span class="math display">\[
+\displaystyle
+i_{20}=i_{21}*i_{10}=\frac{n_2}{n_1}*\frac{n_1}{n_0}=\frac{n_2}{n_0}
+\]</span> 可印证：</p>
+<p>齿轮传动和带传动的传动比之积<span class="math inline">\(i_{20}=i_{21}*i_{10}=3*5=15\)</span></p>
+<p>近似认为与表格中传动比相同。故认为此方案可行！</p>
+<h2><span id="四-计算各个轴相关数据">四、计算各个轴相关数据</span></h2>
+<h4><span id="1-传动比分配-各轴转速">1、传动比分配、各轴转速</span></h4>
+<p><img src="./../../images/实训周机械设计/无标题.png" srcset="/img/loading.gif" lazyload></p>
+<p>均在上图中体现</p>
+<h4><span id="2-各轴输入功率">2、各轴输入功率</span></h4>
+<p>电机轴：<span class="math inline">\(P_1=P_m*η_联\)</span></p>
+<p>第一轴：<span class="math inline">\(P_2=P_1*η_带*η_滚=P_m*η_联*η_带*η_滚\)</span></p>
+<p>工作轴：<span class="math inline">\(P_3=P_2*η_齿*η_滚=P_m*η_联*η_带*η_滚*η_齿*η_滚\)</span></p>
+<p><span class="math inline">\(P_w=P_3*η_{联}^`=P_m*η_联*η_带*η_滚*η_齿*η_滚*η_{联}^`\)</span></p>
+<p>由于各传动效率并没有给值，此处根据经验，可认为<span class="math inline">\(η_联&gt;η_滚&gt;η_带&gt;η_齿&gt;94\%\)</span>（不要问我为什么，厂长是我表锅!!!）</p>
+<p>得：</p>
+<p><span class="math inline">\(P_1=15*0.98=14.7kW\)</span></p>
+<p><span class="math inline">\(P_2=14.7*0.95*0.96=13.41kW\)</span></p>
+<p><span class="math inline">\(P_3=13.69*0.94*0.96=12.09kW\)</span></p>
+<p><span class="math inline">\(P_w=P_3*0.98=11.86kW\)</span></p>
+<h4><span id="3-各轴输入转矩">3、各轴输入转矩</span></h4>
+<p>电机轴：<span class="math inline">\(\displaystyle
+T_1=9550\frac{P_m*η_联}{n_m}=9550\frac{14.7*10^3}{1000}=140.385\)</span></p>
+<p>第一轴：<span class="math inline">\(\displaystyle
+T_2=9550\frac{P_m*η_联*η_带*η_滚}{n_m}i_{21}=9550\frac{13.41*10^3}{1000}*5=640.328\)</span></p>
+<p>工作轴：<span class="math inline">\(\displaystyle
+T_3=9500\frac{P_m*η_联*η_带*η_滚*η_齿*η_滚}{n_m}i_{21}i_{10}=9550\frac{12.09*10^3}{1000}*5*3=1847.925\)</span></p>
+<p><span class="math inline">\(\displaystyle
+T_w=9500\frac{P_m*η_联*η_带*η_滚*η_齿*η_滚*η_{联}^`}{n_m}i_{21}i_{10}=9550\frac{11.86*10^3}{1000}*5*3=1698.945\)</span></p>
+<p>综上所述，可列出下表：</p>
+<p><img src="./../../images/实训周机械设计/image-20241119123043411.png" srcset="/img/loading.gif" lazyload></p>
+<p>传动比：<span class="math inline">\(i=15\)</span></p>
+<p>效率：<span class="math inline">\(η=80.68\%\)</span></p>
+<p>从最终结果来看，简直不要<strong>太过</strong>：</p>
+<p><img src="./../../images/实训周机械设计/ddc26b3e659ec12f661167ba4082f68.jpg" srcset="/img/loading.gif" lazyload></p>
+<h2><span id="五-等待指导教师检查数据">五、等待指导教师检查数据</span></h2>
+<p><img src="./../../images/实训周机械设计/593396370bd715783d7918533198228.jpg" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -411,7 +514,7 @@
       
         <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
       
-        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+        <a href="/tags/%E5%AE%9E%E8%AE%AD/" class="print-no-link">#实训</a>
       
     </div>
   
@@ -423,8 +526,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>网络相关知识</div>
-      <div>https://machomeng.pages.dev/17/</div>
+      <div>实训周机械设计</div>
+      <div>https://machomeng.pages.dev/19/</div>
     </div>
     <div class="license-meta">
       
@@ -436,13 +539,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月10日</div>
+          <div>2024年11月18日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月12日</div>
+          <div>2024年11月19日</div>
         </div>
       
       
@@ -473,18 +576,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/18/" title="进制的相互转化">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">进制的相互转化</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/16/" title="物理">
-                        <span class="hidden-mobile">物理</span>
+                      <a href="/18/" title="进制的相互转化">
+                        <span class="hidden-mobile">进制的相互转化</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -574,7 +671,7 @@
       
         <a href="/19/" title="实训周机械设计"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">实训周机械设计</span>
         </a>
       
@@ -610,7 +707,7 @@
       
         <a href="/17/" title="网络相关知识"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">网络相关知识</span>
         </a>
       
@@ -667,6 +764,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -778,6 +881,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
