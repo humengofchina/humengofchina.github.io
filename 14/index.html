@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://machomeng.pages.dev/images/A/OR.png">
 <meta property="article:published_time" content="2024-09-07T13:36:21.000Z">
-<meta property="article:modified_time" content="2024-11-17T08:23:19.706Z">
+<meta property="article:modified_time" content="2024-12-07T14:19:40.427Z">
 <meta property="article:author" content="Macho Meng">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11k 字
+          12k 字
         
       </span>
     
@@ -277,7 +277,7 @@
         
         
         
-          142 分钟
+          155 分钟
         
       </span>
     
@@ -319,7 +319,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年11月17日 下午
+                    本文最后更新于 2024年12月7日 晚上
                   
                 
               </p>
@@ -444,7 +444,31 @@
 <ul>
 <li><a href="#动态规划">动态规划：</a></li>
 </ul></li>
-<li><a href="#第十二周实训">第十二周：实训</a></li>
+<li><a href="#第十四周2024年12月5日083538">第十四周：2024年12月5日08:35:38</a>
+<ul>
+<li><a href="#图与网络分析">图与网络分析：</a>
+<ul>
+<li><a href="#图的定义">图的定义：</a>
+<ul>
+<li><a href="#顶点的次">顶点的次：</a></li>
+<li><a href="#子图">子图：</a></li>
+</ul></li>
+<li><a href="#网络的定义">网络的定义：</a></li>
+<li><a href="#欧拉回路">欧拉回路：</a></li>
+</ul></li>
+<li><a href="#树">树：</a>
+<ul>
+<li><a href="#图的生成树">图的生成树：</a>
+<ul>
+<li><a href="#最小生成树">最小生成树：</a></li>
+</ul></li>
+<li><a href="#根树及其应用">根树及其应用</a>
+<ul>
+<li><a href="#根树">根树：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#最短路问题">最短路问题：</a></li>
+</ul></li>
 </ul>
 <!-- tocstop -->
 </details>
@@ -1378,7 +1402,106 @@ Z=\displaystyle\sum_{i=1}^{n}\sum_{j=1}^{n}c_{ij}x_{ij}\)</span></p>
 <h4><span id="动态规划">动态规划：</span></h4>
 <p>注：非线性规划本科不讲</p>
 <p>不考，所以不写</p>
-<h2><span id="第十二周实训">第十二周：实训</span></h2>
+<p>第十二周：实训</p>
+<p>第十三周：实训</p>
+<h2><span id="第十四周2024年12月5日083538">第十四周：2024年12月5日08:35:38</span></h2>
+<h3><span id="图与网络分析">图与网络分析：</span></h3>
+<p>历史上的哥尼斯堡七桥问题（无解）和欧拉回路：</p>
+<p><img src="./../../images/运筹学/image-20241205084604373.png" srcset="/img/loading.gif" lazyload></p>
+<p>环球旅行问题（有解）：</p>
+<p><img src="./../../images/运筹学/image-20241205084812247.png" srcset="/img/loading.gif" lazyload></p>
+<h4><span id="图的定义">图的定义：</span></h4>
+<p><img src="./../../images/运筹学/image-20241205085844241.png" srcset="/img/loading.gif" lazyload></p>
+<p>图的分类：</p>
+<p>有向图和无向图：</p>
+<blockquote>
+<p>有向图：由点和边构成</p>
+<p>无向图：由点和弧构成</p>
+</blockquote>
+<p>一条边的两个端点是同一个点称为环</p>
+<p>两个端点之间有两条及以上的边称为多重边</p>
+<p>简单图和多重图和完全图和有向完全图：</p>
+<blockquote>
+<p>简单图：无环，无多重边的图</p>
+<p>多重图：无环，有多重边的图</p>
+<p>完全图：每个顶点间都有边相连的无向简单图</p>
+<p>有向简单图：任意两个顶点之间有且仅有一条有向边的简单图</p>
+</blockquote>
+<p>二部图：一个图可以被分为两个部分，这两个部分的并集为该图，交集为空，使得每条边的两个端点一个属于那个，一个属于那个，则称该图为二部图。</p>
+<h5><span id="顶点的次">顶点的次：</span></h5>
+<p>以点<span class="math inline">\(v\)</span>为端点的边的个数称为点<span class="math inline">\(v\)</span>的度（也叫次），记作<span class="math inline">\(d(v)\)</span></p>
+<p>其中：环计为两度</p>
+<blockquote>
+<p>孤立点：次为0</p>
+<p>悬挂点：次为1</p>
+<p>悬挂边：悬挂点关联的边</p>
+<p>奇点：次为奇数</p>
+<p>偶点：次为偶数</p>
+</blockquote>
+<p>定理：</p>
+<blockquote>
+<p>所有顶点度数之和等于所有边数的两倍</p>
+<p>任意一个图中，奇点的个数为偶数</p>
+</blockquote>
+<p>出次和入次：</p>
+<blockquote>
+<p>出次：<span class="math inline">\(d^+(v_i)\)</span></p>
+<p>入次：<span class="math inline">\(d^-(v_i)\)</span></p>
+</blockquote>
+<p>有向图中：一个点的出次和入次之和就是该点的次，所有顶点的入次之和等于所有顶点的出次之和。</p>
+<h5><span id="子图">子图：</span></h5>
+<p>生成子图和支撑子图：</p>
+<blockquote>
+<p>生成子图：含有部分顶点部分边</p>
+<p>支撑子图：含有所有顶点部分边</p>
+</blockquote>
+<h4><span id="网络的定义">网络的定义：</span></h4>
+<p>一个始点一个终点，中间部分叫中间点，每条弧上对应的数字叫做权，这样的图称为网络</p>
+<p>链：点边点边交替排列。</p>
+<p>链长：链中边的个数。</p>
+<p>初等链：没有重复的点和边</p>
+<p>圈：链的起点和终点为一个点。</p>
+<p>初等圈：无重复点也无重复边</p>
+<p>对于无向图来说，道路与链、回路与圈的意义相同。</p>
+<p>连通图：一个图中任意两点至少有一条链相连。</p>
+<h4><span id="欧拉回路">欧拉回路：</span></h4>
+<p>经过每边一次且仅一次。</p>
+<h3><span id="树">树：</span></h3>
+<p>连通且不含圈的无向图称为树</p>
+<blockquote>
+<p>树叶：次为1的点</p>
+<p>分枝点：次大于1的点</p>
+</blockquote>
+<h4><span id="图的生成树">图的生成树：</span></h4>
+<p>顾名思义：图生出的树，这个树是这个图的支撑子图，图中属于生成树的边为树枝，不在生成树中的边为“弦”</p>
+<blockquote>
+<p>一个图有生成树的充要条件是：图是连通图</p>
+</blockquote>
+<h5><span id="最小生成树">最小生成树：</span></h5>
+<p>一个生成树上的所有树枝上的权总和为生成树的权，具有最小权的生成树称为最小生成树。</p>
+<p>最小生成树的两种算法：</p>
+<p>避圈法：</p>
+<blockquote>
+<p>将权从小到大排列，避开圈选边</p>
+</blockquote>
+<p>破圈法（管梅谷算法）：</p>
+<blockquote>
+<p>麻烦</p>
+</blockquote>
+<h4><span id="根树及其应用">根树及其应用</span></h4>
+<p>（2024年12月7日22:10:05）</p>
+<h5><span id="根树">根树：</span></h5>
+<p>有向树中，恰好有一个节点的入次为0，其余节点入次都为1，则称该有向树为根树。</p>
+<p>在根树中，若每个顶点的出次小于等于m，则称m叉树，若每个顶点的出次恰好等于m或0，则称完全m叉树。</p>
+<h3><span id="最短路问题">最短路问题：</span></h3>
+<p>两个算法：</p>
+<p>1、Dijkstra算法（迪杰斯特拉算法）</p>
+<blockquote>
+<p>初始T标号都是无穷，相互比较将小的T标号该为P标号并记录路径，直到进行全部完毕</p>
+</blockquote>
+<p><img src="./../../images/运筹学/image-20241207221204923.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="./../../images/运筹学/result.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>2、Floyd算法</p>
 
                 
               </div>
@@ -1449,7 +1572,7 @@ Z=\displaystyle\sum_{i=1}^{n}\sum_{j=1}^{n}c_{ij}x_{ij}\)</span></p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年11月17日</div>
+          <div>2024年12月7日</div>
         </div>
       
       
