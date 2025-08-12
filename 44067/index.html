@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Macho Meng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="（抱歉，烂尾了）这是大学二年级下半年，在电子电工技术下册课程学习中的笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电子电工技术（下册）">
+<meta property="og:url" content="https://machomeng.pages.dev/44067/index.html">
+<meta property="og:site_name" content="爱发电的猛男妙妙屋">
+<meta property="og:description" content="（抱歉，烂尾了）这是大学二年级下半年，在电子电工技术下册课程学习中的笔记。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510132209646.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510134919577.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510135604213.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510135810248.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510151828131.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510151930471.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240510152109267.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514202433467.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514202954188.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514204135864.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514204227617.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514204331593.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514210154339.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240514211817326.png">
+<meta property="og:image" content="https://machomeng.pages.dev/images/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E4%B8%8B/image-20240516210837754.png">
+<meta property="article:published_time" content="2024-05-09T13:14:21.000Z">
+<meta property="article:modified_time" content="2025-08-12T02:12:11.538Z">
+<meta property="article:author" content="Macho Meng">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="物理">
+<meta property="article:tag" content="电子电工">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://machomeng.pages.dev/images/%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png">
+  
+  
+  
+  <title>电子电工技术（下册） - 爱发电的猛男妙妙屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"machomeng.pages.dev","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":false,"placement":"left","headingSelector":"h1,h2,h3,h4,h5","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>爱发电的猛男妙妙屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/web/" target="_self">
+                <i class="iconfont icon-bookmark-fill"></i>
+                <span>常用网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/browser/" target="_self">
+                <i class="iconfont icon-codepen-fill"></i>
+                <span>收藏网址</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/informalessay/" target="_self">
+                <i class="iconfont icon-note"></i>
+                <span>随笔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://dr-willmos.github.io/firework/" target="_self">
+                <i class="iconfont icon-slack-fill"></i>
+                <span>烟花</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="电子电工技术（下册）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Macho Meng
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-09 21:14" pubdate>
+          2024年5月9日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          28 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">电子电工技术（下册）</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年8月12日 上午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>【MachoMeng：由于服务器在国外，加载可能会有些缓慢，请耐心等待】</p>
+<p>如内容有误，欢迎在微信公众号【爱发电的猛男妙妙屋】私信指正！</p>
+<p>电工电子技术课件获取方式：微信公众号发送【电工电子技术课件】获取阿里云盘链接。</p>
+<figure>
+<img src="../../images/扫码_搜索联合传播样式-标准色版.png" srcset="/img/loading.gif" lazyload alt="微信公众号">
+<figcaption aria-hidden="true">微信公众号</figcaption>
+</figure>
+<h4><span id="目录默认关闭点击展开">目录（默认关闭，点击展开）：</span></h4>
+<h4><span id="展开目录找的更快">展开目录找的更快</span></h4>
+<details>
+<summary>
+点击展开目录
+</summary>
+<!-- toc -->
+<ul>
+<li><a href="#2024-05-09">2024-05-09</a>
+<ul>
+<li><a href="#61-半导体基础知识">6.1 半导体基础知识</a></li>
+<li><a href="#62-pn结">6.2 PN结</a></li>
+<li><a href="#63-二极管">6.3 二极管</a></li>
+</ul></li>
+<li><a href="#2024-05-14">2024-05-14</a>
+<ul>
+<li><a href="#64-特殊二极管">6.4 特殊二极管</a></li>
+<li><a href="#65-晶体管">6.5 晶体管</a></li>
+</ul></li>
+<li><a href="#2024-05-16">2024-05-16</a>
+<ul>
+<li><a href="#71-基本放大电路">7.1 基本放大电路</a></li>
+</ul></li>
+</ul>
+<!-- tocstop -->
+</details>
+<p>续<a href="https://machomeng.pages.dev/4/">https://machomeng.pages.dev/4/</a></p>
+<h2><span id="2024-05-09">2024-05-09</span></h2>
+<h4><span id="61-半导体基础知识">6.1 半导体基础知识</span></h4>
+<p>在信息技术中，往往以电和光形态的信号为载体，各种信号产生和变换处理主要是由电子电路来实现的，<strong>半导体器件</strong>则是构成电子电路核心。</p>
+<p>一、根据导电能力(电阻率)的不同，可以分为：</p>
+<blockquote>
+<p>1、导体：导体内部有许多脱离原子核束缚的自由电子，金属是导体，导电能力强。</p>
+<p>2、绝缘体：绝缘体不能通过电流，橡胶、塑料和干燥的木材为绝缘体。</p>
+<p>3、半导体：导电特性处于导体和绝缘体之间的物体，如硅Si、锗Ge元素和砷化镓GaAs等化合物。</p>
+</blockquote>
+<p>二、半导体特性：</p>
+<p>掺杂特性：掺入杂质则半导体导电能力增加几百倍</p>
+<p>温度特性：温度升高使导电率增加</p>
+<p>光照特性：光照可以增加导电率，还可以增加电动势</p>
+<p><strong>三、本征半导体</strong>：（纯净的半导体）</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510132209646.png" srcset="/img/loading.gif" lazyload alt="硅晶体的共价键">
+<figcaption aria-hidden="true">硅晶体的共价键</figcaption>
+</figure>
+<p>​ 3-1、自由电子与空穴</p>
+<p>​
+共价键中的电子在获得一定能量后，即可挣脱原子核的束缚，成为<strong>自由电子</strong>。同时在共价键中留下一个<strong>空穴</strong>。</p>
+<p>​ 3-2、热激发与复合现象</p>
+<p>​ 热激发：由于受热或光照产生自由电子和空穴的现象</p>
+<p>​ 复合现象：自由电子在运动中遇到空穴后，两者同时消失，称为复合现象</p>
+<p>​
+温度一定时，本征半导体中的自由电子—空穴对的数目基本不变。温度愈高，自由电子—空穴对数目越多，导电性能也就愈好。</p>
+<p>​ 3-3、半导体导电方式</p>
+<p>​
+当半导体两端加上外电压时，自由电子作定向运动形成电子电流；而空穴的运动相当于正电荷的运动。同时存在着<strong>自由电子</strong>导电和<strong>空穴</strong>导电，分别称为<strong>电子流</strong>和<strong>空穴流</strong>。</p>
+<p>​ 3-4、载流子</p>
+<p>​ 运载电荷的粒子，就是自由电子和空穴</p>
+<p>​ 3-5、注意：</p>
+<ol type="1">
+<li>常温下本征半导体中载流子数目极少, 其导电性差；</li>
+<li>温度升高，载流子的数目急剧增加,半导体的导电性也就愈强。温度对半导体器件性能影响很大。</li>
+<li>本征半导体在热力学零度（0K）和没有外界能量激发下，晶体内无自由电子，不导电。</li>
+</ol>
+<p><strong>四、杂质半导体</strong>：</p>
+<p>​ 4-1、电子型杂质半导体（又称：N型半导体）</p>
+<p>本征半导体中掺入五价元素（如磷）后，得到N型半导体。</p>
+<p>​ 4-2、空穴型半导体（又称：P型半导体）</p>
+<p>本征半导体中掺入三价元素（如硼）后，得到P型半导体。</p>
+<p>无论是N型半导体还是P型半导体，都是中性半导体，对外不显电性。</p>
+<h4><span id="62-pn结">6.2 PN结</span></h4>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510134919577.png" srcset="/img/loading.gif" lazyload alt="PN结的形成">
+<figcaption aria-hidden="true">PN结的形成</figcaption>
+</figure>
+<p>1、多子浓度差</p>
+<p>扩散运动</p>
+<p>2、内电场</p>
+<p>漂移运动</p>
+<p>扩散运动和漂移运动慢慢形成动态平衡后，空间电荷区（称为PN结）的宽度就固定下来。</p>
+<p>一、PN结的特性：</p>
+<p>1.单向导电性</p>
+<p>PN结正向偏置：正向导通</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510135604213.png" srcset="/img/loading.gif" lazyload alt="促进多子的扩散，抑制少子的漂移">
+<figcaption aria-hidden="true">促进多子的扩散，抑制少子的漂移</figcaption>
+</figure>
+<p>PN结反向偏置：反向截止</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510135810248.png" srcset="/img/loading.gif" lazyload alt="促进少子的漂移，抑制多子的扩散">
+<figcaption aria-hidden="true">促进少子的漂移，抑制多子的扩散</figcaption>
+</figure>
+<p>二、反向击穿特性</p>
+<p>1、在反向电场力作用下高速运动的电子直接撞击出共价键中的电子（称为雪崩击穿）。</p>
+<p>2、强大的电场力直接将电子拉出共价键（称为齐纳击穿）。</p>
+<h4><span id="63-二极管">6.3 二极管</span></h4>
+<p>一、基本结构：</p>
+<p>PN结两端引出引线并进行封装，就做成了半导体二极管。</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510151828131.png" srcset="/img/loading.gif" lazyload alt="三种常见二极管">
+<figcaption aria-hidden="true">三种常见二极管</figcaption>
+</figure>
+<p>二、符号：</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510151930471.png" srcset="/img/loading.gif" lazyload alt="二极管电路符号">
+<figcaption aria-hidden="true">二极管电路符号</figcaption>
+</figure>
+<blockquote>
+<p>A为阳极</p>
+</blockquote>
+<blockquote>
+<p>K为阴极</p>
+</blockquote>
+<p>三、伏安结构：</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240510152109267.png" srcset="/img/loading.gif" lazyload alt="二极管的伏安特性曲线">
+<figcaption aria-hidden="true">二极管的伏安特性曲线</figcaption>
+</figure>
+<p>温度升高，正向特性左移，反向特性下移</p>
+<p>四、主要参数：</p>
+<p>1.最大整流电流 <span class="math display">\[
+I_{OM} (I_F)
+\]</span> 二极管长期使用时，允许流过二极管的最大正向平均电流</p>
+<p>2.最大反向工作电压 <span class="math display">\[
+U_{RM}
+\]</span>
+保证二极管不被击穿而给出的最大反向电压，一般是二极管反向击穿电压的一半或2/3。</p>
+<p>3.最高工作频率 <span class="math display">\[
+f_{MAX}
+\]</span>
+因PN结电容效应，当工作频率超过最高工作频率后，二极管的单向导电性变坏。</p>
+<h2><span id="2024-05-14">2024-05-14</span></h2>
+<h4><span id="64-特殊二极管">6.4 特殊二极管</span></h4>
+<p><strong>1、稳压二极管</strong></p>
+<p>一种特殊的面接触型半导体硅二极管。它在电路中与适当数值的电阻配合后能起稳定电压的作用。</p>
+<p>符号：</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514202433467.png" srcset="/img/loading.gif" lazyload alt="稳压二极管符号">
+<figcaption aria-hidden="true">稳压二极管符号</figcaption>
+</figure>
+<p>工作在<strong>反向击穿区</strong>的二极管</p>
+<p>在稳压管刚击穿时，如电流变化，其两端电压易于变化；当电流增大到工作电流I后，电流有很大的变化，其两端电压几乎不变，保持在稳定电压U附近。</p>
+<p>最大耗散功率： <span class="math display">\[
+P_{ZM}=I_{ZM}U_{Z}
+\]</span></p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514202954188.png" srcset="/img/loading.gif" lazyload alt="工作环境在反向击穿区">
+<figcaption aria-hidden="true">工作环境在反向击穿区</figcaption>
+</figure>
+<p><strong>2、光电二极管</strong></p>
+<p>光电二极管是利用二极管光敏感性进行光检测，将光信号转为电信号器件，结构与二极管类似，但在PN结处，通过管壳上玻璃窗口能接收外部光照。</p>
+<p>符号：</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514204135864.png" srcset="/img/loading.gif" lazyload alt="光电二极管符号">
+<figcaption aria-hidden="true">光电二极管符号</figcaption>
+</figure>
+<p>PN结在反向偏置状态下工作，它的反向电流随着光照强度增加而上升。</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514204227617.png" srcset="/img/loading.gif" lazyload alt="特征曲线">
+<figcaption aria-hidden="true">特征曲线</figcaption>
+</figure>
+<p><strong>3、发光二极管</strong></p>
+<p>将电信号转变为光信号的器件，用元素周期表中IV、Ⅴ族元素化合物（如砷化镓、磷化镓等）制成。</p>
+<p>符号：</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514204331593.png" srcset="/img/loading.gif" lazyload alt="发光二极管符号">
+<figcaption aria-hidden="true">发光二极管符号</figcaption>
+</figure>
+<p>工作电压2V左右发光，电流几毫安到十几毫安之间</p>
+<h4><span id="65-晶体管">6.5 晶体管</span></h4>
+<p><strong>1、基本结构</strong></p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240514210154339.png" srcset="/img/loading.gif" lazyload alt="晶体管">
+<figcaption aria-hidden="true">晶体管</figcaption>
+</figure>
+<p><strong>2、电流分配和放大原理</strong></p>
+<p>2.1晶体管放大的外部条件</p>
+<blockquote>
+<p>发射结正偏，集电结反偏</p>
+</blockquote>
+<p>从电位的角度：NPN型 <span class="math display">\[
+V_C&gt;V_B&gt;V_E
+\]</span> <img src="../../images/电工电子技术下/image-20240514211817326.png" srcset="/img/loading.gif" lazyload alt="NPN型"></p>
+<p>2.2各电极电流关系及电流的放大作用</p>
+<figure>
+<img src="../../images/电工电子技术下/image-20240516210837754.png" srcset="/img/loading.gif" lazyload alt="晶体管电流放大实验电路图">
+<figcaption aria-hidden="true">晶体管电流放大实验电路图</figcaption>
+</figure>
+<p>结论： <span class="math display">\[
+I_E=I_B+I_C
+\]</span></p>
+<p><span class="math display">\[
+I_C\gg I_B,I_C\approx I_E
+\]</span></p>
+<p><span class="math display">\[
+ΔI_C\gg ΔI_B
+\]</span></p>
+<p>把<strong>基极电流的微小变化</strong>能够引起<strong>集电极电流较大变化</strong>的特性称为<strong>晶体管的电流放大作用</strong>。</p>
+<p>晶体管的工作状态：</p>
+<blockquote>
+<p>发射结正偏、集电结反偏，为放大状态</p>
+<p>发射结和集电结均正向偏置，为饱和状态</p>
+<p>发射结和集电结均反向偏置，为截止状态</p>
+</blockquote>
+<h2><span id="2024-05-16">2024-05-16</span></h2>
+<h4><span id="71-基本放大电路">7.1 基本放大电路</span></h4>
+<p>在电子电路中，放大是指用一个较小的变化量去控制一个较大的变化量，放大作用实质上是一种能量的控制作用。</p>
+<p><strong>放大器的基本要求：</strong></p>
+<ol type="1">
+<li>具有足够的放大倍数</li>
+<li>有一定的输出功率</li>
+<li>失真要小</li>
+<li>工作要稳定</li>
+</ol>
+<p><strong>放大器实现放大的条件：</strong></p>
+<ol type="1">
+<li>晶体管必须偏置在放大区。发射结正偏，集电结反偏。NPN管：$
+V_C&gt;V_B&gt;V_E<span class="math inline">\(；PNP管：\)</span>
+V_C&lt;V_B&lt;V_E$</li>
+<li>正确设置静态工作点，使整个波形处于放大区。</li>
+<li>信号的变化能引起晶体管输入电流的变化，输出电流的变化能方便地转换成输出电压.</li>
+</ol>
+<p><strong>基本放大电路各元件的作用：</strong></p>
+<ol type="1">
+<li>晶体管的作用：放大元件满足<span class="math inline">\(i_C=βi_B\)</span>；晶体管应工作在放大区。集电结反偏，发射结正偏。</li>
+<li>集电极电源<span class="math inline">\(U_{CC}\)</span>的作用：是为电路提供能量，并保证集电结反偏。</li>
+<li>集电极电阻<span class="math inline">\(R_C\)</span>的作用：是将变化的电流转变为变化的电压，以实现电压的放大。</li>
+<li>基极电阻<span class="math inline">\(R_B\)</span>的作用：能提供合适的静态工作点，并保证发射结正偏。</li>
+<li>耦合电容<span class="math inline">\(C_1\)</span>和<span class="math inline">\(C_2\)</span>的作用：1、隔直作用：隔离输入、输出与电路的的直流通道。2、交流耦合作用：通过交流信号</li>
+<li></li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+      
+        <a href="/tags/%E7%89%A9%E7%90%86/" class="print-no-link">#物理</a>
+      
+        <a href="/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%B7%A5/" class="print-no-link">#电子电工</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>电子电工技术（下册）</div>
+      <div>https://machomeng.pages.dev/44067/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Macho Meng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月9日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年8月12日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
