@@ -223,13 +223,6 @@
   </url>
   
   <url>
-    <loc>https://machomeng.pages.dev/tags/JavaScript/</loc>
-    <lastmod>2025-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://machomeng.pages.dev/tags/%E5%A4%A7%E4%B8%89%E4%B8%93%E4%B8%9A%E8%AF%BE/</loc>
     <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -244,6 +237,13 @@
   </url>
   
   <url>
+    <loc>https://machomeng.pages.dev/tags/%E5%AE%9E%E8%AE%AD/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://machomeng.pages.dev/tags/%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</loc>
     <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -251,7 +251,7 @@
   </url>
   
   <url>
-    <loc>https://machomeng.pages.dev/tags/%E5%AE%9E%E8%AE%AD/</loc>
+    <loc>https://machomeng.pages.dev/tags/JavaScript/</loc>
     <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
